@@ -1,0 +1,90 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import Section from '../../../components/win/Section.astro';
+import AppTile from '../../../components/AppTile.astro';
+import Icon from '../../../components/Icon.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { md, plain } from '../../../lib/markdown';
+import { breadcrumbLd } from '../../../lib/seo';
+import { isPlaceholder } from '../../../lib/contact';
+import { t, url, type Lang } from '../../../lib/i18n';
+import type { Entry } from '../../../lib/content';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const a = site.about(lang);
+const company = site.settings(lang).company || {};
+const units = site.units(lang).filter((u) => u.status !== 'planned');
+const team = site.team(lang);
+const title = a.hero_title || t(lang, 'nav.aboutGroup');
+const trail = [{ label: t(lang, 'nav.about') }];
+const registry = [
+  { k: t(lang, 'about.legalName'), v: company.legal_name },
+  { k: t(lang, 'footer.registration'), v: company.registration_no },
+  { k: t(lang, 'about.taxId'), v: company.tax_id },
+  { k: t(lang, 'about.registeredAddress'), v: company.registered_address },
+];
+---
+<Shell lang={lang} path={['about']} nav="about" title={a.seo_title || title} description={a.seo_description || a.hero_lead || plain(a.story)} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'building', trail }}>
+  {a.hero_lead && <p class="lead">{a.hero_lead}</p>}
+  <div class="frieze" aria-hidden="true"></div>
+  <Section title={t(lang, 'about.history')}>
+    {a.statement && <p class="statement">{a.statement}</p>}
+    <div class="prose" set:html={md(a.story)} />
+    {a.milestones?.length > 0 && (
+      <>
+        <h3 class="sub">{t(lang, 'about.milestones')}</h3>
+        <dl class="facts">{a.milestones.map((m: Entry) => <div><dt>{m.year}</dt><dd>{m.text}</dd></div>)}</dl>
+      </>
+    )}
+  </Section>
+  {a.vision && <Section title={t(lang, 'about.vision')}><p class="statement">{a.vision}</p></Section>}
+  <div class="grid grid--2">
+    {a.mission?.length > 0 && <Section title={t(lang, 'about.mission')}><ul class="checks">{a.mission.map((m: string) => <li>{m}</li>)}</ul></Section>}
+    {a.goals?.length > 0 && <Section title={t(lang, 'about.goals')}><ul class="checks">{a.goals.map((m: string) => <li>{m}</li>)}</ul></Section>}
+  </div>
+  {a.strengths?.length > 0 && (
+    <Section title={t(lang, 'about.strengths')} intro={a.strengths_intro}>
+      <div class="grid grid--2">{a.strengths.map((x: Entry) => <div class="card"><div class="card__body"><h3>{x.title}</h3><p>{x.text}</p></div></div>)}</div>
+    </Section>
+  )}
+  <Section title={t(lang, 'nav.businessUnits')} intro={a.units_intro}>
+    <div class="grid grid--2">
+      {units.map((u) => (
+        <a class="card svc" href={u.link || url(lang, 'group', u.slug)} target={u.link ? '_blank' : undefined} rel={u.link ? 'noopener' : undefined}>
+          <div class="card__body"><AppTile icon={u.icon || 'building'} /><h3>{u.title}</h3><p>{u.summary}</p><span class="link-arrow card__foot">{t(lang, 'cta.learnMore')} →</span></div>
+        </a>
+      ))}
+    </div>
+  </Section>
+  {a.cooperation?.length > 0 && (
+    <Section title={t(lang, 'about.cooperation')} intro={a.cooperation_intro}>
+      <div class="grid grid--2">{a.cooperation.map((c: Entry) => <div class="card"><div class="card__body"><h3>{c.title}</h3><p>{c.text}</p></div></div>)}</div>
+      {a.areas?.length > 0 && (
+        <>
+          <h3 class="sub">{t(lang, 'about.areas')}</h3>
+          <ul class="help-list">{a.areas.map((x: Entry) => <li><strong>{x.name}</strong><span>{x.text}</span></li>)}</ul>
+        </>
+      )}
+    </Section>
+  )}
+  {team.length > 0 && (
+    <Section title={t(lang, 'about.team')} intro={a.team_intro}>
+      <ul class="team">
+        {team.map((m) => (
+          <li class:list={{ 'is-placeholder': m.placeholder }}>
+            <div class="team__photo">{m.photo ? <img src={m.photo} alt={m.name} loading="lazy" /> : <Icon name="user" />}</div>
+            <h3>{m.name}</h3><p class="muted">{m.position}</p>{m.bio && <p>{m.bio}</p>}
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )}
+  <Section title={t(lang, 'about.registration')}>
+    <dl class="facts">{registry.map((r) => <div><dt>{r.k}</dt><dd>{isPlaceholder(r.v) ? t(lang, 'misc.placeholder') : r.v}</dd></div>)}</dl>
+    {company.licenses?.length > 0 && (
+      <ul class="doc-list">{company.licenses.map((l: Entry) => <li><Icon name="file" /><span>{l.file ? <a href={l.file} target="_blank" rel="noopener">{l.title}</a> : l.title}</span></li>)}</ul>
+    )}
+  </Section>
+</Shell>

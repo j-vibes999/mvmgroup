@@ -1,0 +1,113 @@
+# Home page content. Edit in the CMS: Pages → Home.
+# The home page: logo + short introduction on top, then every business in the group as a Lao temple "door".
+en:
+  seo_title: MVM GROUP — Tour & travel, government documents and Lao brands
+  seo_description: >-
+    MVM GROUP is a Lao company group: tour & travel, government documentation, and its own Lao food brands,
+    Big Elephant Yogurt and Pa Daek Sophanua.
+  hero_tagline: Building opportunities across Laos and beyond
+  hero_text: >-
+    A Lao company group: services and brands under one name.
+  group_title: The businesses of MVM GROUP
+  hero_image: ""
+  hero_video: ""
+  rooms:
+    - title: Tour & Travel
+      text: Tours across Laos with multilingual guides.
+      link: services/tour-travel
+      icon: mountain
+      kind: service
+      tone: navy
+    - title: Government Documents
+      text: Licences, permits and official paperwork, done for you.
+      link: services/government-documentation
+      icon: document
+      kind: service
+      tone: red
+    - title: Big Elephant Yogurt
+      text: Our own Lao yogurt brand.
+      link: brands/big-elephant-yogurt
+      icon: elephant
+      kind: brand
+      tone: green
+    - title: Pa Daek Sophanua
+      text: Traditional Lao fermented fish seasoning.
+      link: https://www.sophanua.online/
+      image: /uploads/brands/sophanua-logo.webp
+      icon: jar
+      kind: brand
+      tone: black
+    - title: Business Consulting
+      text: Company setup and market entry in Laos.
+      link: services/business-consulting
+      icon: briefcase
+      kind: service
+      tone: red
+    - title: Translation & Interpretation
+      text: Lao, Chinese, Thai and English.
+      link: services/translation-interpretation
+      icon: translate
+      kind: service
+      tone: black
+    - title: Import-Export & Logistics
+      text: Shipping and customs, to and from Laos.
+      link: services/import-export-logistics
+      icon: truck
+      kind: service
+      tone: navy
+    - title: Product Trading & Distribution
+      text: Sourcing and distribution across Laos.
+      link: services/product-trading-distribution
+      icon: box
+      kind: service
+      tone: green
+la:
+  seo_title: MVM GROUP — ທ່ອງທ່ຽວ, ເອກະສານທາງລັດ ແລະ ແບຣນລາວ
+  seo_description: >-
+    MVM GROUP ແມ່ນກຸ່ມບໍລິສັດລາວ: ທ່ອງທ່ຽວ ແລະ ການເດີນທາງ, ບໍລິການເອກະສານທາງລັດ ແລະ ແບຣນອາຫານລາວຂອງຕົນເອງ
+    ຄື ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ ແລະ ປາແດກໂສພານົວ.
+  hero_tagline: ສ້າງໂອກາດທາງທຸລະກິດ ທົ່ວ ສປປ ລາວ ແລະ ກ້າວສູ່ສາກົນ
+  hero_text: >-
+    ກຸ່ມບໍລິສັດລາວ ທີ່ລວມທຸລະກິດບໍລິການ ແລະ ແບຣນສິນຄ້າ ໄວ້ໃນເຄືອດຽວກັນ.
+  group_title: ທຸລະກິດໃນເຄືອ MVM GROUP
+  rooms:
+    - title: ທ່ອງທ່ຽວ ແລະ ທົວ
+      text: ທົວທົ່ວລາວ ພ້ອມໄກດ໌ຫຼາຍພາສາ.
+    - title: ເອກະສານທາງລັດ
+      text: ຮັບດຳເນີນໃບອະນຸຍາດ ແລະ ເອກະສານທາງລັດ ແທນທ່ານ.
+    - title: ໂຢເກີດທ໌ ຊ້າງໃຫຍ່
+      text: ແບຣນໂຢເກີດທ໌ລາວຂອງພວກເຮົາ.
+    - title: ປາແດກໂສພານົວ
+      text: ປາແດກລາວ ລົດຊາດດັ້ງເດີມ.
+    - title: ທີ່ປຶກສາທຸລະກິດ
+      text: ຈັດຕັ້ງບໍລິສັດ ແລະ ເຂົ້າສູ່ຕະຫຼາດລາວ.
+    - title: ແປພາສາ ແລະ ລ່າມ
+      text: ລາວ, ຈີນ, ໄທ ແລະ ອັງກິດ.
+    - title: ນຳເຂົ້າ-ສົ່ງອອກ ແລະ ໂລຈິສຕິກ
+      text: ຂົນສົ່ງ ແລະ ພິທີການພາສີ ເຂົ້າ-ອອກ ລາວ.
+    - title: ການຄ້າ ແລະ ຈັດຈຳໜ່າຍສິນຄ້າ
+      text: ຈັດຫາ ແລະ ຈັດຈຳໜ່າຍສິນຄ້າທົ່ວລາວ.
+zh:
+  seo_title: MVM 集团 — 旅游出行、政府文件办理与老挝品牌
+  seo_description: >-
+    MVM 集团是一家老挝企业集团，提供旅游出行与政府文件办理服务，并拥有自有老挝食品品牌大象酸奶和索法努阿鱼酱。
+  hero_tagline: 在老挝及更广阔的市场创造机遇
+  hero_text: 老挝企业集团：服务与品牌，汇聚一体。
+  group_title: MVM 集团旗下业务
+  rooms:
+    - title: 旅游出行
+      text: 老挝全境旅游，多语种导游。
+    - title: 政府文件办理
+      text: 执照、许可证及各类政府文件代办。
+    - title: 大象酸奶
+      text: 我们自有的老挝酸奶品牌。
+    - title: 索法努阿鱼酱
+      text: 传统风味的老挝鱼酱。
+    - title: 商务咨询
+      text: 老挝公司设立与市场进入。
+    - title: 翻译与口译
+      text: 老挝语、中文、泰语、英语。
+    - title: 进出口与物流
+      text: 进出老挝的运输与清关。
+    - title: 产品贸易与分销
+      text: 老挝全境采购与分销。

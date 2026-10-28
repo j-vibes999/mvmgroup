@@ -1,0 +1,96 @@
+---
+import Shell from '../../../../layouts/Shell.astro';
+import Section from '../../../../components/win/Section.astro';
+import Steps from '../../../../components/win/Steps.astro';
+import Icon from '../../../../components/Icon.astro';
+import { getSite, itemPaths } from '../../../../lib/site';
+import { md, plain } from '../../../../lib/markdown';
+import { abs, breadcrumbLd } from '../../../../lib/seo';
+import { isPlaceholder } from '../../../../lib/contact';
+import { t, url, type Lang } from '../../../../lib/i18n';
+import type { Entry } from '../../../../lib/content';
+
+export const getStaticPaths = () => itemPaths('brand', (l) => getSite().brands(l));
+const lang = Astro.params.lang as Lang;
+const { item: b } = Astro.props as { item: Entry };
+const trail = [{ label: t(lang, 'nav.brands'), href: url(lang, 'brands') }, { label: b.title }];
+const distributorHref = `${url(lang, 'partnership')}?type=distributor&brand=${b.slug}`;
+const others = [b.name_la, b.name_en, b.name_zh].filter((n) => n && n !== b.title);
+const outlets = (b.outlets || []).filter((o: Entry) => o.name);
+const bc = b.contact || {};
+const art = b.hero_image || (b.illustration ? `/img/illustrations/${b.illustration}.svg` : '');
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Brand',
+    name: b.name_en || b.title,
+    alternateName: [b.name_la, b.name_zh].filter(Boolean),
+    description: b.summary,
+    logo: b.logo ? abs(b.logo) : undefined,
+    url: abs(url(lang, 'brands', b.slug)),
+  },
+  breadcrumbLd(lang, trail),
+];
+---
+<Shell lang={lang} path={['brands', b.slug]} nav="brands" title={b.seo_title || b.title} description={b.seo_description || b.summary || plain(b.story)} image={b.hero_image || b.card_image || b.logo} jsonLd={jsonLd} win={{ title: b.title, eyebrow: t(lang, 'brand.of'), icon: 'jar', logo: b.logo, trail }}>
+  {others.length > 0 && <p class="card__meta">{others.join(' · ')}</p>}
+  {b.tagline && <p class="lead statement">{b.tagline}</p>}
+  {b.summary && <p class="muted">{b.summary}</p>}
+  <ul class="acts">
+    <li><a href={distributorHref}><span class="acts__c"><Icon name="users" /></span>{t(lang, 'cta.becomeDistributor')}</a></li>
+    <li><a href="#where"><span class="acts__c"><Icon name="pin" /></span>{t(lang, 'brand.whereToBuy')}</a></li>
+    <li><a href="#brand-contact"><span class="acts__c"><Icon name="chat" /></span>{t(lang, 'cta.contactBrand')}</a></li>
+    <li><button type="button" data-share><span class="acts__c"><Icon name="link" /></span><span data-share-label>{t(lang, 'news.share')}</span></button></li>
+  </ul>
+  {art && <figure class="hero-photo hero-photo--art"><img src={art} alt="" decoding="async" /></figure>}
+  <div class="frieze" aria-hidden="true"></div>
+  {(b.story || b.concept) && (
+    <Section title={t(lang, 'brand.story')}>
+      <div class="prose" set:html={md(b.story)} />
+      {b.concept && <><h3 class="sub">{t(lang, 'brand.concept')}</h3><div class="prose" set:html={md(b.concept)} /></>}
+    </Section>
+  )}
+  {b.highlights?.length > 0 && (
+    <Section title={t(lang, 'brand.highlights')}><div class="grid grid--2">{b.highlights.map((h: Entry) => <div class="card"><div class="card__body"><h3>{h.title}</h3>{h.text && <p>{h.text}</p>}</div></div>)}</div></Section>
+  )}
+  {b.products?.length > 0 && (
+    <Section title={t(lang, 'brand.products')}>
+      <div class="grid grid--2">
+        {b.products.map((p: Entry) => (
+          <article class="card">
+            <div class="card__media">{p.image ? <img src={p.image} alt={p.name} loading="lazy" /> : <div class="media-pending"><img src="/patterns/dok-champa.svg" alt="" /></div>}</div>
+            <div class="card__body"><h3>{p.name}</h3>{p.description && <p>{p.description}</p>}{p.size && <span class="card__meta">{p.size}</span>}</div>
+          </article>
+        ))}
+      </div>
+    </Section>
+  )}
+  {b.flavors?.length > 0 && <Section title={t(lang, 'brand.flavors')}><ul class="pills">{b.flavors.map((f: Entry) => <li>{f.name}{f.note && <small> · {f.note}</small>}</li>)}</ul></Section>}
+  {b.sizes?.length > 0 && <Section title={t(lang, 'brand.sizes')}><ul class="pills">{b.sizes.map((f: Entry) => <li>{f.name}{f.note && <small> · {f.note}</small>}</li>)}</ul></Section>}
+  {b.usage?.length > 0 && <Section title={t(lang, 'brand.usage')}><Steps items={b.usage} /></Section>}
+  {b.gallery?.length > 0 && (
+    <Section title={t(lang, 'brand.gallery')}>
+      <div class="gallery">{b.gallery.filter((g: Entry) => g.image).map((g: Entry) => <figure><img src={g.image} alt={g.caption || ''} loading="lazy" />{g.caption && <figcaption>{g.caption}</figcaption>}</figure>)}</div>
+    </Section>
+  )}
+  <Section title={t(lang, 'brand.whereToBuy')} id="where">
+    {outlets.length > 0 ? (
+      <dl class="facts">{outlets.map((o: Entry) => <div><dt>{o.type || t(lang, 'brand.whereToBuy')}</dt><dd>{o.link ? <a href={o.link} target="_blank" rel="noopener">{o.name}</a> : o.name}{o.area && <small class="muted"> · {o.area}</small>}</dd></div>)}</dl>
+    ) : (
+      <p class="muted">{t(lang, 'brand.noOutlets')}</p>
+    )}
+  </Section>
+  <div class="callout">
+    <p><strong>{t(lang, 'brand.distributorTitle')}</strong> — {t(lang, 'brand.distributorText')}</p>
+    <div class="hero-actions"><a class="btn btn--solid" href={distributorHref}>{t(lang, 'cta.becomeDistributor')}</a></div>
+  </div>
+  <Section title={t(lang, 'brand.contactTitle')} id="brand-contact">
+    <ul class="site-footer__contact">
+      {!isPlaceholder(bc.phone) && <li><Icon name="phone" /><a href={`tel:+${String(bc.phone).replace(/[^\d]/g, '')}`}>{bc.phone}</a></li>}
+      {!isPlaceholder(bc.email) && <li><Icon name="mail" /><a href={`mailto:${bc.email}`}>{bc.email}</a></li>}
+      {!isPlaceholder(bc.facebook) && <li><Icon name="facebook" /><a href={bc.facebook} target="_blank" rel="noopener">Facebook</a></li>}
+      {!isPlaceholder(bc.tiktok) && <li><Icon name="tiktok" /><a href={bc.tiktok} target="_blank" rel="noopener">TikTok</a></li>}
+    </ul>
+    <p><a class="link-arrow" href={`${url(lang, 'contact')}?service=product-distribution`}>{t(lang, 'cta.contactBrand')} →</a></p>
+  </Section>
+</Shell>

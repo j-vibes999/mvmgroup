@@ -1,0 +1,72 @@
+# Headings and intros for listing and form pages. Edit in the CMS: Pages → Page headings.
+en:
+  services_title: Our services
+  services_lead: >-
+    Government documents and permits, and tours and travel in Laos, with consulting, translation, logistics and
+    trading when you need them. Choose a service to see who it is for, how it works, the documents you need and
+    typical timelines.
+  brands_title: Our brands
+  brands_lead: >-
+    MVM GROUP develops and distributes its own consumer brands, built on Lao taste and made for
+    modern shelves.
+  projects_title: Our work
+  projects_lead: >-
+    A record of what MVM GROUP has delivered for clients and partners: government documents and permits,
+    tours and business visits, and the launch and distribution of our own brands.
+  news_title: News and insights
+  news_lead: >-
+    Company news, practical guides to investing and working in Laos, and updates from our brands.
+  contact_title: Contact MVM GROUP
+  contact_lead: >-
+    Call, message or write to us in Lao, Chinese, Thai or English. Use the form and the right team will
+    reply.
+  quote_title: Request a quote
+  quote_lead: >-
+    Tell us what you need and we will reply with the scope, timeline, documents required and a quotation.
+  partnership_title: Distributors and partners
+  partnership_lead: >-
+    Sell our brands, stock our products, invest with us or work with us as a business partner.
+  partnership_intro: ""
+la:
+  services_title: ບໍລິການຂອງພວກເຮົາ
+  services_lead: >-
+    ເອກະສານ ແລະ ໃບອະນຸຍາດທາງລັດ, ການທ່ອງທ່ຽວ ແລະ ການເດີນທາງໃນລາວ ພ້ອມທັງທີ່ປຶກສາ, ການແປພາສາ, ໂລຈິສຕິກ
+    ແລະ ການຄ້າ ເມື່ອທ່ານຕ້ອງການ. ເລືອກບໍລິການເພື່ອເບິ່ງວ່າເໝາະກັບໃຜ, ຂັ້ນຕອນເປັນແນວໃດ, ເອກະສານທີ່ຕ້ອງໃຊ້
+    ແລະ ໄລຍະເວລາໂດຍທົ່ວໄປ.
+  brands_title: ແບຣນຂອງພວກເຮົາ
+  brands_lead: >-
+    MVM GROUP ພັດທະນາ ແລະ ຈັດຈຳໜ່າຍແບຣນສິນຄ້າຂອງຕົນເອງ ທີ່ສ້າງຈາກລົດຊາດແບບລາວ
+    ແລະ ພ້ອມວາງຂາຍໃນຮ້ານຄ້າທັນສະໄໝ.
+  projects_title: ຜົນງານຂອງພວກເຮົາ
+  projects_lead: >-
+    ບັນທຶກຜົນງານທີ່ MVM GROUP ໄດ້ເຮັດໃຫ້ລູກຄ້າ ແລະ ຄູ່ຮ່ວມງານ: ເອກະສານ ແລະ ໃບອະນຸຍາດທາງລັດ,
+    ການທ່ອງທ່ຽວ ແລະ ທັດສະນະສຶກສາ, ພ້ອມທັງການເປີດຕົວ ແລະ ຈັດຈຳໜ່າຍແບຣນຂອງພວກເຮົາເອງ.
+  news_title: ຂ່າວສານ ແລະ ບົດຄວາມ
+  news_lead: >-
+    ຂ່າວບໍລິສັດ, ຄູ່ມືການລົງທຶນ ແລະ ການເຮັດວຽກໃນ ສປປ ລາວ ແລະ ຂ່າວຈາກແບຣນສິນຄ້າຂອງພວກເຮົາ.
+  contact_title: ຕິດຕໍ່ MVM GROUP
+  contact_lead: >-
+    ໂທ, ສົ່ງຂໍ້ຄວາມ ຫຼື ຂຽນຫາພວກເຮົາເປັນພາສາລາວ, ຈີນ, ໄທ ຫຼື ອັງກິດ. ກອກແບບຟອມ ແລ້ວທີມງານທີ່ກ່ຽວຂ້ອງຈະຕອບກັບ.
+  quote_title: ຂໍໃບສະເໜີລາຄາ
+  quote_lead: >-
+    ບອກພວກເຮົາວ່າທ່ານຕ້ອງການຫຍັງ ແລ້ວພວກເຮົາຈະຕອບກັບພ້ອມຂອບເຂດວຽກ, ໄລຍະເວລາ, ເອກະສານທີ່ຕ້ອງໃຊ້ ແລະ ໃບສະເໜີລາຄາ.
+  partnership_title: ຕົວແທນຈຳໜ່າຍ ແລະ ຄູ່ຮ່ວມທຸລະກິດ
+  partnership_lead: >-
+    ຈຳໜ່າຍແບຣນຂອງພວກເຮົາ, ນຳສິນຄ້າໄປວາງຂາຍ, ຮ່ວມລົງທຶນ ຫຼື ເຮັດວຽກຮ່ວມກັນໃນຖານະຄູ່ຮ່ວມທຸລະກິດ.
+zh:
+  services_title: 我们的服务
+  services_lead: >-
+    政府文件与许可证办理、老挝旅游与出行，并可按需提供咨询、翻译、物流和贸易服务。选择服务即可查看适用对象、办理流程、所需文件和一般周期。
+  brands_title: 旗下品牌
+  brands_lead: MVM 集团开发并分销自有消费品牌，源于老挝风味，适合现代零售渠道。
+  projects_title: 我们的成果
+  projects_lead: >-
+    记录 MVM 集团为客户和合作伙伴完成的工作：政府文件与许可证办理、旅游与商务考察，以及自有品牌的推出与分销。
+  news_title: 新闻与洞察
+  news_lead: 公司新闻、在老挝投资与经营的实用指南，以及旗下品牌动态。
+  contact_title: 联系 MVM 集团
+  contact_lead: 欢迎使用老挝语、中文、泰语或英语致电、留言或发邮件给我们。填写表单后，相关团队会尽快回复。
+  quote_title: 获取报价
+  quote_lead: 告诉我们您的需求，我们将回复工作范围、时间安排、所需文件及报价。
+  partnership_title: 经销与合作
+  partnership_lead: 销售我们的品牌、采购产品上架、投资合作，或成为我们的业务合作伙伴。

@@ -1,0 +1,21 @@
+en:
+  title: Consumer Brands
+  summary: Food brands developed and distributed by MVM GROUP, starting with Big Elephant Yogurt and Pa Daek Sophanua.
+  description: |-
+    MVM GROUP builds its own consumer brands. We develop products, design packaging, and sell through distributors, shops and restaurants. New brands are added as the group grows.
+  icon: jar
+  status: active
+  show_in_menu: true
+  order: 4
+  link: ""
+  image: ""
+la:
+  title: ແບຣນສິນຄ້າບໍລິໂພກ
+  summary: ແບຣນອາຫານທີ່ MVM GROUP ພັດທະນາ ແລະ ຈັດຈຳໜ່າຍ, ເລີ່ມຈາກ ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ ແລະ ປາແດກໂສພານົວ.
+  description: |-
+    MVM GROUP ສ້າງແບຣນສິນຄ້າຂອງຕົນເອງ. ພວກເຮົາພັດທະນາຜະລິດຕະພັນ, ອອກແບບບັນຈຸພັນ ແລະ ຈຳໜ່າຍຜ່ານຕົວແທນ, ຮ້ານຄ້າ ແລະ ຮ້ານອາຫານ. ແບຣນໃໝ່ຈະຖືກເພີ່ມເຂົ້າ ຕາມການເຕີບໃຫຍ່ຂອງກຸ່ມບໍລິສັດ.
+zh:
+  title: 消费品牌
+  summary: MVM 集团开发并分销的食品品牌，首批包括大象酸奶和索法努阿鱼酱。
+  description: |-
+    MVM 集团打造自有消费品牌。我们开发产品、设计包装，并通过经销商、商店和餐厅进行销售。随着集团发展，将陆续推出新品牌。

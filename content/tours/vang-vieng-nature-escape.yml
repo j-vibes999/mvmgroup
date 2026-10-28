@@ -1,0 +1,160 @@
+en:
+  title: Vang Vieng Nature Escape
+  summary: >-
+    Limestone mountains, a blue lagoon, caves and the Nam Song river, about one hour from Vientiane on the
+    Laos–China Railway.
+  service: tour-travel
+  order: 2
+  duration: 2 days · 1 night
+  route: Vientiane → Vang Vieng → Vientiane
+  image: /img/photos/laos-vang-vieng-card.jpg
+  hero_image: /img/photos/laos-vang-vieng-wide.jpg
+  photo_credit: >-
+    Photo: [Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin), Wikimedia Commons,
+    [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  best_for: Nature lovers, couples, friends and families
+  start: Vientiane
+  end: Vientiane
+  transport: Laos–China Railway and private van
+  overview: >-
+    Vang Vieng sits among dramatic karst peaks on the Nam Song river. With the fast train it is an easy overnight
+    escape from Vientiane: swim in a blue lagoon, explore caves, paddle the river and watch the sun set behind the
+    mountains.
+  highlights:
+    - Fast train from Vientiane in about 1 hour
+    - The Blue Lagoon and Tham Phu Kham cave
+    - Kayaking on the Nam Song river
+    - Sunset over karst mountains and rice fields
+    - "Optional: a sunrise hot-air balloon flight"
+  days:
+    - title: Train to Vang Vieng, the lagoon and the river
+      visits:
+        - Morning train from Vientiane to Vang Vieng (about 1 hour)
+        - The Blue Lagoon and Tham Phu Kham cave
+        - Lunch with a view of the mountains
+        - Kayaking on the Nam Song river
+        - Sunset over the karst peaks and rice fields
+      overnight: Riverside hotel or resort in Vang Vieng
+      transport: Laos–China Railway, then private van
+    - title: Sunrise, caves and the train back
+      visits:
+        - "Optional: sunrise hot-air balloon flight"
+        - Tham Chang cave, above the Nam Song river
+        - "Optional: short hike to the Nam Xay viewpoint"
+        - Afternoon train back to Vientiane
+      overnight: Back in Vientiane
+      transport: Private van and Laos–China Railway
+  includes:
+    - Return train tickets Vientiane–Vang Vieng (second class)
+    - Private van with driver in Vang Vieng
+    - Guide speaking Lao, English, Chinese or Thai
+    - 1 night in a hotel with breakfast
+    - Kayaking with equipment and instructor
+    - Entrance fees for the sights listed
+    - Drinking water
+  excludes:
+    - Hot-air balloon flight (optional)
+    - Lunch and dinner
+    - Personal expenses and tips
+la:
+  title: ທົວວັງວຽງ ທຳມະຊາດ
+  summary: >-
+    ພູຫີນປູນ, ບຶງນ້ຳສີຟ້າ, ຖ້ຳ ແລະ ແມ່ນ້ຳຊອງ ຫ່າງຈາກວຽງຈັນພຽງປະມານ 1 ຊົ່ວໂມງ ດ້ວຍລົດໄຟລາວ-ຈີນ.
+  duration: 2 ມື້ 1 ຄືນ
+  route: ວຽງຈັນ → ວັງວຽງ → ວຽງຈັນ
+  photo_credit: >-
+    ພາບ: [Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin), Wikimedia Commons,
+    [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  best_for: ຜູ້ຮັກທຳມະຊາດ, ຄູ່ຮັກ, ໝູ່ເພື່ອນ ແລະ ຄອບຄົວ
+  start: ວຽງຈັນ
+  end: ວຽງຈັນ
+  transport: ລົດໄຟລາວ-ຈີນ ແລະ ລົດຕູ້ສ່ວນຕົວ
+  overview: >-
+    ວັງວຽງຕັ້ງຢູ່ທ່າມກາງພູຫີນປູນອັນສວຍງາມ ແຄມແມ່ນ້ຳຊອງ. ດ້ວຍລົດໄຟຄວາມໄວສູງ ທ່ານສາມາດໄປພັກ 1 ຄືນໄດ້ງ່າຍໆ:
+    ລອຍນ້ຳໃນບຶງສີຟ້າ, ສຳຫຼວດຖ້ຳ, ພາຍເຮືອຄາຢັກ ແລະ ຊົມຕາເວັນຕົກຫຼັງພູ.
+  highlights:
+    - ລົດໄຟຄວາມໄວສູງຈາກວຽງຈັນ ປະມານ 1 ຊົ່ວໂມງ
+    - ບຶງນ້ຳສີຟ້າ (Blue Lagoon) ແລະ ຖ້ຳພູຄຳ
+    - ພາຍເຮືອຄາຢັກຕາມລຳນ້ຳຊອງ
+    - ຕາເວັນຕົກຫຼັງພູຫີນປູນ ແລະ ທົ່ງນາ
+    - "ທາງເລືອກ: ຂີ່ບານລູນລົມຮ້ອນຕອນເຊົ້າ"
+  days:
+    - title: ຂີ່ລົດໄຟໄປວັງວຽງ, ບຶງສີຟ້າ ແລະ ລຳນ້ຳຊອງ
+      visits:
+        - ຂີ່ລົດໄຟຕອນເຊົ້າຈາກວຽງຈັນໄປວັງວຽງ (ປະມານ 1 ຊົ່ວໂມງ)
+        - ບຶງນ້ຳສີຟ້າ ແລະ ຖ້ຳພູຄຳ
+        - ອາຫານທ່ຽງ ພ້ອມວິວພູ
+        - ພາຍເຮືອຄາຢັກຕາມລຳນ້ຳຊອງ
+        - ຊົມຕາເວັນຕົກຫຼັງພູຫີນປູນ ແລະ ທົ່ງນາ
+      overnight: ໂຮງແຮມ ຫຼື ຣີສອດແຄມນ້ຳຊອງ ວັງວຽງ
+      transport: ລົດໄຟລາວ-ຈີນ ຕໍ່ດ້ວຍລົດຕູ້ສ່ວນຕົວ
+    - title: ຕາເວັນຂຶ້ນ, ຖ້ຳ ແລະ ກັບວຽງຈັນ
+      visits:
+        - "ທາງເລືອກ: ຂີ່ບານລູນລົມຮ້ອນຊົມຕາເວັນຂຶ້ນ"
+        - ຖ້ຳຈັງ ເທິງຝັ່ງນ້ຳຊອງ
+        - "ທາງເລືອກ: ຍ່າງຂຶ້ນຈຸດຊົມວິວນ້ຳຊາຍ"
+        - ຂີ່ລົດໄຟຕອນບ່າຍກັບວຽງຈັນ
+      overnight: ກັບຮອດວຽງຈັນ
+      transport: ລົດຕູ້ສ່ວນຕົວ ແລະ ລົດໄຟລາວ-ຈີນ
+  includes:
+    - ປີ້ລົດໄຟໄປ-ກັບ ວຽງຈັນ-ວັງວຽງ (ຊັ້ນ 2)
+    - ລົດຕູ້ສ່ວນຕົວພ້ອມຄົນຂັບໃນວັງວຽງ
+    - ໄກດ໌ພາສາລາວ, ອັງກິດ, ຈີນ ຫຼື ໄທ
+    - ໂຮງແຮມ 1 ຄືນ ພ້ອມອາຫານເຊົ້າ
+    - ພາຍເຮືອຄາຢັກ ພ້ອມອຸປະກອນ ແລະ ຄູຝຶກ
+    - ຄ່າເຂົ້າຊົມສະຖານທີ່ຕາມໂປຣແກຣມ
+    - ນ້ຳດື່ມ
+  excludes:
+    - ຄ່າຂີ່ບານລູນລົມຮ້ອນ (ທາງເລືອກ)
+    - ອາຫານທ່ຽງ ແລະ ອາຫານແລງ
+    - ຄ່າໃຊ້ຈ່າຍສ່ວນຕົວ ແລະ ທິບ
+zh:
+  title: 万荣自然之旅
+  summary: 喀斯特山峰、蓝色泻湖、溶洞和南松河，乘中老铁路从万象出发约1小时即达。
+  duration: 2天1晚
+  route: 万象 → 万荣 → 万象
+  photo_credit: >-
+    图片：[Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin)，Wikimedia Commons，
+    [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+  best_for: 自然爱好者、情侣、朋友结伴及家庭
+  start: 万象
+  end: 万象
+  transport: 中老铁路及私人商务车
+  overview: >-
+    万荣坐落在南松河畔壮观的喀斯特山峰之间。乘坐动车，从万象出发即可轻松享受两天一晚：在蓝色泻湖游泳、探索溶洞、在河上划皮划艇，欣赏山后日落。
+  highlights:
+    - 从万象乘动车约1小时到达
+    - 蓝色泻湖与普坎洞
+    - 南松河皮划艇
+    - 喀斯特山峰与稻田日落
+    - 可选：清晨热气球
+  days:
+    - title: 乘火车前往万荣，泻湖与南松河
+      visits:
+        - 上午乘火车从万象前往万荣（约1小时）
+        - 蓝色泻湖与普坎洞
+        - 山景餐厅午餐
+        - 南松河皮划艇
+        - 欣赏喀斯特山峰与稻田日落
+      overnight: 万荣南松河畔酒店或度假村
+      transport: 中老铁路，转乘私人商务车
+    - title: 日出、溶洞与返程
+      visits:
+        - 可选：乘热气球看日出
+        - 南松河畔的章洞
+        - 可选：徒步登上南赛观景台
+        - 下午乘火车返回万象
+      overnight: 返回万象
+      transport: 私人商务车及中老铁路
+  includes:
+    - 万象—万荣往返火车票（二等座）
+    - 万荣当地带司机私人商务车
+    - 老挝语、英语、中文或泰语导游
+    - 1晚酒店含早餐
+    - 皮划艇（含装备及教练）
+    - 行程所列景点门票
+    - 饮用水
+  excludes:
+    - 热气球（自选项目）
+    - 午餐及晚餐
+    - 个人消费及小费

@@ -1,0 +1,10 @@
+---
+import { ICONS } from '../lib/icons';
+interface Props { icon?: string; logo?: string; badge?: boolean }
+const { icon = 'compass', logo, badge } = Astro.props;
+const glyph = ICONS[icon] ? icon : 'compass';
+---
+<span class:list={['app', { 'app--logo': logo }]} aria-hidden="true">
+  {logo ? <img src={logo} alt="" decoding="async" /> : <svg viewBox="0 0 24 24"><use href={`#i-${glyph}`} /></svg>}
+  {badge && <span class="app__badge">↗</span>}
+</span>

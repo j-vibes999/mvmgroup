@@ -1,0 +1,27 @@
+en:
+  title: Business & Government Services
+  summary: Consulting, government documentation, and translation for companies and investors in Laos.
+  description: |-
+    This unit helps companies and investors set up and operate in Laos. We advise on business structure and market entry, prepare and follow up government documents and permits, and provide translation and interpretation in Lao, Chinese, Thai and English.
+
+    Most clients use more than one of these services at the same time, so one coordinator manages the whole file.
+  icon: briefcase
+  status: active
+  show_in_menu: true
+  order: 1
+  link: ""
+  image: ""
+la:
+  title: ບໍລິການທຸລະກິດ ແລະ ເອກະສານທາງລັດ
+  summary: ທີ່ປຶກສາ, ເອກະສານທາງລັດ ແລະ ການແປພາສາ ສຳລັບບໍລິສັດ ແລະ ນັກລົງທຶນໃນ ສປປ ລາວ.
+  description: |-
+    ໜ່ວຍທຸລະກິດນີ້ຊ່ວຍບໍລິສັດ ແລະ ນັກລົງທຶນ ໃນການສ້າງຕັ້ງ ແລະ ດຳເນີນທຸລະກິດໃນ ສປປ ລາວ. ພວກເຮົາໃຫ້ຄຳປຶກສາດ້ານໂຄງສ້າງທຸລະກິດ ແລະ ການເຂົ້າສູ່ຕະຫຼາດ, ກະກຽມ ແລະ ຕິດຕາມເອກະສານທາງລັດ ແລະ ໃບອະນຸຍາດ, ພ້ອມທັງໃຫ້ບໍລິການແປພາສາ ແລະ ລ່າມ ເປັນພາສາລາວ, ຈີນ, ໄທ ແລະ ອັງກິດ.
+
+    ລູກຄ້າສ່ວນຫຼາຍໃຊ້ຫຼາຍບໍລິການພ້ອມກັນ, ສະນັ້ນ ຈຶ່ງມີຜູ້ປະສານງານຄົນດຽວດູແລທັງໝົດ.
+zh:
+  title: 商务与政府事务服务
+  summary: 为在老挝的企业和投资者提供咨询、政府文件办理及翻译服务。
+  description: |-
+    本板块帮助企业和投资者在老挝设立和运营业务。我们提供企业架构与市场进入咨询，准备并跟进政府文件和许可证，并提供老挝语、中文、泰语和英语的笔译与口译服务。
+
+    大多数客户会同时使用多项服务，因此由一位协调人统筹整个项目。

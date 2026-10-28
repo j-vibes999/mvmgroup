@@ -1,0 +1,714 @@
+# Decap CMS configuration for the MVM GROUP website.
+# Docs: https://decapcms.org/docs/configuration-options/
+#
+# Editors sign in at https://<your-domain>/admin/ with Netlify Identity.
+# Every save creates a commit in the Git repository; Netlify rebuilds the site
+# automatically (about 1 minute).
+#
+# Content is stored per entry in ONE file holding all three languages
+# (en / la / zh). Fields marked "i18n" are translated; the others (images,
+# order, contact details...) are shared by all languages.
+
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: 'Upload “{{path}}”'
+    deleteMedia: 'Delete “{{path}}”'
+
+# To edit content on your own computer without signing in:
+#   1. run `npx decap-server` in the project folder
+#   2. run `npm run dev` and open http://localhost:4321/admin/
+#   3. uncomment the next line
+# local_backend: true
+
+site_url: https://www.mvmgroup.la
+display_url: https://www.mvmgroup.la
+logo_url: /brand/logo-emblem.svg
+
+media_folder: public/uploads
+public_folder: /uploads
+
+i18n:
+  structure: single_file
+  locales: [en, la, zh]
+  default_locale: en
+
+collections:
+  # ---------------------------------------------------------------------------
+  - name: services
+    label: Services
+    label_singular: Service
+    description: Each service gets its own page at /<language>/services/<file-name>/. New services appear in the menus automatically.
+    folder: content/services
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{order}} · {{title}}'
+    sortable_fields: [order, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Short summary (1 sentence), name: summary, widget: text, i18n: true, required: false }
+      - label: Business unit
+        name: unit
+        widget: relation
+        collection: units
+        value_field: '{{slug}}'
+        search_fields: [title]
+        display_fields: [title]
+        required: false
+      - label: Icon
+        name: icon
+        widget: select
+        options: [compass, document, translate, mountain, truck, box, briefcase, jar, building, chart, media, chip, users, news]
+        default: compass
+      - label: Option to pre-select on the quote form
+        name: quote_option
+        widget: select
+        required: false
+        options:
+          - { label: Business consulting, value: business-consulting }
+          - { label: Government documentation, value: government-documentation }
+          - { label: Translation, value: translation }
+          - { label: Tour, value: tour }
+          - { label: Import-export, value: import-export }
+          - { label: Logistics, value: logistics }
+          - { label: Product distribution, value: product-distribution }
+      - { label: Order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+      - { label: Image (optional), name: image, widget: image, required: false }
+      - { label: What this service is, name: intro, widget: markdown, i18n: true, required: false }
+      - label: Who it is for
+        name: audience
+        widget: list
+        i18n: true
+        required: false
+        field: { label: Item, name: item, widget: string }
+      - label: How we help
+        name: help
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+      - label: Process steps
+        name: process
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Step, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+      - label: Documents required
+        name: documents
+        widget: list
+        i18n: true
+        required: false
+        field: { label: Document, name: item, widget: string }
+      - label: Processing time
+        name: timeline
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Item, name: item, widget: string }
+          - { label: Duration, name: duration, widget: string }
+      - label: FAQ
+        name: faq
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: text }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+      # Tour page fields: only used when tour packages are linked to this service (Tour & Travel)
+      - { label: 'Tours page: heading', name: hub_title, widget: string, i18n: true, required: false }
+      - { label: 'Tours page: intro', name: hub_lead, widget: text, i18n: true, required: false }
+      - label: 'Tours page: key points (ticks under the intro)'
+        name: hub_facts
+        widget: list
+        i18n: true
+        required: false
+        field: { label: Point, name: item, widget: string }
+      - label: 'Tours page: slideshow photos (wide, at least 1600px)'
+        name: hero_photos
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Photo, name: image, widget: image }
+          - { label: Place name, name: place, widget: string, required: false }
+      - { label: 'Tours page: photo credit', name: hub_credit, widget: string, i18n: true, required: false }
+      - { label: 'Tours page: packages intro', name: packages_intro, widget: text, i18n: true, required: false }
+      - { label: 'Tours page: destinations intro', name: destinations_intro, widget: text, i18n: true, required: false }
+      - label: 'Tours page: destinations'
+        name: destinations
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Photo, name: image, widget: image, required: false }
+          - { label: Description, name: text, widget: text, required: false }
+          - { label: Top sights, name: sights, widget: list, field: { label: Sight, name: item, widget: string }, required: false }
+          - { label: Where to stay, name: stay, widget: string, required: false }
+          - { label: Getting there, name: getting_there, widget: text, required: false }
+          - { label: Time needed, name: time, widget: string, required: false }
+      - { label: 'Tours page: travel information intro', name: info_intro, widget: text, i18n: true, required: false }
+      - label: 'Tours page: travel information'
+        name: travel_info
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - label: Icon
+            name: icon
+            widget: select
+            required: false
+            options: [calendar, globe, compass, file, box, users, train, bed, clock, pin, mountain, chat]
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: markdown }
+
+  # ---------------------------------------------------------------------------
+  - name: tours
+    label: Tour packages
+    label_singular: Tour package
+    description: >-
+      Tour packages appear on the Tour & Travel page (/<language>/services/tour-travel/) and each gets its own page with
+      a day-by-day itinerary. Prices are not shown: visitors request a quotation.
+    folder: content/tours
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{order}} · {{title}} ({{duration}})'
+    sortable_fields: [order, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Short summary, name: summary, widget: text, i18n: true }
+      - label: Service page it belongs to
+        name: service
+        widget: relation
+        collection: services
+        value_field: '{{slug}}'
+        search_fields: [title]
+        display_fields: [title]
+        default: tour-travel
+      - { label: 'Duration (e.g. "3 days · 2 nights")', name: duration, widget: string, i18n: true }
+      - { label: 'Route (e.g. "Vientiane → Vang Vieng")', name: route, widget: string, i18n: true, required: false }
+      - { label: 'Card photo (4:3, about 800×600)', name: image, widget: image }
+      - { label: 'Top photo (wide, about 1600×700)', name: hero_image, widget: image, required: false }
+      - { label: Photo credit (if needed), name: photo_credit, widget: string, i18n: true, required: false }
+      - { label: Best for, name: best_for, widget: string, i18n: true, required: false }
+      - { label: Starts, name: start, widget: string, i18n: true, required: false }
+      - { label: Ends, name: end, widget: string, i18n: true, required: false }
+      - { label: Transport, name: transport, widget: string, i18n: true, required: false }
+      - { label: About this tour, name: overview, widget: markdown, i18n: true, required: false }
+      - { label: Highlights, name: highlights, widget: list, i18n: true, required: false, field: { label: Highlight, name: item, widget: string } }
+      - label: Day-by-day itinerary
+        name: days
+        widget: list
+        i18n: true
+        label_singular: Day
+        fields:
+          - { label: Title of the day, name: title, widget: string }
+          - { label: Where we go, name: visits, widget: list, field: { label: Stop, name: item, widget: string } }
+          - { label: Extra notes (optional), name: text, widget: markdown, required: false }
+          - { label: Overnight (where to sleep), name: overnight, widget: string, required: false }
+          - { label: Transport, name: transport, widget: string, required: false }
+      - { label: Included, name: includes, widget: list, i18n: true, required: false, field: { label: Item, name: item, widget: string } }
+      - { label: Not included, name: excludes, widget: list, i18n: true, required: false, field: { label: Item, name: item, widget: string } }
+      - { label: Order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: units
+    label: Business units
+    label_singular: Business unit
+    description: >-
+      Divisions of MVM GROUP. Set Status to "active" to show a unit on the website (home page structure, About page,
+      About menu and its own page at /<language>/group/<file-name>/). Units with status "planned" stay hidden.
+    folder: content/units
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{order}} · {{title}} ({{status}})'
+    sortable_fields: [order, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Short summary, name: summary, widget: text, i18n: true, required: false }
+      - { label: Description, name: description, widget: markdown, i18n: true, required: false }
+      - label: Status
+        name: status
+        widget: select
+        options: [active, planned]
+        default: planned
+      - { label: Show in the About menu, name: show_in_menu, widget: boolean, default: true, required: false }
+      - label: Icon
+        name: icon
+        widget: select
+        options: [briefcase, mountain, truck, jar, building, chart, media, chip, compass, document, translate, box, users]
+        default: building
+      - { label: Order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: External link instead of a unit page (optional), name: link, widget: string, required: false }
+      - { label: Image (optional), name: image, widget: image, required: false }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: brands
+    label: Brands
+    label_singular: Brand
+    description: Each brand gets its own page at /<language>/brands/<file-name>/. Sections without content are hidden.
+    folder: content/brands
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{order}} · {{title}}'
+    sortable_fields: [order, title]
+    i18n: true
+    fields:
+      - { label: Name shown in menus, name: title, widget: string, i18n: true }
+      - { label: Brand name in English, name: name_en, widget: string }
+      - { label: Brand name in Lao, name: name_la, widget: string, required: false }
+      - { label: Brand name in Chinese, name: name_zh, widget: string, required: false }
+      - label: Business unit
+        name: unit
+        widget: relation
+        collection: units
+        value_field: '{{slug}}'
+        search_fields: [title]
+        display_fields: [title]
+        required: false
+      - { label: Order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+      - { label: Brand background colour, name: accent_color, widget: color, required: false }
+      - { label: Logo, name: logo, widget: image, required: false }
+      - { label: Hero photo (product shot), name: hero_image, widget: image, required: false }
+      - { label: Card photo (home and brand list), name: card_image, widget: image, required: false }
+      - label: Placeholder illustration (used until photos are added)
+        name: illustration
+        widget: select
+        required: false
+        options: [big-elephant, pa-daek, products]
+      - { label: Tagline, name: tagline, widget: string, i18n: true, required: false }
+      - { label: Short summary, name: summary, widget: text, i18n: true, required: false }
+      - { label: Brand story, name: story, widget: markdown, i18n: true, required: false }
+      - { label: Concept, name: concept, widget: markdown, i18n: true, required: false }
+      - label: Highlights
+        name: highlights
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+      - label: Products
+        name: products
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: text, required: false }
+          - { label: Size, name: size, widget: string, required: false }
+          - { label: Photo, name: image, widget: image, required: false }
+      - label: Flavours
+        name: flavors
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Note, name: note, widget: string, required: false }
+      - label: Pack sizes
+        name: sizes
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Note, name: note, widget: string, required: false }
+      - label: How to use
+        name: usage
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Step, name: title, widget: string }
+          - { label: Text, name: text, widget: text, required: false }
+      - label: Gallery (photos or videos)
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Photo, name: image, widget: image, required: false }
+          - { label: Caption / alt text, name: alt, widget: string, required: false }
+          - { label: Video (YouTube link or uploaded MP4), name: video, widget: file, required: false }
+      - label: Where to buy
+        name: outlets
+        widget: list
+        i18n: true
+        required: false
+        fields:
+          - { label: Shop or outlet name, name: name, widget: string }
+          - { label: City / province, name: area, widget: string, required: false }
+          - { label: 'Type (supermarket, shop, online...)', name: type, widget: string, required: false }
+          - { label: Link (optional), name: link, widget: string, required: false }
+      - label: Brand contact
+        name: contact
+        widget: object
+        required: false
+        fields:
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Facebook page URL, name: facebook, widget: string, required: false }
+          - { label: TikTok URL, name: tiktok, widget: string, required: false }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: projects
+    label: Our work (projects)
+    label_singular: Work entry
+    description: Portfolio entries at /<language>/projects/<file-name>/. Tick "Sample entry" for placeholders (they are hidden from search engines).
+    folder: content/projects
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{title}} ({{year}})'
+    sortable_fields: [year, order, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Short summary, name: summary, widget: text, i18n: true, required: false }
+      - { label: Client, name: client, widget: string, i18n: true, required: false }
+      - label: Type of work
+        name: category
+        widget: select
+        options:
+          - { label: Business consulting, value: business-consulting }
+          - { label: Government documentation, value: government-documentation }
+          - { label: Translation, value: translation }
+          - { label: Import-export, value: import-export }
+          - { label: Logistics, value: logistics }
+          - { label: Business visits, value: business-tours }
+          - { label: Tourism, value: tourism }
+          - { label: Brand development, value: brand-development }
+      - label: Services used
+        name: services
+        widget: relation
+        collection: services
+        value_field: '{{slug}}'
+        search_fields: [title]
+        display_fields: [title]
+        multiple: true
+        required: false
+      - { label: Year, name: year, widget: string, required: false }
+      - { label: Location, name: location, widget: string, i18n: true, required: false }
+      - { label: Cover photo, name: cover, widget: image, required: false }
+      - { label: Cover photo description, name: cover_alt, widget: string, i18n: true, required: false }
+      - { label: Project story, name: body, widget: markdown, i18n: true, required: false }
+      - label: Gallery (photos or videos)
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Photo, name: image, widget: image, required: false }
+          - { label: Caption / alt text, name: alt, widget: string, required: false }
+          - { label: Video (YouTube link or uploaded MP4), name: video, widget: file, required: false }
+      - { label: Show on home page, name: featured, widget: boolean, default: false, required: false }
+      - { label: Sample entry (placeholder), name: sample, widget: boolean, default: false, required: false }
+      - { label: Order, name: order, widget: number, value_type: int, default: 10, required: false }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: news
+    label: News & articles
+    label_singular: Article
+    description: Articles at /<language>/news/<file-name>/, newest first. Leave a translation empty to show the English text in that language.
+    folder: content/news
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{date}} · {{title}}'
+    sortable_fields: [date, title]
+    i18n: true
+    fields:
+      - { label: Title, name: title, widget: string, i18n: true }
+      - { label: Date, name: date, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false }
+      - label: Category
+        name: category
+        widget: select
+        options:
+          - { label: Company news, value: company-news }
+          - { label: Investing in Laos, value: investing-in-laos }
+          - { label: Government documents, value: government-documents }
+          - { label: Import-export, value: import-export }
+          - { label: Logistics, value: logistics }
+          - { label: Travel, value: travel }
+          - { label: Brand news, value: brand-news }
+      - { label: Cover photo, name: cover, widget: image, required: false }
+      - { label: Cover photo description, name: cover_alt, widget: string, i18n: true, required: false }
+      - { label: Excerpt (shown in lists and search results), name: excerpt, widget: text, i18n: true, required: false }
+      - { label: Article, name: body, widget: markdown, i18n: true }
+      - { label: Author, name: author, widget: string, i18n: true, required: false }
+      - { label: Featured, name: featured, widget: boolean, default: false, required: false }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+      - { label: SEO title (optional), name: seo_title, widget: string, i18n: true, required: false }
+      - { label: SEO description (optional), name: seo_description, widget: text, i18n: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: team
+    label: Leadership team
+    label_singular: Team member
+    folder: content/team
+    format: yml
+    extension: yml
+    create: true
+    identifier_field: name
+    slug: '{{slug}}'
+    summary: '{{order}} · {{name}}'
+    sortable_fields: [order, name]
+    i18n: true
+    fields:
+      - { label: Name, name: name, widget: string, i18n: true }
+      - { label: Position, name: position, widget: string, i18n: true }
+      - { label: Short bio, name: bio, widget: text, i18n: true, required: false }
+      - { label: 'Photo (portrait, 4:5)', name: photo, widget: image, required: false }
+      - { label: Order, name: order, widget: number, value_type: int, default: 10 }
+      - { label: Placeholder profile, name: placeholder, widget: boolean, default: false, required: false }
+      - { label: Published, name: published, widget: boolean, default: true, required: false }
+
+  # ---------------------------------------------------------------------------
+  - name: settings
+    label: Settings & pages
+    i18n: true
+    files:
+      - name: site
+        label: 'Site settings (contact, logo, analytics)'
+        file: content/settings/site.yml
+        i18n: true
+        fields:
+          - { label: Site name, name: site_name, widget: string }
+          - { label: 'Website address (https://...)', name: site_url, widget: string }
+          - { label: Logo (replaces the placeholder logo), name: logo, widget: image, required: false }
+          - { label: Favicon (SVG or PNG), name: favicon, widget: image, required: false }
+          - { label: Social sharing image (1200×630), name: og_image, widget: image, required: false }
+          - { label: Tagline, name: tagline, widget: string, i18n: true }
+          - { label: Default meta description, name: description, widget: text, i18n: true }
+          - label: Pillars under the logo
+            name: pillars
+            widget: list
+            i18n: true
+            field: { label: Word, name: word, widget: string }
+          - { label: Footer description, name: footer_text, widget: text, i18n: true }
+          - { label: Address, name: address, widget: string, i18n: true, required: false }
+          - { label: Office hours, name: hours, widget: string, i18n: true, required: false }
+          - label: Contact channels
+            name: contact
+            widget: object
+            hint: Values containing XXXX are treated as placeholders and are not linked.
+            fields:
+              - { label: 'Phone (international format, e.g. +856 20 1234 5678)', name: phone, widget: string, required: false }
+              - { label: WhatsApp number, name: whatsapp, widget: string, required: false }
+              - { label: WeChat ID, name: wechat, widget: string, required: false }
+              - { label: WeChat QR code, name: wechat_qr, widget: image, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Google Maps embed URL (Share → Embed a map → copy the src), name: map_embed, widget: string, required: false }
+              - { label: Google Maps link, name: map_link, widget: string, required: false }
+              - { label: Facebook page URL, name: facebook, widget: string, required: false }
+              - { label: TikTok URL, name: tiktok, widget: string, required: false }
+          - label: Company registration
+            name: company
+            widget: object
+            fields:
+              - { label: Registered company name, name: legal_name, widget: string, required: false }
+              - { label: Enterprise registration no., name: registration_no, widget: string, required: false }
+              - { label: Tax ID (TIN), name: tax_id, widget: string, required: false }
+              - { label: Registered address, name: registered_address, widget: string, required: false }
+              - label: Licences and certificates
+                name: licenses
+                widget: list
+                required: false
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: File (PDF or image), name: file, widget: file, required: false }
+          - label: Analytics
+            name: analytics
+            widget: object
+            fields:
+              - { label: Google Analytics 4 ID (G-XXXXXXX), name: ga4_id, widget: string, required: false }
+              - { label: Meta Pixel ID, name: meta_pixel_id, widget: string, required: false }
+              - { label: Google Search Console verification code, name: google_site_verification, widget: string, required: false }
+          - label: Forms
+            name: forms
+            widget: object
+            fields:
+              - label: Add Google reCAPTCHA to forms
+                name: recaptcha
+                widget: boolean
+                default: false
+                required: false
+                hint: Off by default because Google services are blocked for visitors in mainland China. Netlify's honeypot and spam filter are always on.
+          - label: Extra menu items
+            name: menu_extra
+            widget: list
+            required: false
+            hint: Shown in the main menu before Contact. Use a path such as "group/transportation" or a full https:// link.
+            fields:
+              - { label: Label (English), name: label_en, widget: string }
+              - { label: Label (Lao), name: label_la, widget: string, required: false }
+              - { label: Label (Chinese), name: label_zh, widget: string, required: false }
+              - { label: Link, name: url, widget: string }
+
+      - name: home
+        label: Home page
+        file: content/settings/home.yml
+        i18n: true
+        fields:
+          - { label: SEO title, name: seo_title, widget: string, i18n: true, required: false }
+          - { label: SEO description, name: seo_description, widget: text, i18n: true, required: false }
+          - { label: Hero headline, name: hero_tagline, widget: string, i18n: true }
+          - { label: Hero text, name: hero_text, widget: text, i18n: true, required: false }
+          - { label: Hero background photo (optional), name: hero_image, widget: image, required: false }
+          - { label: 'Hero background video (MP4, optional)', name: hero_video, widget: file, required: false }
+          - { label: 'Heading above the businesses', name: group_title, widget: string, i18n: true, required: false }
+          - label: 'Businesses in the group (each shown as a Lao temple door)'
+            name: rooms
+            widget: list
+            i18n: true
+            label_singular: Business
+            summary: '{{fields.title}}'
+            fields:
+              - { label: Name, name: title, widget: string }
+              - { label: Short text (1 line), name: text, widget: string, required: false }
+              - { label: 'Link: a page of this site (e.g. "services/tour-travel") or a full website address (https://...)', name: link, widget: string }
+              - label: Type
+                name: kind
+                widget: select
+                required: false
+                options: [{ label: Service, value: service }, { label: Brand, value: brand }]
+              - label: Door colour
+                name: tone
+                widget: select
+                required: false
+                options: [{ label: Indigo, value: navy }, { label: Red lacquer, value: red }, { label: Jade green, value: green }, { label: Black lacquer, value: black }]
+              - label: Icon
+                name: icon
+                widget: select
+                required: false
+                options: [mountain, document, elephant, jar, briefcase, translate, truck, box, building, chart, media, chip, users, compass, globe]
+              - { label: 'Logo (optional, replaces the icon; square PNG/SVG)', name: image, widget: image, required: false }
+
+      - name: about
+        label: About page
+        file: content/settings/about.yml
+        i18n: true
+        fields:
+          - { label: SEO title, name: seo_title, widget: string, i18n: true, required: false }
+          - { label: SEO description, name: seo_description, widget: text, i18n: true, required: false }
+          - { label: Heading, name: hero_title, widget: string, i18n: true }
+          - { label: Intro, name: hero_lead, widget: text, i18n: true, required: false }
+          - { label: Statement, name: statement, widget: string, i18n: true, required: false }
+          - { label: Our story, name: story, widget: markdown, i18n: true, required: false }
+          - label: Milestones
+            name: milestones
+            widget: list
+            i18n: true
+            required: false
+            fields:
+              - { label: Year, name: year, widget: string }
+              - { label: Text, name: text, widget: string }
+          - { label: Vision, name: vision, widget: text, i18n: true }
+          - label: Mission
+            name: mission
+            widget: list
+            i18n: true
+            field: { label: Item, name: item, widget: string }
+          - label: Goals
+            name: goals
+            widget: list
+            i18n: true
+            field: { label: Item, name: item, widget: string }
+          - { label: Strengths intro, name: strengths_intro, widget: string, i18n: true, required: false }
+          - label: Strengths
+            name: strengths
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Business units intro, name: units_intro, widget: string, i18n: true, required: false }
+          - { label: Laos–China–international intro, name: cooperation_intro, widget: string, i18n: true, required: false }
+          - label: 'Laos, China and international'
+            name: cooperation
+            widget: list
+            i18n: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Text, name: text, widget: text }
+          - label: Where we operate
+            name: areas
+            widget: list
+            i18n: true
+            fields:
+              - { label: Area, name: name, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: Leadership intro, name: team_intro, widget: string, i18n: true, required: false }
+
+      - name: pages
+        label: 'Page headings (services, brands, contact...)'
+        file: content/settings/pages.yml
+        i18n: true
+        fields:
+          - { label: Services page heading, name: services_title, widget: string, i18n: true }
+          - { label: Services page intro, name: services_lead, widget: text, i18n: true, required: false }
+          - { label: Brands page heading, name: brands_title, widget: string, i18n: true }
+          - { label: Brands page intro, name: brands_lead, widget: text, i18n: true, required: false }
+          - { label: Projects page heading, name: projects_title, widget: string, i18n: true }
+          - { label: Projects page intro, name: projects_lead, widget: text, i18n: true, required: false }
+          - { label: News page heading, name: news_title, widget: string, i18n: true }
+          - { label: News page intro, name: news_lead, widget: text, i18n: true, required: false }
+          - { label: Contact page heading, name: contact_title, widget: string, i18n: true }
+          - { label: Contact page intro, name: contact_lead, widget: text, i18n: true, required: false }
+          - { label: Quote page heading, name: quote_title, widget: string, i18n: true }
+          - { label: Quote page intro, name: quote_lead, widget: text, i18n: true, required: false }
+          - { label: Partnership page heading, name: partnership_title, widget: string, i18n: true }
+          - { label: Partnership page intro, name: partnership_lead, widget: text, i18n: true, required: false }
+          - { label: Partnership page extra text (optional), name: partnership_intro, widget: markdown, i18n: true, required: false }
+
+      - name: legal
+        label: Privacy policy & terms
+        file: content/settings/legal.yml
+        i18n: true
+        fields:
+          - { label: Last updated, name: updated, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false }
+          - { label: Privacy policy title, name: privacy_title, widget: string, i18n: true }
+          - { label: Privacy policy, name: privacy_body, widget: markdown, i18n: true }
+          - { label: Terms title, name: terms_title, widget: string, i18n: true }
+          - { label: Terms of use, name: terms_body, widget: markdown, i18n: true }

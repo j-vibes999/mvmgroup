@@ -1,0 +1,104 @@
+---
+import '@fontsource-variable/cormorant';
+import '@fontsource/marcellus';
+import '@fontsource-variable/noto-sans';
+import '@fontsource-variable/noto-sans-lao';
+import '@fontsource-variable/noto-serif-lao';
+import '../styles/global.css';
+import '../styles/shell.css';
+import { ClientRouter } from 'astro:transitions';
+import Sprite from '../components/Sprite.astro';
+import Stage from '../components/stage/Stage.astro';
+import Ring from '../components/stage/Ring.astro';
+import TopBar from '../components/stage/TopBar.astro';
+import Dock from '../components/stage/Dock.astro';
+import Window from '../components/stage/Window.astro';
+import { getSite } from '../lib/site';
+import { LOCALES, localeInfo, t, url, type Lang } from '../lib/i18n';
+import { creditsFor } from '../lib/credits';
+
+interface Props {
+  lang: Lang;
+  path: string[];
+  title?: string;
+  fullTitle?: string;
+  description?: string;
+  image?: string;
+  nav?: string;
+  noindex?: boolean;
+  ogType?: string;
+  jsonLd?: object | object[];
+  photos?: (string | undefined)[];
+  /** Window head; omit `win` on the home screen (window closed). */
+  win?: { title: string; eyebrow?: string; icon?: string; logo?: string; trail?: { label: string; href?: string }[] };
+}
+const { lang, path, title, fullTitle, description, image, nav, noindex, ogType = 'website', jsonLd, photos = [], win } = Astro.props;
+const s = getSite().settings(lang);
+const info = localeInfo(lang);
+const siteName = s.site_name || 'MVM GROUP';
+const site = (Astro.site?.href || 'https://www.mvmgroup.la/').replace(/\/$/, '');
+const abs = (p: string) => (/^https?:/.test(p) ? p : site + p);
+const pageTitle = fullTitle || (title ? `${title} | ${siteName}` : `${siteName} — ${s.tagline || ''}`);
+const desc = description || s.description || '';
+const canonical = abs(url(lang, ...path));
+const ogImage = abs(image || s.og_image || '/brand/og-image.png');
+const ld = ([] as object[]).concat(jsonLd || []).filter(Boolean);
+const a = s.analytics || {};
+const ga = a.ga4_id && /^G-[A-Z0-9]+$/i.test(a.ga4_id) ? a.ga4_id : '';
+const pixel = a.meta_pixel_id && /^\d{6,20}$/.test(String(a.meta_pixel_id)) ? String(a.meta_pixel_id) : '';
+const credits = creditsFor(photos);
+---
+<!doctype html>
+<html lang={info.htmlLang} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonical} />
+    {LOCALES.map((l) => <link rel="alternate" hreflang={l.hreflang} href={abs(url(l.code, ...path))} />)}
+    <link rel="alternate" hreflang="x-default" href={abs(url('en', ...path))} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title || siteName} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={info.ogLocale} />
+    {LOCALES.filter((l) => l.code !== lang).map((l) => <meta property="og:locale:alternate" content={l.ogLocale} />)}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0e0b08" />
+    {a.google_site_verification && <meta name="google-site-verification" content={a.google_site_verification} />}
+    <link rel="icon" href={s.favicon || '/brand/favicon.svg'} type="image/svg+xml" />
+    <link rel="icon" href="/brand/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
+    {ga && <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga}`}></script>}
+    {ga && <script is:inline define:vars={{ ga }}>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config',ga);</script>}
+    {pixel && <script is:inline define:vars={{ pixel }}>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',pixel);fbq('track','PageView');</script>}
+    {ld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j).replace(/</g, '\\u003c')} />)}
+    <ClientRouter fallback="swap" />
+    <slot name="head" />
+  </head>
+  <body class:list={{ 'has-window': !!win }}>
+    <Sprite />
+    <a class="skip-link" href={win ? '#win-title' : '#rooms'}>{t(lang, 'nav.skip')}</a>
+    <Stage />
+    <TopBar lang={lang} path={path} nav={nav} />
+    <main id="rooms">
+      <Ring lang={lang} />
+      <p class="tagline"><strong>{s.site_name || 'MVM GROUP'}</strong><span>{getSite().home(lang).hero_tagline}</span></p>
+    </main>
+    <Dock lang={lang} />
+    {win && (
+      <Window lang={lang} path={path} title={win.title} eyebrow={win.eyebrow} icon={win.icon} logo={win.logo} trail={win.trail} credits={credits}>
+        <slot />
+      </Window>
+    )}
+    <div class="launch" data-launch hidden></div>
+    <script>
+      import '../scripts/shell';
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+---
+// Netlify Forms: submissions appear in the Netlify dashboard and are emailed via
+// Site configuration → Forms → notifications. Honeypot + Akismet; reCAPTCHA only
+// when switched on in the CMS (Google is blocked in mainland China).
+// data-astro-reload: a normal POST so Netlify receives the submission.
+import { getSite } from '../../lib/site';
+import { t, url, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang; name: string; submit: string }
+const { lang, name, submit } = Astro.props;
+const recaptcha = getSite().settings(lang).forms?.recaptcha === true;
+---
+<form
+  class="form"
+  name={name}
+  method="POST"
+  action={url(lang, 'thank-you')}
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  data-netlify-recaptcha={recaptcha ? 'true' : undefined}
+  data-astro-reload
+  data-form
+  data-msg-required={t(lang, 'form.errorRequired')}
+  data-msg-email={t(lang, 'form.errorEmail')}
+  data-msg-choice={t(lang, 'form.errorChoice')}
+  data-msg-consent={t(lang, 'form.errorConsent')}
+  data-msg-sending={t(lang, 'form.sending')}
+>
+  <input type="hidden" name="form-name" value={name} />
+  <input type="hidden" name="language" value={lang} />
+  <input type="hidden" name="page" value="" />
+  <p class="hp-field" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+  <slot />
+  {recaptcha && <div data-netlify-recaptcha="true"></div>}
+  <div class="consent" data-consent>
+    <input type="checkbox" id={`consent-${name}`} name="consent" value="yes" required />
+    <label for={`consent-${name}`}>{t(lang, 'form.consent')} <a href={url(lang, 'privacy')} target="_blank">{t(lang, 'footer.privacy')}</a>.</label>
+  </div>
+  <div class="form__foot">
+    <p class="form__note">{t(lang, 'form.requiredNote')}</p>
+    <button class="btn btn--solid" type="submit">{submit}</button>
+  </div>
+</form>

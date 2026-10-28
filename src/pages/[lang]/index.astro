@@ -1,0 +1,21 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import { getSite, langPaths } from '../../lib/site';
+import type { Lang } from '../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const settings = site.settings(lang);
+const home = site.home(lang);
+const orgLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: settings.site_name || 'MVM GROUP',
+  url: `${Astro.site}${lang}/`,
+  logo: `${Astro.site}brand/logo-lockup.png`,
+  description: settings.description,
+  email: settings.contact?.email || undefined,
+};
+---
+<Shell lang={lang} path={[]} nav="home" fullTitle={home.seo_title} description={home.seo_description} jsonLd={orgLd} />

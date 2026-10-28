@@ -1,0 +1,31 @@
+---
+import { t, type Lang } from '../../lib/i18n';
+interface Props {
+  lang: Lang;
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  autocomplete?: string;
+  hint?: string;
+  options?: { value: string; label: string }[];
+  rows?: number;
+  prefill?: string;
+  inputmode?: 'tel' | 'email' | 'text';
+  wide?: boolean;
+}
+const { lang, name, label, type = 'text', required = false, autocomplete, hint, options = [], rows = 5, prefill, inputmode, wide } = Astro.props;
+const id = `f-${name.replace(/\W/g, '')}`;
+const common = { id, name, required, autocomplete, 'data-prefill': prefill, 'aria-describedby': hint ? `${id}-hint` : undefined };
+---
+<div class:list={['field', { 'field--wide': wide }]}>
+  <label for={id}>{label}{required ? ' *' : <span class="field__opt"> ({t(lang, 'form.optional')})</span>}</label>
+  {hint && <p class="field__hint" id={`${id}-hint`}>{hint}</p>}
+  {type === 'textarea' ? (
+    <textarea {...common} rows={rows}></textarea>
+  ) : type === 'select' ? (
+    <select {...common}><option value="">{t(lang, 'form.choose')}</option>{options.map((o) => <option value={o.value}>{o.label}</option>)}</select>
+  ) : (
+    <input {...common} type={type} inputmode={inputmode} />
+  )}
+</div>

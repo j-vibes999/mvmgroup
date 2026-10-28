@@ -1,0 +1,63 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Company setup for a regional manufacturer
+  summary: Market-entry advice, company registration and first licences for a manufacturer opening in Laos.
+  client: Client name to be added
+  category: business-consulting
+  services:
+    - business-consulting
+    - government-documentation
+    - translation-interpretation
+  year: ""
+  location: Vientiane Capital
+  cover: ""
+  featured: true
+  sample: true
+  order: 1
+  gallery: []
+  body: |-
+    ## The brief
+    A manufacturer from the region wanted to open a production and sales company in Laos and needed to understand the options before committing.
+
+    ## What we did
+    - Compared company structures and ownership options for the planned activities
+    - Prepared and submitted the registration file and first operating licences
+    - Translated company documents between Chinese, Lao and English
+    - Organised meetings with the relevant offices, with an interpreter
+
+    ## Result
+    Describe the outcome here: what was delivered, how long it took and what the client can now do.
+la:
+  title: ການສ້າງຕັ້ງບໍລິສັດ ໃຫ້ຜູ້ຜະລິດໃນພາກພື້ນ
+  summary: ຄຳປຶກສາການເຂົ້າສູ່ຕະຫຼາດ, ການຈົດທະບຽນບໍລິສັດ ແລະ ໃບອະນຸຍາດທຳອິດ ສຳລັບຜູ້ຜະລິດທີ່ເປີດທຸລະກິດໃນລາວ.
+  client: ລໍຖ້າເພີ່ມຊື່ລູກຄ້າ
+  location: ນະຄອນຫຼວງວຽງຈັນ
+  body: |-
+    ## ຄວາມຕ້ອງການຂອງລູກຄ້າ
+    ຜູ້ຜະລິດຈາກພາກພື້ນຕ້ອງການເປີດບໍລິສັດຜະລິດ ແລະ ຈຳໜ່າຍໃນລາວ ແລະ ຕ້ອງການເຂົ້າໃຈທາງເລືອກຕ່າງໆກ່ອນຕັດສິນໃຈ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ປຽບທຽບໂຄງສ້າງບໍລິສັດ ແລະ ທາງເລືອກການຖືຫຸ້ນ ສຳລັບກິດຈະການທີ່ວາງແຜນໄວ້
+    - ກະກຽມ ແລະ ຍື່ນເອກະສານຈົດທະບຽນ ແລະ ໃບອະນຸຍາດດຳເນີນງານທຳອິດ
+    - ແປເອກະສານບໍລິສັດ ລະຫວ່າງພາສາຈີນ, ລາວ ແລະ ອັງກິດ
+    - ນັດພົບກັບຫ້ອງການທີ່ກ່ຽວຂ້ອງ ພ້ອມລ່າມ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້: ສິ່ງທີ່ສົ່ງມອບ, ໃຊ້ເວລາດົນປານໃດ ແລະ ລູກຄ້າສາມາດເຮັດຫຍັງໄດ້ແລ້ວ.
+zh:
+  title: 为区域制造商设立公司
+  summary: 为在老挝开设公司的制造商提供市场进入咨询、公司注册及首批许可证办理。
+  client: 客户名称待补充
+  location: 万象首都
+  body: |-
+    ## 项目需求
+    一家区域制造商计划在老挝设立生产和销售公司，希望在决策前了解各种方案。
+
+    ## 我们的工作
+    - 针对计划经营的业务比较公司架构和持股方案
+    - 准备并递交注册材料及首批经营许可
+    - 在中文、老挝语和英语之间翻译公司文件
+    - 安排与相关部门的会面并配备口译
+
+    ## 成果
+    在此描述项目成果：交付内容、所用时间以及客户现在可以开展的业务。

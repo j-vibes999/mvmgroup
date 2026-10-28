@@ -1,0 +1,23 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import BrandCard from '../../../components/win/BrandCard.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { t, url, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const p = site.pages(lang);
+const title = p.brands_title || t(lang, 'section.brands');
+const trail = [{ label: t(lang, 'nav.brands') }];
+---
+<Shell lang={lang} path={['brands']} nav="brands" title={title} description={p.brands_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'jar', trail }}>
+  {p.brands_lead && <p class="lead">{p.brands_lead}</p>}
+  <div class="frieze" aria-hidden="true"></div>
+  <div class="grid grid--2">{site.brands(lang).map((b) => <BrandCard lang={lang} level="h2" item={b} />)}</div>
+  <div class="callout" style="margin-top:28px">
+    <p><strong>{t(lang, 'brand.moreTitle')}</strong> — {t(lang, 'brand.moreText')}</p>
+    <div class="hero-actions"><a class="btn" href={`${url(lang, 'partnership')}?type=business`}>{t(lang, 'cta.partner')}</a></div>
+  </div>
+</Shell>

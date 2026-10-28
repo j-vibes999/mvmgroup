@@ -1,0 +1,33 @@
+---
+import Form from './Form.astro';
+import Field from './Field.astro';
+import ContactFields from './ContactFields.astro';
+import { QUOTE_OPTIONS, label } from '../../lib/taxonomies';
+import { t, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const contactBy = ['email', 'phone', 'whatsapp', 'wechat'].map((k) => ({ value: k, label: t(lang, `contact.${k}`) }));
+const starts = ['asap', 'month', 'quarter', 'exploring'].map((k) => ({ value: k, label: t(lang, `form.start.${k}`) }));
+---
+<Form lang={lang} name="quote" submit={t(lang, 'form.sendQuote')}>
+  <fieldset class="form__group">
+    <legend class="form__legend">{t(lang, 'form.aboutRequest')}</legend>
+    <div class="field" data-required-group>
+      <span class="field__label" id="services-label">{t(lang, 'form.servicesNeeded')} *</span>
+      <p class="field__hint">{t(lang, 'form.selectAll')}</p>
+      <div class="choices" role="group" aria-labelledby="services-label">
+        {QUOTE_OPTIONS.map((o) => <label class="choice"><input type="checkbox" name="services[]" value={o.key} data-prefill="service" /><span>{label(o, lang)}</span></label>)}
+      </div>
+    </div>
+    <Field lang={lang} name="details" label={t(lang, 'form.projectDetails')} type="textarea" required hint={t(lang, 'form.projectHint')} rows={6} />
+    <div class="form__row">
+      <Field lang={lang} name="start" label={t(lang, 'form.startDate')} type="select" options={starts} />
+      <Field lang={lang} name="budget" label={t(lang, 'form.budget')} />
+    </div>
+  </fieldset>
+  <fieldset class="form__group">
+    <legend class="form__legend">{t(lang, 'form.yourDetails')}</legend>
+    <ContactFields lang={lang} />
+    <Field lang={lang} name="contact_by" label={t(lang, 'form.contactBy')} type="select" options={contactBy} />
+  </fieldset>
+</Form>

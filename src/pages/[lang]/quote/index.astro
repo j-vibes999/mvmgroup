@@ -1,0 +1,23 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import QuoteForm from '../../../components/forms/QuoteForm.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const p = getSite().pages(lang);
+const title = p.quote_title || t(lang, 'cta.requestQuote');
+const trail = [{ label: t(lang, 'cta.requestQuote') }];
+---
+<Shell lang={lang} path={['quote']} title={title} description={p.quote_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'file', trail }}>
+  {p.quote_lead && <p class="lead">{p.quote_lead}</p>}
+  <div class="callout">
+    <p><strong>{t(lang, 'quote.nextTitle')}</strong></p>
+    <ol class="next-steps"><li>{t(lang, 'quote.next1')}</li><li>{t(lang, 'quote.next2')}</li><li>{t(lang, 'quote.next3')}</li></ol>
+  </div>
+  <div class="frieze" aria-hidden="true"></div>
+  <QuoteForm lang={lang} />
+  <p class="note">{t(lang, 'service.pricingText')}</p>
+</Shell>

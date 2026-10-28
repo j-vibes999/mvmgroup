@@ -1,0 +1,15 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import QuickActions from '../../../components/win/QuickActions.astro';
+import { langPaths } from '../../../lib/site';
+import { t, url, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+---
+<Shell lang={lang} path={['thank-you']} title={t(lang, 'thanks.title')} noindex win={{ title: t(lang, 'thanks.title'), icon: 'check' }}>
+  <p class="lead">{t(lang, 'thanks.text')}</p>
+  <div class="hero-actions"><a class="btn btn--solid" href={url(lang)}>{t(lang, 'cta.backHome')}</a><a class="btn" href={url(lang, 'services')}>{t(lang, 'cta.viewServices')}</a></div>
+  <QuickActions lang={lang} />
+  <script is:inline>try{if(window.gtag)gtag('event','generate_lead');if(window.fbq)fbq('track','Lead');}catch(e){}</script>
+</Shell>

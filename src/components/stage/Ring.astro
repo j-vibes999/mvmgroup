@@ -1,0 +1,29 @@
+---
+import AppTile from '../AppTile.astro';
+import { roomsFor } from '../../lib/rooms';
+import { t, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const rooms = roomsFor(lang);
+---
+<nav aria-label={t(lang, 'home.groupTitle')}>
+  <ul class="rooms" data-ring>
+    {rooms.map((r, i) => (
+      <li style={`--i:${i}`}>
+        <a
+          class="room"
+          href={r.href}
+          data-room={i}
+          data-external={r.external ? r.host : undefined}
+          data-launch-logo={r.external ? r.logo : undefined}
+          title={r.text || undefined}
+        >
+          <AppTile icon={r.icon} logo={r.logo} badge={r.external} />
+          <span class="room__title">{r.title}</span>
+          <span class="room__kind">{r.kindLabel}</span>
+          {r.external && <span class="sr-only">({r.host})</span>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>

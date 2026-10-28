@@ -1,0 +1,454 @@
+en:
+  title: Tour & Travel
+  summary: Private trips, transfers, guides and business study tours in Laos.
+  icon: mountain
+  unit: travel
+  quote_option: tour
+  order: 1
+  image: ""
+  seo_title: Private tours, transfers and business study tours in Laos
+  seo_description: >-
+    Airport and border transfers, private tours with Lao, Chinese, Thai and English-speaking guides, and
+    business study tours across Laos.
+  intro: |-
+    We organise travel in Laos for leisure travellers, families and business groups: airport and cross-border transfers, private tours with multilingual guides, and business study visits to companies, farms and economic zones.
+
+    Because the same group handles translation, permits and business meetings, we can combine sightseeing with a full programme of appointments. This is especially useful for investors visiting Laos for the first time.
+  audience:
+    - International visitors who want a private, well-organised trip
+    - Chinese and Thai groups travelling by road or rail
+    - Business delegations and investor visits
+    - Companies planning incentive trips or team travel
+    - Families and VIP guests who need reliable transfers
+  help:
+    - title: Transfers and vehicles
+      text: Airport, railway station and border pick-ups with drivers, from sedans to coaches.
+    - title: Private and group tours
+      text: Vientiane, Luang Prabang, Vang Vieng, the south and custom routes.
+    - title: Multilingual guides
+      text: Guides who speak Lao, Chinese, Thai or English.
+    - title: Business study tours
+      text: Visits to factories, farms, special economic zones and potential partners, with interpreters.
+    - title: Hotels and on-trip support
+      text: Hotel booking, domestic tickets, meals and help throughout the trip.
+    - title: Event and incentive trips
+      text: Company trips, meetings and small events planned end to end.
+  process:
+    - title: Share your plans
+      text: Dates, number of travellers, interests and budget.
+    - title: Itinerary and quotation
+      text: We propose a day-by-day itinerary with vehicles, guides, hotels and price.
+    - title: Confirmation
+      text: Once you approve, we book everything and send a final travel pack.
+    - title: On the trip
+      text: Your guide and coordinator are on call throughout the journey.
+    - title: After the trip
+      text: For business visits, we follow up on contacts and next steps.
+  documents:
+    - Passport copies of all travellers
+    - Flight, train or border-crossing details
+    - Visa or entry approval (we can advise on requirements)
+    - List of companies or sites to visit (for business tours)
+  timeline:
+    - item: Itinerary proposal
+      duration: 1–3 working days
+    - item: Leisure trips
+      duration: Book 1–2 weeks ahead
+    - item: Business study tours
+      duration: Plan 3–4 weeks ahead
+    - item: Airport transfers
+      duration: 24 hours' notice
+  faq:
+    - question: Can you arrange travel on the Laos–China Railway?
+      answer: Yes. We can include train journeys in your itinerary, subject to ticket availability, and meet you at the station.
+    - question: Do you organise visits to companies and economic zones?
+      answer: Yes. We arrange appointments, transport and interpreters, and prepare a short briefing for each visit.
+    - question: Can you handle travel for a large group?
+      answer: Yes. We plan group transport, hotels and meals, and assign enough guides for the group size.
+    - question: What happens if plans change during the trip?
+      answer: Your coordinator adjusts bookings with you. Any cost changes are agreed before they are made.
+  # Tour page (shown because tour packages are linked to this service)
+  hub_title: Tours in Laos
+  hub_lead: >-
+    Private and small-group tours to Vientiane, Vang Vieng and Luang Prabang, with multilingual guides, hotels and
+    train tickets arranged for you.
+  hub_facts:
+    - Private or group tours
+    - Guides in Lao, English, Chinese & Thai
+    - Laos–China Railway tickets booked for you
+  hero_photos:
+    - image: /img/photos/laos-vang-vieng-wide.jpg
+      place: Vang Vieng
+    - image: /img/photos/laos-phou-si-wide.jpg
+      place: Mount Phousi and the Mekong, Luang Prabang
+    - image: /img/photos/laos-that-luang-wide.jpg
+      place: Pha That Luang, Vientiane
+    - image: /img/photos/laos-kuang-si-wide.jpg
+      place: Kuang Si Falls, Luang Prabang
+  hub_credit: >-
+    Photos: [Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin) (CC BY-SA 4.0) and
+    [Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh) (CC BY-SA 3.0), Wikimedia Commons
+  packages_intro: >-
+    Sample itineraries to start from. Each one can be private or for a group, and changed to fit your dates, hotels
+    and interests.
+  destinations_intro: The three places most visitors combine on a first trip to Laos.
+  destinations:
+    - name: Vientiane Capital
+      image: /img/photos/laos-that-luang-card.jpg
+      text: >-
+        The relaxed capital on the Mekong: golden stupas, old temples, wide French-era avenues and riverside night
+        markets.
+      sights:
+        - Pha That Luang
+        - Patuxai (Victory Monument)
+        - Wat Si Saket and Haw Phra Kaew
+        - Buddha Park (Xieng Khuan)
+        - Mekong riverside and night market
+      stay: Hotels in the city centre and along the Mekong riverside
+      getting_there: >-
+        Wattay International Airport; trains from Luang Prabang, Vang Vieng and Kunming; the Friendship Bridge from
+        Nong Khai, Thailand
+      time: 1–2 days
+    - name: Vang Vieng
+      image: /img/photos/laos-vang-vieng-card.jpg
+      text: Limestone mountains, rivers, caves and lagoons, the outdoor heart of Laos.
+      sights:
+        - The Blue Lagoon and Tham Phu Kham cave
+        - Tham Chang cave
+        - Kayaking and tubing on the Nam Song river
+        - Hot-air balloon flights
+        - Nam Xay and Pha Ngern viewpoints
+      stay: Riverside resorts and boutique hotels along the Nam Song
+      getting_there: About 1 hour by train from Vientiane, or about 1.5 hours by car on the expressway
+      time: 1–2 nights
+    - name: Luang Prabang
+      image: /img/photos/laos-wat-mai-card.jpg
+      text: >-
+        A UNESCO World Heritage town of golden temples and colonial houses, where the Mekong meets the Nam Khan.
+      sights:
+        - Wat Xieng Thong
+        - Royal Palace Museum
+        - Mount Phousi at sunset
+        - The morning alms giving
+        - Kuang Si Falls
+        - The Pak Ou Caves
+      stay: Boutique hotels and guesthouses in the old town
+      getting_there: >-
+        About 2 hours by train from Vientiane (about 1 hour from Vang Vieng), or Luang Prabang International Airport
+      time: 2–3 nights
+  info_intro: Practical things to know before you travel. Ask us about anything that is not covered here.
+  travel_info:
+    - icon: calendar
+      title: Best time to visit
+      text: >-
+        November to February is cool and dry, the most popular season. March to May is hot, with haze in the north in
+        March and April. June to October is the green season: lush landscapes, full waterfalls and fewer visitors.
+        Festivals to plan around: Lao New Year (mid-April), the boat racing festivals (October) and the That Luang
+        Festival (November).
+    - icon: globe
+      title: Getting to Laos
+      text: >-
+        International airports in Vientiane (VTE) and Luang Prabang (LPQ). From Thailand, cross the Friendship Bridge
+        at Nong Khai. From China, cross-border trains run from Kunming to Vientiane on the Laos–China Railway.
+    - icon: compass
+      title: Getting around
+      text: >-
+        The Laos–China Railway links Vientiane, Vang Vieng and Luang Prabang: about 1 hour to Vang Vieng and about 2
+        hours to Luang Prabang. Tickets go on sale only a few days before travel and sell out quickly, so we book them
+        for you with your passport details. Stations are outside the towns; we meet you with a van.
+    - icon: file
+      title: Visa and entry
+      text: >-
+        Citizens of ASEAN countries can usually visit without a visa for a short stay. Many other nationalities can
+        apply for an e-Visa or get a visa on arrival. Your passport should be valid for at least six months. Rules
+        change, so we check the requirements for your passport before you book.
+    - icon: box
+      title: Money and phone
+      text: >-
+        The currency is the Lao kip (LAK). Carry some cash: cards are accepted mainly in larger hotels and
+        restaurants, and ATMs are found in the towns. Local SIM cards with mobile data are cheap and easy to buy
+        with your passport.
+    - icon: users
+      title: Temple etiquette
+      text: >-
+        Cover shoulders and knees in temples and take off your shoes before entering. Women should not touch monks.
+        During the morning alms giving, watch quietly from a distance and do not use flash.
+la:
+  title: ທ່ອງທ່ຽວ ແລະ ທົວ
+  summary: ທ່ອງທ່ຽວສ່ວນຕົວ, ລົດຮັບສົ່ງ, ໄກດ໌ ແລະ ການທັດສະນະສຶກສາດ້ານທຸລະກິດໃນ ສປປ ລາວ.
+  seo_title: ທົວສ່ວນຕົວ, ລົດຮັບສົ່ງ ແລະ ທັດສະນະສຶກສາທຸລະກິດໃນ ສປປ ລາວ
+  seo_description: >-
+    ລົດຮັບສົ່ງສະໜາມບິນ ແລະ ດ່ານຊາຍແດນ, ທົວສ່ວນຕົວພ້ອມໄກດ໌ພາສາລາວ, ຈີນ, ໄທ ແລະ ອັງກິດ ແລະ
+    ການທັດສະນະສຶກສາທຸລະກິດທົ່ວ ສປປ ລາວ.
+  intro: |-
+    ພວກເຮົາຈັດການເດີນທາງໃນ ສປປ ລາວ ສຳລັບນັກທ່ອງທ່ຽວ, ຄອບຄົວ ແລະ ຄະນະທຸລະກິດ: ລົດຮັບສົ່ງສະໜາມບິນ ແລະ ດ່ານຊາຍແດນ, ທົວສ່ວນຕົວພ້ອມໄກດ໌ຫຼາຍພາສາ ແລະ ການທັດສະນະສຶກສາບໍລິສັດ, ຟາມ ແລະ ເຂດເສດຖະກິດ.
+
+    ເນື່ອງຈາກກຸ່ມບໍລິສັດດຽວກັນດູແລທັງການແປພາສາ, ໃບອະນຸຍາດ ແລະ ການນັດພົບທຸລະກິດ, ພວກເຮົາຈຶ່ງສາມາດປະສົມການທ່ອງທ່ຽວເຂົ້າກັບກຳນົດການນັດພົບໄດ້ຢ່າງຄົບຖ້ວນ. ສິ່ງນີ້ເປັນປະໂຫຍດຫຼາຍສຳລັບນັກລົງທຶນທີ່ມາລາວເປັນຄັ້ງທຳອິດ.
+  audience:
+    - ແຂກຕ່າງປະເທດທີ່ຕ້ອງການທ່ອງທ່ຽວແບບສ່ວນຕົວ ແລະ ຈັດການຢ່າງດີ
+    - ຄະນະຈາກຈີນ ແລະ ໄທ ທີ່ເດີນທາງທາງລົດ ຫຼື ລົດໄຟ
+    - ຄະນະຜູ້ແທນທຸລະກິດ ແລະ ນັກລົງທຶນ
+    - ບໍລິສັດທີ່ວາງແຜນທ່ອງທ່ຽວສຳລັບພະນັກງານ
+    - ຄອບຄົວ ແລະ ແຂກ VIP ທີ່ຕ້ອງການການຮັບສົ່ງທີ່ໄວ້ໃຈໄດ້
+  help:
+    - title: ລົດຮັບສົ່ງ ແລະ ພາຫະນະ
+      text: ຮັບສົ່ງສະໜາມບິນ, ສະຖານີລົດໄຟ ແລະ ດ່ານຊາຍແດນ ພ້ອມຄົນຂັບ ຕັ້ງແຕ່ລົດເກັງຈົນເຖິງລົດໂດຍສານ.
+    - title: ທົວສ່ວນຕົວ ແລະ ທົວກຸ່ມ
+      text: ວຽງຈັນ, ຫຼວງພະບາງ, ວັງວຽງ, ພາກໃຕ້ ແລະ ເສັ້ນທາງຕາມຄວາມຕ້ອງການ.
+    - title: ໄກດ໌ຫຼາຍພາສາ
+      text: ໄກດ໌ທີ່ເວົ້າພາສາລາວ, ຈີນ, ໄທ ຫຼື ອັງກິດ.
+    - title: ທັດສະນະສຶກສາທຸລະກິດ
+      text: ຢ້ຽມຢາມໂຮງງານ, ຟາມ, ເຂດເສດຖະກິດພິເສດ ແລະ ຄູ່ຮ່ວມງານທີ່ມີທ່າແຮງ ພ້ອມລ່າມ.
+    - title: ໂຮງແຮມ ແລະ ການຊ່ວຍເຫຼືອລະຫວ່າງເດີນທາງ
+      text: ຈອງໂຮງແຮມ, ປີ້ພາຍໃນປະເທດ, ອາຫານ ແລະ ການຊ່ວຍເຫຼືອຕະຫຼອດການເດີນທາງ.
+    - title: ການເດີນທາງສຳລັບງານ ແລະ ລາງວັນພະນັກງານ
+      text: ການທ່ອງທ່ຽວບໍລິສັດ, ການປະຊຸມ ແລະ ງານຂະໜາດນ້ອຍ ຈັດການຄົບວົງຈອນ.
+  process:
+    - title: ບອກແຜນການຂອງທ່ານ
+      text: ວັນທີ, ຈຳນວນຜູ້ເດີນທາງ, ຄວາມສົນໃຈ ແລະ ງົບປະມານ.
+    - title: ກຳນົດການ ແລະ ໃບສະເໜີລາຄາ
+      text: ພວກເຮົາສະເໜີກຳນົດການແຕ່ລະມື້ ພ້ອມພາຫະນະ, ໄກດ໌, ໂຮງແຮມ ແລະ ລາຄາ.
+    - title: ຢືນຢັນ
+      text: ເມື່ອທ່ານອະນຸມັດ, ພວກເຮົາຈອງທຸກຢ່າງ ແລະ ສົ່ງຂໍ້ມູນການເດີນທາງສະບັບສຸດທ້າຍໃຫ້.
+    - title: ລະຫວ່າງເດີນທາງ
+      text: ໄກດ໌ ແລະ ຜູ້ປະສານງານພ້ອມຊ່ວຍເຫຼືອຕະຫຼອດການເດີນທາງ.
+    - title: ຫຼັງການເດີນທາງ
+      text: ສຳລັບການຢ້ຽມຢາມທຸລະກິດ, ພວກເຮົາຕິດຕາມຜູ້ຕິດຕໍ່ ແລະ ຂັ້ນຕອນຕໍ່ໄປ.
+  documents:
+    - ສຳເນົາໜັງສືຜ່ານແດນຂອງຜູ້ເດີນທາງທຸກຄົນ
+    - ຂໍ້ມູນຖ້ຽວບິນ, ລົດໄຟ ຫຼື ການຂ້າມດ່ານ
+    - ວີຊາ ຫຼື ການອະນຸຍາດເຂົ້າປະເທດ (ພວກເຮົາໃຫ້ຄຳແນະນຳໄດ້)
+    - ລາຍຊື່ບໍລິສັດ ຫຼື ສະຖານທີ່ທີ່ຕ້ອງການຢ້ຽມຢາມ (ສຳລັບທົວທຸລະກິດ)
+  timeline:
+    - item: ສະເໜີກຳນົດການ
+      duration: 1–3 ວັນລັດຖະການ
+    - item: ທ່ອງທ່ຽວພັກຜ່ອນ
+      duration: ຈອງລ່ວງໜ້າ 1–2 ອາທິດ
+    - item: ທັດສະນະສຶກສາທຸລະກິດ
+      duration: ວາງແຜນລ່ວງໜ້າ 3–4 ອາທິດ
+    - item: ລົດຮັບສົ່ງສະໜາມບິນ
+      duration: ແຈ້ງລ່ວງໜ້າ 24 ຊົ່ວໂມງ
+  faq:
+    - question: ສາມາດຈັດການເດີນທາງດ້ວຍລົດໄຟລາວ-ຈີນ ໄດ້ບໍ?
+      answer: ໄດ້. ພວກເຮົາສາມາດລວມການເດີນທາງດ້ວຍລົດໄຟເຂົ້າໃນກຳນົດການ ຂຶ້ນກັບປີ້ທີ່ມີ ແລະ ໄປຮັບທ່ານທີ່ສະຖານີ.
+    - question: ທ່ານຈັດການຢ້ຽມຢາມບໍລິສັດ ແລະ ເຂດເສດຖະກິດບໍ?
+      answer: ແມ່ນ. ພວກເຮົານັດໝາຍ, ຈັດພາຫະນະ ແລະ ລ່າມ ພ້ອມກະກຽມຂໍ້ມູນສະຫຼຸບສຳລັບແຕ່ລະການຢ້ຽມຢາມ.
+    - question: ສາມາດຈັດການເດີນທາງສຳລັບກຸ່ມໃຫຍ່ໄດ້ບໍ?
+      answer: ໄດ້. ພວກເຮົາວາງແຜນການຂົນສົ່ງ, ໂຮງແຮມ ແລະ ອາຫານສຳລັບກຸ່ມ ແລະ ຈັດໄກດ໌ໃຫ້ພຽງພໍກັບຂະໜາດກຸ່ມ.
+    - question: ຖ້າແຜນປ່ຽນລະຫວ່າງເດີນທາງ ຈະເປັນແນວໃດ?
+      answer: ຜູ້ປະສານງານຈະປັບການຈອງຮ່ວມກັບທ່ານ. ຄ່າໃຊ້ຈ່າຍທີ່ປ່ຽນແປງຈະຕົກລົງກັນກ່ອນດຳເນີນການ.
+  hub_title: ທົວທ່ຽວລາວ
+  hub_lead: >-
+    ທົວສ່ວນຕົວ ແລະ ທົວກຸ່ມນ້ອຍ ໄປນະຄອນຫຼວງວຽງຈັນ, ວັງວຽງ ແລະ ຫຼວງພະບາງ ພ້ອມໄກດ໌ຫຼາຍພາສາ,
+    ໂຮງແຮມ ແລະ ປີ້ລົດໄຟ ພວກເຮົາຈັດໃຫ້ຄົບ.
+  hub_facts:
+    - ທົວສ່ວນຕົວ ຫຼື ທົວກຸ່ມ
+    - ໄກດ໌ພາສາລາວ, ອັງກິດ, ຈີນ ແລະ ໄທ
+    - ຈອງປີ້ລົດໄຟລາວ-ຈີນໃຫ້
+  hero_photos:
+    - place: ວັງວຽງ
+    - place: ພູສີ ແລະ ແມ່ນ້ຳຂອງ, ຫຼວງພະບາງ
+    - place: ພະທາດຫຼວງ, ວຽງຈັນ
+    - place: ນ້ຳຕົກຕາດກວາງຊີ, ຫຼວງພະບາງ
+  hub_credit: >-
+    ພາບ: [Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin) (CC BY-SA 4.0) ແລະ
+    [Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh) (CC BY-SA 3.0), Wikimedia Commons
+  packages_intro: >-
+    ໂປຣແກຣມຕົວຢ່າງເພື່ອເລີ່ມຕົ້ນ. ທຸກແພັກເກດຈັດເປັນທົວສ່ວນຕົວ ຫຼື ທົວກຸ່ມໄດ້ ແລະ ປັບໃຫ້ເຂົ້າກັບວັນທີ, ໂຮງແຮມ
+    ແລະ ຄວາມສົນໃຈຂອງທ່ານ.
+  destinations_intro: ສາມສະຖານທີ່ທີ່ນັກທ່ອງທ່ຽວສ່ວນຫຼາຍນິຍົມໄປ ໃນການມາລາວຄັ້ງທຳອິດ.
+  destinations:
+    - name: ນະຄອນຫຼວງວຽງຈັນ
+      text: >-
+        ນະຄອນຫຼວງທີ່ສະຫງົບແຄມແມ່ນ້ຳຂອງ: ພະທາດສີທອງ, ວັດເກົ່າແກ່, ຖະໜົນກວ້າງແບບຍຸກຝຣັ່ງ ແລະ ຕະຫຼາດກາງຄືນແຄມຂອງ.
+      sights:
+        - ພະທາດຫຼວງ
+        - ປະຕູໄຊ
+        - ວັດສີສະເກດ ແລະ ຫໍພະແກ້ວ
+        - ສວນພະ (ວັດຊຽງຂວັນ)
+        - ແຄມຂອງ ແລະ ຕະຫຼາດກາງຄືນ
+      stay: ໂຮງແຮມໃຈກາງເມືອງ ແລະ ແຄມແມ່ນ້ຳຂອງ
+      getting_there: >-
+        ສະໜາມບິນສາກົນວັດໄຕ; ລົດໄຟຈາກຫຼວງພະບາງ, ວັງວຽງ ແລະ ຄຸນໝິງ; ຂົວມິດຕະພາບຈາກໜອງຄາຍ ປະເທດໄທ
+      time: 1–2 ມື້
+    - name: ວັງວຽງ
+      text: ພູຫີນປູນ, ແມ່ນ້ຳ, ຖ້ຳ ແລະ ບຶງນ້ຳສີຟ້າ ຫົວໃຈຂອງການທ່ອງທ່ຽວທຳມະຊາດໃນລາວ.
+      sights:
+        - ບຶງນ້ຳສີຟ້າ ແລະ ຖ້ຳພູຄຳ
+        - ຖ້ຳຈັງ
+        - ພາຍເຮືອຄາຢັກ ແລະ ລອຍຢາງຕາມລຳນ້ຳຊອງ
+        - ຂີ່ບານລູນລົມຮ້ອນ
+        - ຈຸດຊົມວິວນ້ຳຊາຍ ແລະ ຜາເງິນ
+      stay: ຣີສອດ ແລະ ໂຮງແຮມບູຕິກແຄມນ້ຳຊອງ
+      getting_there: ລົດໄຟຈາກວຽງຈັນ ປະມານ 1 ຊົ່ວໂມງ ຫຼື ຂັບລົດທາງດ່ວນ ປະມານ 1 ຊົ່ວໂມງເຄິ່ງ
+      time: 1–2 ຄືນ
+    - name: ຫຼວງພະບາງ
+      text: ເມືອງມໍລະດົກໂລກຂອງ UNESCO ທີ່ມີວັດວາອາຮາມ ແລະ ເຮືອນແບບອານານິຄົມ ບ່ອນແມ່ນ້ຳຂອງບັນຈົບກັບນ້ຳຄານ.
+      sights:
+        - ວັດຊຽງທອງ
+        - ພິພິທະພັນພະລາຊະວັງ
+        - ຕາເວັນຕົກເທິງພູສີ
+        - ການຕັກບາດຕອນເຊົ້າ
+        - ນ້ຳຕົກຕາດກວາງຊີ
+        - ຖ້ຳຕິ່ງ (ປາກອູ)
+      stay: ໂຮງແຮມບູຕິກ ແລະ ເຮືອນພັກໃນຕົວເມືອງເກົ່າ
+      getting_there: ລົດໄຟຈາກວຽງຈັນ ປະມານ 2 ຊົ່ວໂມງ (ຈາກວັງວຽງ ປະມານ 1 ຊົ່ວໂມງ) ຫຼື ສະໜາມບິນສາກົນຫຼວງພະບາງ
+      time: 2–3 ຄືນ
+  info_intro: ຂໍ້ມູນທີ່ຄວນຮູ້ກ່ອນເດີນທາງ. ຖ້າມີຄຳຖາມອື່ນ ສອບຖາມພວກເຮົາໄດ້ຕະຫຼອດ.
+  travel_info:
+    - title: ຊ່ວງເວລາທີ່ເໝາະສົມ
+      text: >-
+        ເດືອນພະຈິກ ຫາ ກຸມພາ ອາກາດເຢັນ ແລະ ແຫ້ງ ເປັນຊ່ວງທີ່ນິຍົມທີ່ສຸດ. ເດືອນມີນາ ຫາ ພຶດສະພາ ອາກາດຮ້ອນ ແລະ ມີໝອກຄວັນ
+        ທາງພາກເໜືອໃນເດືອນມີນາ-ເມສາ. ເດືອນມິຖຸນາ ຫາ ຕຸລາ ເປັນລະດູຂຽວ: ທິວທັດຂຽວສົດ, ນ້ຳຕົກເຕັມ ແລະ ນັກທ່ອງທ່ຽວໜ້ອຍ.
+        ບຸນທີ່ໜ້າໄປ: ບຸນປີໃໝ່ລາວ (ກາງເດືອນເມສາ), ບຸນຊ່ວງເຮືອ (ເດືອນຕຸລາ) ແລະ ບຸນພະທາດຫຼວງ (ເດືອນພະຈິກ).
+    - title: ການເດີນທາງມາລາວ
+      text: >-
+        ມີສະໜາມບິນສາກົນທີ່ວຽງຈັນ (VTE) ແລະ ຫຼວງພະບາງ (LPQ). ຈາກປະເທດໄທ ຂ້າມຂົວມິດຕະພາບທີ່ໜອງຄາຍ.
+        ຈາກປະເທດຈີນ ມີລົດໄຟຂ້າມແດນຈາກຄຸນໝິງມາວຽງຈັນ ຕາມທາງລົດໄຟລາວ-ຈີນ.
+    - title: ການເດີນທາງພາຍໃນ
+      text: >-
+        ທາງລົດໄຟລາວ-ຈີນ ເຊື່ອມວຽງຈັນ, ວັງວຽງ ແລະ ຫຼວງພະບາງ: ໄປວັງວຽງປະມານ 1 ຊົ່ວໂມງ ແລະ ໄປຫຼວງພະບາງປະມານ 2 ຊົ່ວໂມງ.
+        ປີ້ເປີດຂາຍພຽງບໍ່ເທົ່າໃດມື້ກ່ອນເດີນທາງ ແລະ ໝົດໄວ ພວກເຮົາຈຶ່ງຈອງໃຫ້ດ້ວຍຂໍ້ມູນໜັງສືຜ່ານແດນຂອງທ່ານ.
+        ສະຖານີຢູ່ນອກຕົວເມືອງ ພວກເຮົາມີລົດຕູ້ໄປຮັບ.
+    - title: ວີຊາ ແລະ ການເຂົ້າເມືອງ
+      text: >-
+        ພົນລະເມືອງອາຊຽນສ່ວນຫຼາຍ ເຂົ້າລາວໄດ້ໂດຍບໍ່ຕ້ອງມີວີຊາໃນໄລຍະສັ້ນ. ຫຼາຍສັນຊາດອື່ນ ສາມາດຂໍ e-Visa ຫຼື ວີຊາໜ້າດ່ານ.
+        ໜັງສືຜ່ານແດນຄວນມີອາຍຸເຫຼືອຢ່າງໜ້ອຍ 6 ເດືອນ. ລະບຽບອາດປ່ຽນແປງ ພວກເຮົາຈະກວດສອບໃຫ້ກ່ອນທ່ານຈອງ.
+    - title: ເງິນ ແລະ ໂທລະສັບ
+      text: >-
+        ສະກຸນເງິນແມ່ນເງິນກີບລາວ (LAK). ຄວນມີເງິນສົດຕິດຕົວ: ບັດໃຊ້ໄດ້ສ່ວນຫຼາຍໃນໂຮງແຮມ ແລະ ຮ້ານອາຫານໃຫຍ່ ແລະ ມີຕູ້ ATM
+        ໃນຕົວເມືອງ. ຊິມກາດພ້ອມອິນເຕີເນັດລາຄາຖືກ ຊື້ງ່າຍດ້ວຍໜັງສືຜ່ານແດນ.
+    - title: ມາລະຍາດໃນວັດ
+      text: >-
+        ນຸ່ງເຄື່ອງປິດບ່າ ແລະ ຫົວເຂົ່າເມື່ອເຂົ້າວັດ ແລະ ຖອດເກີບກ່ອນເຂົ້າໂບດ. ແມ່ຍິງບໍ່ຄວນແຕະຕ້ອງພະສົງ.
+        ໃນເວລາຕັກບາດ ຊົມຢ່າງງຽບໆ ຢູ່ຫ່າງໆ ແລະ ບໍ່ໃຊ້ແຟລັດ.
+zh:
+  title: 旅游与出行
+  summary: 老挝私人行程、接送、导游及商务考察服务。
+  seo_title: 老挝私人定制游、接送及商务考察
+  seo_description: 机场及口岸接送、配备老挝语、中文、泰语和英语导游的私人定制游，以及覆盖老挝全境的商务考察。
+  intro: |-
+    我们为休闲游客、家庭和商务团体安排老挝行程：机场及口岸接送、配备多语种导游的私人定制游，以及参观企业、农场和经济区的商务考察。
+
+    由于翻译、许可证和商务会面都由同一集团负责，我们可以将观光与完整的商务日程结合起来，这对首次来老挝考察的投资者尤其有帮助。
+  audience:
+    - 希望私人定制、安排周到行程的国际游客
+    - 通过公路或铁路出行的中国和泰国团体
+    - 商务代表团和投资考察团
+    - 计划奖励旅游或团建出行的企业
+    - 需要可靠接送服务的家庭和贵宾
+  help:
+    - title: 接送与车辆
+      text: 机场、火车站及口岸接送，车型从轿车到大巴均可安排。
+    - title: 私人及团体旅游
+      text: 万象、琅勃拉邦、万荣、南部地区及定制线路。
+    - title: 多语种导游
+      text: 可使用老挝语、中文、泰语或英语的导游。
+    - title: 商务考察
+      text: 参观工厂、农场、经济特区及潜在合作伙伴，并配备翻译。
+    - title: 酒店与行程协助
+      text: 酒店预订、国内交通票务、餐饮及全程协助。
+    - title: 会议与奖励旅游
+      text: 一站式策划企业旅游、会议及小型活动。
+  process:
+    - title: 告诉我们您的计划
+      text: 日期、人数、兴趣和预算。
+    - title: 行程与报价
+      text: 我们提供逐日行程方案，包括车辆、导游、酒店和价格。
+    - title: 确认预订
+      text: 您确认后，我们完成全部预订并发送最终行程资料。
+    - title: 行程中
+      text: 导游和协调人全程随时为您服务。
+    - title: 行程结束后
+      text: 对于商务考察，我们会跟进联系人及后续事项。
+  documents:
+    - 全体出行人员护照复印件
+    - 航班、火车或口岸通关信息
+    - 签证或入境许可（我们可提供相关建议）
+    - 拟参观的企业或地点清单（商务考察）
+  timeline:
+    - item: 行程方案
+      duration: 1–3 个工作日
+    - item: 休闲旅游
+      duration: 建议提前 1–2 周预订
+    - item: 商务考察
+      duration: 建议提前 3–4 周规划
+    - item: 机场接送
+      duration: 提前 24 小时通知
+  faq:
+    - question: 可以安排乘坐中老铁路出行吗？
+      answer: 可以。我们可将火车行程纳入安排（视票源情况），并在车站接站。
+    - question: 你们组织参观企业和经济区吗？
+      answer: 是的。我们负责预约、交通和翻译，并为每次参观准备简报。
+    - question: 可以安排大型团体出行吗？
+      answer: 可以。我们统筹团体交通、酒店和餐饮，并根据团队规模配备足够的导游。
+    - question: 行程中计划有变怎么办？
+      answer: 协调人会与您一起调整预订。任何费用变动都会事先与您确认。
+  hub_title: 老挝旅游线路
+  hub_lead: 万象、万荣、琅勃拉邦私家团与小团游，配备多语种导游，酒店和火车票一站式安排。
+  hub_facts:
+    - 私家团或拼团
+    - 老挝语、英语、中文、泰语导游
+    - 代订中老铁路车票
+  hero_photos:
+    - place: 万荣
+    - place: 普西山与湄公河 · 琅勃拉邦
+    - place: 塔銮 · 万象
+    - place: 光西瀑布 · 琅勃拉邦
+  hub_credit: >-
+    图片：[Basile Morin](https://commons.wikimedia.org/wiki/User:Basile_Morin)（CC BY-SA 4.0）及
+    [Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh)（CC BY-SA 3.0），Wikimedia Commons
+  packages_intro: 以下为参考行程，均可安排私家团或拼团，并可根据您的日期、酒店和兴趣调整。
+  destinations_intro: 首次来老挝，大多数游客都会把这三个地方串联起来。
+  destinations:
+    - name: 万象市
+      text: 湄公河畔悠闲的首都：金色佛塔、古老寺庙、法式林荫大道和河畔夜市。
+      sights:
+        - 塔銮
+        - 凯旋门
+        - 西沙格寺与玉佛寺
+        - 佛像公园（香昆寺）
+        - 湄公河畔与夜市
+      stay: 市中心及湄公河畔酒店
+      getting_there: 瓦岱国际机场；琅勃拉邦、万荣及昆明方向火车；泰国廊开的友谊大桥
+      time: 1–2天
+    - name: 万荣
+      text: 喀斯特山峰、河流、溶洞和泻湖，老挝户外旅游的中心。
+      sights:
+        - 蓝色泻湖与普坎洞
+        - 章洞
+        - 南松河皮划艇与漂流
+        - 热气球
+        - 南赛及帕恩观景台
+      stay: 南松河畔度假村和精品酒店
+      getting_there: 从万象乘火车约1小时，或走高速公路驾车约1.5小时
+      time: 1–2晚
+    - name: 琅勃拉邦
+      text: 联合国教科文组织世界遗产古城，金色寺庙与殖民建筑林立，位于湄公河与南康河交汇处。
+      sights:
+        - 香通寺
+        - 皇宫博物馆
+        - 普西山日落
+        - 清晨布施
+        - 光西瀑布
+        - 帕乌洞
+      stay: 古城内的精品酒店和民宿
+      getting_there: 从万象乘火车约2小时（从万荣约1小时），或琅勃拉邦国际机场
+      time: 2–3晚
+  info_intro: 出发前需要了解的实用信息。如有其他问题，欢迎随时咨询。
+  travel_info:
+    - title: 最佳旅行时间
+      text: >-
+        11月至次年2月凉爽干燥，是最受欢迎的季节。3月至5月炎热，3、4月北部有烟霾。6月至10月为绿季：草木葱郁、瀑布丰沛、游客较少。值得安排的节日：老挝新年（4月中旬）、龙舟节（10月）和塔銮节（11月）。
+    - title: 如何前往老挝
+      text: 万象（VTE）和琅勃拉邦（LPQ）设有国际机场。从泰国可经廊开的友谊大桥入境。从中国可乘中老铁路跨境列车由昆明直达万象。
+    - title: 当地交通
+      text: >-
+        中老铁路连接万象、万荣和琅勃拉邦：到万荣约1小时，到琅勃拉邦约2小时。车票仅在出发前几天开售且很快售罄，我们会凭您的护照信息代为预订。火车站位于城外，我们安排商务车接送。
+    - title: 签证与入境
+      text: >-
+        东盟国家公民短期停留通常免签。许多其他国家的游客可申请电子签证或办理落地签。护照有效期应至少还有六个月。政策可能变化，我们会在您预订前为您核实。
+    - title: 货币与通讯
+      text: 当地货币为老挝基普（LAK）。请备些现金：银行卡主要在较大的酒店和餐厅使用，城镇有自动取款机。凭护照即可方便地购买便宜的本地流量卡。
+    - title: 寺庙礼仪
+      text: 进入寺庙请遮盖肩膀和膝盖，进殿前脱鞋。女性不要触碰僧侣。观看清晨布施时请保持安静、保持距离，不要使用闪光灯。

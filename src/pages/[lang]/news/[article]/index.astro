@@ -1,0 +1,60 @@
+---
+import Shell from '../../../../layouts/Shell.astro';
+import Section from '../../../../components/win/Section.astro';
+import NewsCard from '../../../../components/NewsCard.astro';
+import Icon from '../../../../components/Icon.astro';
+import { getSite, itemPaths } from '../../../../lib/site';
+import { md, plain } from '../../../../lib/markdown';
+import { abs, breadcrumbLd } from '../../../../lib/seo';
+import { findCategory, label, NEWS_CATEGORIES } from '../../../../lib/taxonomies';
+import { formatDate, isoDate, localeInfo, t, url, type Lang } from '../../../../lib/i18n';
+import type { Entry } from '../../../../lib/content';
+
+export const getStaticPaths = () => itemPaths('article', (l) => getSite().news(l));
+const lang = Astro.params.lang as Lang;
+const { item: n } = Astro.props as { item: Entry };
+const cat = findCategory(NEWS_CATEGORIES, n.category);
+const others = getSite().news(lang).filter((x) => x.slug !== n.slug);
+const related = others.filter((x) => x.category === n.category).concat(others.filter((x) => x.category !== n.category)).slice(0, 2);
+const trail = [{ label: t(lang, 'nav.news'), href: url(lang, 'news') }, { label: n.title }];
+const pageUrl = abs(url(lang, 'news', n.slug));
+const share = [
+  { label: 'Facebook', icon: 'facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}` },
+  { label: 'WhatsApp', icon: 'whatsapp', href: `https://wa.me/?text=${encodeURIComponent(`${n.title} ${pageUrl}`)}` },
+];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: n.title,
+    description: n.excerpt,
+    datePublished: isoDate(n.date),
+    dateModified: isoDate(n.updated || n.date),
+    inLanguage: localeInfo(lang).htmlLang,
+    image: n.cover ? [abs(n.cover)] : undefined,
+    author: { '@type': 'Organization', name: n.author || 'MVM GROUP' },
+    publisher: { '@type': 'Organization', name: 'MVM GROUP', logo: { '@type': 'ImageObject', url: abs('/brand/logo-mark.png') } },
+    mainEntityOfPage: pageUrl,
+  },
+  breadcrumbLd(lang, trail),
+];
+---
+<Shell lang={lang} path={['news', n.slug]} nav="news" title={n.seo_title || n.title} description={n.seo_description || n.excerpt || plain(n.body)} image={n.cover} ogType="article" jsonLd={jsonLd} win={{ title: n.title, eyebrow: cat ? label(cat, lang) : t(lang, 'nav.news'), icon: cat?.icon || 'news', trail }}>
+  <meta slot="head" property="article:published_time" content={isoDate(n.date)} />
+  <article>
+    <p class="card__meta">
+      {cat && <a href={url(lang, 'news', 'category', cat.key)}>{label(cat, lang)}</a>}
+      {cat && ' · '}<time datetime={isoDate(n.date)}>{formatDate(n.date, lang)}</time>{n.author && ` · ${n.author}`}
+    </p>
+    {n.excerpt && <p class="lead">{n.excerpt}</p>}
+    {n.cover && <figure class="hero-photo"><img src={n.cover} alt={n.cover_alt || n.title} decoding="async" /></figure>}
+    <div class="frieze" aria-hidden="true"></div>
+    <div class="prose" set:html={md(n.body)} />
+  </article>
+  <div class="share-row">
+    <span class="muted">{t(lang, 'news.share')}</span>
+    {share.map((s) => <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}><span class="acts__c"><Icon name={s.icon} /></span></a>)}
+    <button type="button" data-share aria-label={t(lang, 'news.copyLink')}><span class="acts__c"><Icon name="link" /></span><span data-share-label class="sr-only">{t(lang, 'news.copyLink')}</span></button>
+  </div>
+  {related.length > 0 && <Section title={t(lang, 'news.related')}><div class="grid grid--2">{related.map((x) => <NewsCard lang={lang} item={x} />)}</div></Section>}
+</Shell>

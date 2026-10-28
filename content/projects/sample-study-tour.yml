@@ -1,0 +1,60 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Investor study tour in Laos
+  summary: A multi-day programme of company visits, meetings and travel for a group of investors.
+  client: Client name to be added
+  category: business-tours
+  services:
+    - tour-travel
+    - business-consulting
+    - translation-interpretation
+  year: ""
+  location: Vientiane and northern Laos
+  cover: ""
+  featured: false
+  sample: true
+  order: 5
+  gallery: []
+  body: |-
+    ## The brief
+    A group of investors wanted to see business opportunities in Laos in a single, well-organised trip.
+
+    ## What we did
+    - Built a programme of company, farm and economic-zone visits
+    - Arranged transport, hotels and interpreters
+    - Prepared a short briefing before each visit and followed up on contacts afterwards
+
+    ## Result
+    Describe the outcome here.
+la:
+  title: ທັດສະນະສຶກສາສຳລັບນັກລົງທຶນໃນລາວ
+  summary: ກຳນົດການຫຼາຍມື້ ລວມການຢ້ຽມຢາມບໍລິສັດ, ການປະຊຸມ ແລະ ການເດີນທາງ ສຳລັບຄະນະນັກລົງທຶນ.
+  client: ລໍຖ້າເພີ່ມຊື່ລູກຄ້າ
+  location: ວຽງຈັນ ແລະ ພາກເໜືອຂອງລາວ
+  body: |-
+    ## ຄວາມຕ້ອງການຂອງລູກຄ້າ
+    ຄະນະນັກລົງທຶນຕ້ອງການເບິ່ງໂອກາດທາງທຸລະກິດໃນລາວ ໃນການເດີນທາງຄັ້ງດຽວທີ່ຈັດການຢ່າງດີ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ສ້າງກຳນົດການຢ້ຽມຢາມບໍລິສັດ, ຟາມ ແລະ ເຂດເສດຖະກິດ
+    - ຈັດພາຫະນະ, ໂຮງແຮມ ແລະ ລ່າມ
+    - ກະກຽມຂໍ້ມູນສະຫຼຸບກ່ອນແຕ່ລະການຢ້ຽມຢາມ ແລະ ຕິດຕາມຜູ້ຕິດຕໍ່ຫຼັງຈາກນັ້ນ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້.
+zh:
+  title: 老挝投资考察之旅
+  summary: 为投资者团体安排的多日企业参观、会谈及出行行程。
+  client: 客户名称待补充
+  location: 万象及老挝北部
+  body: |-
+    ## 项目需求
+    一个投资者团体希望通过一次安排周到的行程，了解老挝的商业机会。
+
+    ## 我们的工作
+    - 制定参观企业、农场和经济区的日程
+    - 安排交通、酒店和口译
+    - 每次参观前准备简报，并在行程后跟进联系人
+
+    ## 成果
+    在此描述项目成果。

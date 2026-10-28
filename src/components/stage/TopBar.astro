@@ -1,0 +1,22 @@
+---
+import Icon from '../Icon.astro';
+import LangLinks from '../LangLinks.astro';
+import { menuFor } from './menu';
+import { t, url, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang; path: string[]; nav?: string }
+const { lang, path, nav } = Astro.props;
+---
+<header class="topbar" data-topbar>
+  <a class="logo" href={url(lang)} aria-label="MVM GROUP">
+    <img src="/brand/logo-emblem-bold.svg" width="40" height="40" alt="" />
+    <span>MVM GROUP</span>
+  </a>
+  <nav aria-label={t(lang, 'nav.menu')}>
+    <ul class="topbar__menu">
+      {menuFor(lang).map((m) => (
+        <li><a href={m.href} data-win-link aria-current={nav === m.key ? 'page' : undefined}><Icon name={m.icon} />{m.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+  <LangLinks lang={lang} path={path} class="lang" label={t(lang, 'nav.language')} />
+</header>

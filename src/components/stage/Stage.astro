@@ -1,0 +1,10 @@
+---
+// The persistent backdrop: lacquer wall + gold dust + golden MVM emblem (3D),
+// with a CSS poster and the flat emblem underneath for visitors without WebGL.
+---
+<div class="stage" data-stage transition:persist="stage" aria-hidden="true">
+  <div class="stage__poster" data-stage-poster></div>
+  <img class="stage__emblem" src="/brand/logo-emblem.svg" alt="" width="432" height="432" fetchpriority="high" />
+  <canvas class="stage__canvas" data-stage-canvas></canvas>
+  <svg class="stage__spokes" data-spokes></svg>
+</div>

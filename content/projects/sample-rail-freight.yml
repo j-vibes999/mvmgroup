@@ -1,0 +1,59 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Rail and road shipment of equipment from China
+  summary: Route planning, customs documents and delivery to site for equipment shipped from China to Laos.
+  client: Client name to be added
+  category: logistics
+  services:
+    - import-export-logistics
+    - government-documentation
+  year: ""
+  location: China → Laos
+  cover: ""
+  featured: true
+  sample: true
+  order: 4
+  gallery: []
+  body: |-
+    ## The brief
+    A project contractor needed equipment moved from China to a site in Laos on a fixed schedule.
+
+    ## What we did
+    - Compared rail and road options for cost and transit time
+    - Prepared the trade and customs documents
+    - Coordinated clearance at the border and delivery to site
+
+    ## Result
+    Describe the outcome here.
+la:
+  title: ຂົນສົ່ງອຸປະກອນຈາກຈີນ ທາງລົດໄຟ ແລະ ທາງບົກ
+  summary: ວາງແຜນເສັ້ນທາງ, ເອກະສານພາສີ ແລະ ຈັດສົ່ງເຖິງໜ້າວຽກ ສຳລັບອຸປະກອນທີ່ຂົນສົ່ງຈາກຈີນມາລາວ.
+  client: ລໍຖ້າເພີ່ມຊື່ລູກຄ້າ
+  location: ຈີນ → ລາວ
+  body: |-
+    ## ຄວາມຕ້ອງການຂອງລູກຄ້າ
+    ຜູ້ຮັບເໝົາໂຄງການຕ້ອງການຂົນສົ່ງອຸປະກອນຈາກຈີນ ໄປຫາໜ້າວຽກໃນລາວ ຕາມກຳນົດເວລາທີ່ແນ່ນອນ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ປຽບທຽບທາງເລືອກທາງລົດໄຟ ແລະ ທາງບົກ ທັງຕົ້ນທຶນ ແລະ ເວລາຂົນສົ່ງ
+    - ກະກຽມເອກະສານການຄ້າ ແລະ ພາສີ
+    - ປະສານງານການຜ່ານພາສີທີ່ດ່ານ ແລະ ການຈັດສົ່ງເຖິງໜ້າວຽກ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້.
+zh:
+  title: 从中国铁路及公路运输设备
+  summary: 为从中国运往老挝的设备提供路线规划、报关单证及送货到现场服务。
+  client: 客户名称待补充
+  location: 中国 → 老挝
+  body: |-
+    ## 项目需求
+    一家工程承包商需要按既定时间将设备从中国运至老挝的项目现场。
+
+    ## 我们的工作
+    - 从成本和时效角度比较铁路与公路方案
+    - 准备贸易及报关单证
+    - 协调口岸清关并送货到现场
+
+    ## 成果
+    在此描述项目成果。

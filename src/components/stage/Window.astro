@@ -1,0 +1,36 @@
+---
+import AppTile from '../AppTile.astro';
+import Crumbs from '../Crumbs.astro';
+import Icon from '../Icon.astro';
+import WinFoot from './WinFoot.astro';
+import { t, url, type Lang } from '../../lib/i18n';
+interface Props {
+  lang: Lang;
+  path: string[];
+  title: string;
+  eyebrow?: string;
+  icon?: string;
+  logo?: string;
+  trail?: { label: string; href?: string }[];
+  credits?: string[];
+}
+const { lang, path, title, eyebrow, icon = 'compass', logo, trail = [], credits = [] } = Astro.props;
+const home = url(lang);
+---
+<a class="veil" href={home} data-window-veil tabindex="-1" aria-hidden="true"></a>
+<dialog class="win" open data-window aria-labelledby="win-title" transition:animate="fade">
+  <a class="win__close" href={home} data-window-close aria-label={t(lang, 'nav.close')}><Icon name="close" /></a>
+  <header class="whead">
+    <img class="whead__rosette" src="/patterns/laikham-rosette.svg" alt="" aria-hidden="true" />
+    <AppTile icon={icon} logo={logo} />
+    <div>
+      {trail.length > 1 && <Crumbs lang={lang} trail={trail} />}
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h1 id="win-title">{title}</h1>
+    </div>
+  </header>
+  <div class="win__body" data-win-body>
+    <slot />
+    <WinFoot lang={lang} path={path} credits={credits} />
+  </div>
+</dialog>

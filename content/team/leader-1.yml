@@ -1,0 +1,14 @@
+# Placeholder leadership profile. Replace name, position, photo and bio in the CMS, then untick "Placeholder".
+en:
+  name: Name to be added
+  position: Position to be added
+  bio: ""
+  photo: ""
+  order: 1
+  placeholder: true
+la:
+  name: ລໍຖ້າເພີ່ມຊື່
+  position: ລໍຖ້າເພີ່ມຕຳແໜ່ງ
+zh:
+  name: 姓名待补充
+  position: 职位待补充

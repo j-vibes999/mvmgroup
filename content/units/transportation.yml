@@ -1,0 +1,17 @@
+# Ready-made business unit, hidden until its status is set to "active" in the CMS.
+en:
+  title: Transportation
+  summary: Passenger and freight transport services.
+  description: ""
+  icon: truck
+  status: planned
+  show_in_menu: true
+  order: 5
+  link: ""
+  image: ""
+la:
+  title: ການຂົນສົ່ງ
+  summary: ບໍລິການຂົນສົ່ງຜູ້ໂດຍສານ ແລະ ສິນຄ້າ.
+zh:
+  title: 交通运输
+  summary: 客运及货运服务。

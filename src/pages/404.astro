@@ -1,0 +1,8 @@
+---
+import Shell from '../layouts/Shell.astro';
+import { t, url } from '../lib/i18n';
+---
+<Shell lang="en" path={['404']} title={t('en', 'notFound.title')} noindex win={{ title: t('en', 'notFound.title'), eyebrow: '404', icon: 'compass' }}>
+  <p class="lead">{t('en', 'notFound.text')}</p>
+  <div class="hero-actions"><a class="btn btn--solid" href={url('en')}>{t('en', 'cta.backHome')}</a><a class="btn" href="/la/">ລາວ</a><a class="btn" href="/zh/">中文</a></div>
+</Shell>

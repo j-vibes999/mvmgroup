@@ -1,0 +1,201 @@
+en:
+  title: Import-Export & Logistics
+  summary: Shipping, customs clearance and cross-border transport to and from Laos.
+  icon: truck
+  unit: trade-logistics
+  quote_option: import-export
+  order: 5
+  image: ""
+  seo_title: Import-export, customs clearance and logistics in Laos
+  seo_description: >-
+    Road, rail and sea-plus-road freight to and from Laos, customs clearance, trade documents, warehousing
+    and delivery, coordinated by MVM GROUP.
+  intro: |-
+    Laos is landlocked, so most goods move by road, by rail on the Laos–China Railway, or by sea through ports in neighbouring countries. We plan the route, prepare trade documents, coordinate customs clearance and track your cargo until delivery.
+
+    We work with importers, exporters, factories and project contractors who need goods to arrive on time and with the right paperwork.
+  audience:
+    - Importers bringing goods into Laos from China, Thailand, Vietnam and beyond
+    - Lao producers exporting agricultural or manufactured products
+    - Factories and construction projects importing equipment and materials
+    - Traders using Laos as a transit route between China and Southeast Asia
+    - Companies that need import licences or product registration first
+  help:
+    - title: Route and cost planning
+      text: Comparing road, rail and sea-plus-road options for time and cost.
+    - title: Customs clearance
+      text: Preparing declarations and supporting documents, and clearing goods at the border.
+    - title: Trade documents
+      text: Commercial invoices, packing lists, certificates of origin and permits.
+    - title: Freight forwarding
+      text: Full and part loads by truck, rail containers and sea freight via neighbouring ports.
+    - title: Warehousing and delivery
+      text: Short-term storage and last-mile delivery within Laos.
+    - title: Import licences and registration
+      text: Help with import permits and product registration before goods are shipped.
+  process:
+    - title: Cargo details
+      text: Tell us what you are shipping, from where, to where and when.
+    - title: Route and quotation
+      text: We recommend a route and send a quotation with transit time and the documents needed.
+    - title: Booking and documents
+      text: We book transport and prepare or check the trade and customs documents.
+    - title: Shipping and clearance
+      text: Cargo moves, customs is cleared and you receive regular status updates.
+    - title: Delivery
+      text: Goods are delivered to your warehouse or site with proof of delivery.
+  documents:
+    - Commercial invoice and packing list
+    - Sales contract or purchase order
+    - Certificate of origin (where preferential tariffs apply)
+    - Import or export permits for controlled goods
+    - Product specifications, photos or HS codes
+    - Enterprise registration and tax ID of the importer or exporter
+  timeline:
+    - item: Quotation
+      duration: 1–3 working days
+    - item: Document preparation
+      duration: 2–5 working days
+    - item: Customs clearance
+      duration: Usually a few days once documents are complete
+    - item: Transit time
+      duration: Quoted per route
+  faq:
+    - question: Can you ship from China to Laos by rail?
+      answer: Yes. Rail freight on the Laos–China Railway is one of the options we compare with road transport for your cargo.
+    - question: Do you handle small shipments?
+      answer: Yes. We arrange part loads and consolidated shipments as well as full trucks and containers.
+    - question: Can you help if my goods need an import licence?
+      answer: Yes. Our documentation team can apply for the permits your goods require before shipment.
+    - question: Do you provide cargo insurance?
+      answer: We can arrange cargo insurance through partners on request and include it in the quotation.
+la:
+  title: ນຳເຂົ້າ-ສົ່ງອອກ ແລະ ໂລຈິສຕິກ
+  summary: ການຂົນສົ່ງ, ການຜ່ານພາສີ ແລະ ການຂົນສົ່ງຂ້າມແດນ ເຂົ້າ-ອອກ ສປປ ລາວ.
+  seo_title: ນຳເຂົ້າ-ສົ່ງອອກ, ການຜ່ານພາສີ ແລະ ໂລຈິສຕິກໃນ ສປປ ລາວ
+  seo_description: >-
+    ການຂົນສົ່ງທາງບົກ, ທາງລົດໄຟ ແລະ ທາງທະເລບວກທາງບົກ ເຂົ້າ-ອອກ ສປປ ລາວ, ການຜ່ານພາສີ, ເອກະສານການຄ້າ,
+    ສາງ ແລະ ການຈັດສົ່ງ ໂດຍ MVM GROUP.
+  intro: |-
+    ສປປ ລາວ ເປັນປະເທດທີ່ບໍ່ມີທາງອອກສູ່ທະເລ, ສິນຄ້າສ່ວນຫຼາຍຈຶ່ງຂົນສົ່ງທາງບົກ, ທາງລົດໄຟລາວ-ຈີນ ຫຼື ທາງທະເລຜ່ານທ່າເຮືອຂອງປະເທດໃກ້ຄຽງ. ພວກເຮົາວາງແຜນເສັ້ນທາງ, ກະກຽມເອກະສານການຄ້າ, ປະສານງານການຜ່ານພາສີ ແລະ ຕິດຕາມສິນຄ້າຈົນເຖິງປາຍທາງ.
+
+    ພວກເຮົາເຮັດວຽກກັບຜູ້ນຳເຂົ້າ, ຜູ້ສົ່ງອອກ, ໂຮງງານ ແລະ ຜູ້ຮັບເໝົາໂຄງການ ທີ່ຕ້ອງການໃຫ້ສິນຄ້າມາຮອດທັນເວລາ ພ້ອມເອກະສານທີ່ຖືກຕ້ອງ.
+  audience:
+    - ຜູ້ນຳເຂົ້າສິນຄ້າເຂົ້າລາວ ຈາກຈີນ, ໄທ, ຫວຽດນາມ ແລະ ປະເທດອື່ນໆ
+    - ຜູ້ຜະລິດລາວທີ່ສົ່ງອອກຜະລິດຕະພັນກະສິກຳ ຫຼື ອຸດສາຫະກຳ
+    - ໂຮງງານ ແລະ ໂຄງການກໍ່ສ້າງທີ່ນຳເຂົ້າອຸປະກອນ ແລະ ວັດສະດຸ
+    - ພໍ່ຄ້າທີ່ໃຊ້ລາວເປັນເສັ້ນທາງຜ່ານແດນ ລະຫວ່າງຈີນ ແລະ ອາຊີຕາເວັນອອກສ່ຽງໃຕ້
+    - ບໍລິສັດທີ່ຕ້ອງຂໍໃບອະນຸຍາດນຳເຂົ້າ ຫຼື ຂຶ້ນທະບຽນຜະລິດຕະພັນກ່ອນ
+  help:
+    - title: ວາງແຜນເສັ້ນທາງ ແລະ ຕົ້ນທຶນ
+      text: ປຽບທຽບທາງເລືອກທາງບົກ, ລົດໄຟ ແລະ ທາງທະເລບວກທາງບົກ ທັງດ້ານເວລາ ແລະ ຕົ້ນທຶນ.
+    - title: ການຜ່ານພາສີ
+      text: ກະກຽມໃບແຈ້ງພາສີ ແລະ ເອກະສານປະກອບ ແລະ ຜ່ານພາສີສິນຄ້າທີ່ດ່ານຊາຍແດນ.
+    - title: ເອກະສານການຄ້າ
+      text: ໃບເກັບເງິນການຄ້າ, ລາຍການບັນຈຸຫີບຫໍ່, ໃບຢັ້ງຢືນແຫຼ່ງກຳເນີດ ແລະ ໃບອະນຸຍາດ.
+    - title: ການຂົນສົ່ງສິນຄ້າ
+      text: ຂົນສົ່ງເຕັມຄັນ ແລະ ບາງສ່ວນທາງລົດ, ຕູ້ຄອນເທນເນີທາງລົດໄຟ ແລະ ທາງທະເລຜ່ານທ່າເຮືອໃກ້ຄຽງ.
+    - title: ສາງ ແລະ ການຈັດສົ່ງ
+      text: ການເກັບຮັກສາໄລຍະສັ້ນ ແລະ ການຈັດສົ່ງເຖິງປາຍທາງພາຍໃນລາວ.
+    - title: ໃບອະນຸຍາດນຳເຂົ້າ ແລະ ການຂຶ້ນທະບຽນ
+      text: ຊ່ວຍຂໍໃບອະນຸຍາດນຳເຂົ້າ ແລະ ຂຶ້ນທະບຽນຜະລິດຕະພັນ ກ່ອນການຂົນສົ່ງ.
+  process:
+    - title: ຂໍ້ມູນສິນຄ້າ
+      text: ບອກພວກເຮົາວ່າທ່ານຂົນສົ່ງຫຍັງ, ຈາກໃສ, ໄປໃສ ແລະ ເມື່ອໃດ.
+    - title: ເສັ້ນທາງ ແລະ ໃບສະເໜີລາຄາ
+      text: ພວກເຮົາແນະນຳເສັ້ນທາງ ແລະ ສົ່ງໃບສະເໜີລາຄາ ພ້ອມໄລຍະເວລາຂົນສົ່ງ ແລະ ເອກະສານທີ່ຕ້ອງໃຊ້.
+    - title: ຈອງ ແລະ ກະກຽມເອກະສານ
+      text: ພວກເຮົາຈອງການຂົນສົ່ງ ແລະ ກະກຽມ ຫຼື ກວດສອບເອກະສານການຄ້າ ແລະ ພາສີ.
+    - title: ຂົນສົ່ງ ແລະ ຜ່ານພາສີ
+      text: ສິນຄ້າເຄື່ອນຍ້າຍ, ຜ່ານພາສີ ແລະ ທ່ານໄດ້ຮັບການລາຍງານສະຖານະເປັນປະຈຳ.
+    - title: ຈັດສົ່ງ
+      text: ສິນຄ້າຖືກສົ່ງເຖິງສາງ ຫຼື ສະຖານທີ່ຂອງທ່ານ ພ້ອມຫຼັກຖານການສົ່ງມອບ.
+  documents:
+    - ໃບເກັບເງິນການຄ້າ ແລະ ລາຍການບັນຈຸຫີບຫໍ່
+    - ສັນຍາຊື້-ຂາຍ ຫຼື ໃບສັ່ງຊື້
+    - ໃບຢັ້ງຢືນແຫຼ່ງກຳເນີດສິນຄ້າ (ກໍລະນີໃຊ້ສິດທິພິເສດທາງພາສີ)
+    - ໃບອະນຸຍາດນຳເຂົ້າ ຫຼື ສົ່ງອອກ ສຳລັບສິນຄ້າຄວບຄຸມ
+    - ລາຍລະອຽດ, ຮູບພາບ ຫຼື ລະຫັດ HS ຂອງສິນຄ້າ
+    - ໃບທະບຽນວິສາຫະກິດ ແລະ ເລກປະຈຳຕົວຜູ້ເສຍອາກອນ ຂອງຜູ້ນຳເຂົ້າ ຫຼື ຜູ້ສົ່ງອອກ
+  timeline:
+    - item: ໃບສະເໜີລາຄາ
+      duration: 1–3 ວັນລັດຖະການ
+    - item: ກະກຽມເອກະສານ
+      duration: 2–5 ວັນລັດຖະການ
+    - item: ຜ່ານພາສີ
+      duration: ໂດຍທົ່ວໄປພາຍໃນບໍ່ເທົ່າໃດມື້ ເມື່ອເອກະສານຄົບຖ້ວນ
+    - item: ໄລຍະເວລາຂົນສົ່ງ
+      duration: ສະເໜີຕາມແຕ່ລະເສັ້ນທາງ
+  faq:
+    - question: ສາມາດຂົນສົ່ງຈາກຈີນມາລາວທາງລົດໄຟໄດ້ບໍ?
+      answer: ໄດ້. ການຂົນສົ່ງສິນຄ້າທາງລົດໄຟລາວ-ຈີນ ເປັນໜຶ່ງໃນທາງເລືອກທີ່ພວກເຮົາປຽບທຽບກັບການຂົນສົ່ງທາງບົກ ສຳລັບສິນຄ້າຂອງທ່ານ.
+    - question: ທ່ານຮັບຂົນສົ່ງສິນຄ້າຈຳນວນນ້ອຍບໍ?
+      answer: ຮັບ. ພວກເຮົາຈັດການຂົນສົ່ງແບບບາງສ່ວນ ແລະ ແບບລວມສິນຄ້າໄດ້ ນອກເໜືອຈາກລົດເຕັມຄັນ ແລະ ຕູ້ຄອນເທນເນີ.
+    - question: ຖ້າສິນຄ້າຂອງຂ້ອຍຕ້ອງມີໃບອະນຸຍາດນຳເຂົ້າ, ທ່ານຊ່ວຍໄດ້ບໍ?
+      answer: ໄດ້. ທີມເອກະສານຂອງພວກເຮົາສາມາດຍື່ນຂໍໃບອະນຸຍາດທີ່ສິນຄ້າຂອງທ່ານຕ້ອງການ ກ່ອນການຂົນສົ່ງ.
+    - question: ທ່ານມີປະກັນໄພສິນຄ້າບໍ?
+      answer: ພວກເຮົາສາມາດຈັດການປະກັນໄພສິນຄ້າຜ່ານຄູ່ຮ່ວມງານຕາມການຮ້ອງຂໍ ແລະ ລວມໄວ້ໃນໃບສະເໜີລາຄາ.
+zh:
+  title: 进出口与物流
+  summary: 进出老挝的货物运输、清关及跨境物流。
+  seo_title: 老挝进出口、清关与物流服务
+  seo_description: MVM 集团协调进出老挝的公路、铁路及海运加陆运货运，提供清关、贸易单证、仓储和配送服务。
+  intro: |-
+    老挝是内陆国家，大部分货物通过公路、中老铁路，或经邻国港口的海运进出。我们规划运输路线、准备贸易单证、协调清关，并全程跟踪货物直至交付。
+
+    我们服务于进口商、出口商、工厂和工程承包商，确保货物按时到达且单证齐全。
+  audience:
+    - 从中国、泰国、越南等地进口货物到老挝的进口商
+    - 出口农产品或工业制品的老挝生产商
+    - 进口设备和材料的工厂及建设项目
+    - 以老挝为中国与东南亚之间过境通道的贸易商
+    - 需要先办理进口许可或产品注册的企业
+  help:
+    - title: 路线与成本规划
+      text: 从时效和成本角度比较公路、铁路及海运加陆运方案。
+    - title: 清关服务
+      text: 准备报关单及随附单证，在口岸办理货物清关。
+    - title: 贸易单证
+      text: 商业发票、装箱单、原产地证书及许可证。
+    - title: 货运代理
+      text: 整车及零担公路运输、铁路集装箱运输，以及经邻国港口的海运。
+    - title: 仓储与配送
+      text: 短期仓储及老挝境内的末端配送。
+    - title: 进口许可与注册
+      text: 在发货前协助办理进口许可和产品注册。
+  process:
+    - title: 货物信息
+      text: 告诉我们您要运输什么、从哪里到哪里以及时间。
+    - title: 路线与报价
+      text: 我们推荐运输路线，并发送包含运输时效和所需单证的报价。
+    - title: 订舱与单证
+      text: 我们安排运输，并准备或审核贸易及报关单证。
+    - title: 运输与清关
+      text: 货物启运并完成清关，您将定期收到状态更新。
+    - title: 交付
+      text: 货物送达您的仓库或现场，并提供签收证明。
+  documents:
+    - 商业发票及装箱单
+    - 销售合同或采购订单
+    - 原产地证书（适用优惠关税时）
+    - 管制类货物的进出口许可证
+    - 产品规格、照片或 HS 编码
+    - 进口商或出口商的企业登记证及税号
+  timeline:
+    - item: 报价
+      duration: 1–3 个工作日
+    - item: 单证准备
+      duration: 2–5 个工作日
+    - item: 清关
+      duration: 单证齐全后通常数日内
+    - item: 运输时效
+      duration: 按路线报价
+  faq:
+    - question: 可以通过铁路从中国运货到老挝吗？
+      answer: 可以。中老铁路货运是我们为您的货物与公路运输进行比较的方案之一。
+    - question: 你们承接小批量货物吗？
+      answer: 承接。除整车和整柜外，我们也可安排零担和拼箱运输。
+    - question: 如果我的货物需要进口许可证，你们能帮忙吗？
+      answer: 可以。我们的文件团队可在发货前为您的货物申请所需许可。
+    - question: 你们提供货物保险吗？
+      answer: 可根据需要通过合作伙伴安排货物保险，并计入报价。

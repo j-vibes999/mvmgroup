@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" fill="none" stroke="#C8A15A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 46l84-12 24 160-84 12z" opacity=".45"/>
+<path d="M54 56h74l24 24v130H54z"/>
+<path d="M128 56v24h24"/>
+<circle cx="103" cy="84" r="10"/>
+<path d="M103 76c-3 4-3 12 0 16 3-4 3-12 0-16zM95 84c4-3 12-3 16 0-4 3-12 3-16 0z" opacity=".75"/>
+<path d="M72 110h62M72 120h62M72 130h46M72 140h56M72 150h38" opacity=".7"/>
+<path d="M72 184c5-9 9-9 11-1s6 7 10-1 8-7 10 1" opacity=".9"/>
+<path d="M70 194h40" opacity=".5"/>
+<circle cx="130" cy="184" r="15"/>
+<circle cx="130" cy="184" r="10" opacity=".6"/>
+<path d="M130 177l2.1 4.4 4.8.6-3.5 3.3.9 4.8-4.3-2.3-4.3 2.3.9-4.8-3.5-3.3 4.8-.6z" opacity=".85"/>
+<path d="M160 150l22-30 7 5-22 30z"/>
+<path d="M160 150l-3 11 9-6M182 120l3-4 7 5-3 4"/>
+<path d="M14 222h172"/>
+<path d="M14 238c10-4 20-4 30 0s20 4 30 0 20-4 30 0 20 4 30 0 20-4 30 0 20 4 30 0" opacity=".5"/>
+<path d="M40 250c10-4 20-4 30 0s20 4 30 0 20-4 30 0 20 4 30 0" opacity=".35"/>
+<circle cx="34" cy="70" r="2" opacity=".5"/><circle cx="170" cy="62" r="2" opacity=".5"/><circle cx="176" cy="196" r="2" opacity=".5"/>
+</svg>

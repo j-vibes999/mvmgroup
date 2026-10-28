@@ -1,0 +1,58 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Chinese–Lao translation of contracts and licences
+  summary: Translation and formatting of a contract package and supporting licences for government submission.
+  client: Client name to be added
+  category: translation
+  services:
+    - translation-interpretation
+  year: ""
+  location: Vientiane Capital
+  cover: ""
+  featured: false
+  sample: true
+  order: 3
+  gallery: []
+  body: |-
+    ## The brief
+    A company needed a set of Chinese contracts and licences translated into Lao and formatted for submission.
+
+    ## What we did
+    - Agreed a glossary of names and technical terms with the client
+    - Translated and formatted each document to match the original
+    - Arranged a second review of names, numbers and dates
+
+    ## Result
+    Describe the outcome here.
+la:
+  title: ແປສັນຍາ ແລະ ໃບອະນຸຍາດ ຈີນ–ລາວ
+  summary: ແປ ແລະ ຈັດຮູບແບບຊຸດສັນຍາ ແລະ ໃບອະນຸຍາດປະກອບ ເພື່ອຍື່ນຕໍ່ພາກລັດ.
+  client: ລໍຖ້າເພີ່ມຊື່ລູກຄ້າ
+  location: ນະຄອນຫຼວງວຽງຈັນ
+  body: |-
+    ## ຄວາມຕ້ອງການຂອງລູກຄ້າ
+    ບໍລິສັດໜຶ່ງຕ້ອງການແປສັນຍາ ແລະ ໃບອະນຸຍາດພາສາຈີນເປັນພາສາລາວ ແລະ ຈັດຮູບແບບເພື່ອຍື່ນ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ຕົກລົງລາຍການຊື່ ແລະ ຄຳສັບເຕັກນິກກັບລູກຄ້າ
+    - ແປ ແລະ ຈັດຮູບແບບແຕ່ລະເອກະສານໃຫ້ກົງກັບຕົ້ນສະບັບ
+    - ກວດທານຊື່, ຕົວເລກ ແລະ ວັນທີ ເປັນຄັ້ງທີສອງ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້.
+zh:
+  title: 合同及执照中译老
+  summary: 翻译并排版一套合同及随附执照，用于向政府部门递交。
+  client: 客户名称待补充
+  location: 万象首都
+  body: |-
+    ## 项目需求
+    一家企业需要将一套中文合同和执照翻译成老挝语，并按递交要求排版。
+
+    ## 我们的工作
+    - 与客户确定人名及专业术语对照表
+    - 逐份翻译并按原件格式排版
+    - 安排第二轮人名、数字和日期审校
+
+    ## 成果
+    在此描述项目成果。

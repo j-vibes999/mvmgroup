@@ -1,0 +1,15 @@
+---
+import Form from './Form.astro';
+import Field from './Field.astro';
+import ContactFields from './ContactFields.astro';
+import { QUOTE_OPTIONS, label } from '../../lib/taxonomies';
+import { t, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const options = [...QUOTE_OPTIONS.map((o) => ({ value: o.key, label: label(o, lang) })), { value: 'other', label: t(lang, 'form.other') }];
+---
+<Form lang={lang} name="contact" submit={t(lang, 'form.sendMessage')}>
+  <ContactFields lang={lang} />
+  <Field lang={lang} name="interest" label={t(lang, 'form.interest')} type="select" options={options} prefill="service" />
+  <Field lang={lang} name="message" label={t(lang, 'form.details')} type="textarea" required hint={t(lang, 'form.detailsHint')} />
+</Form>

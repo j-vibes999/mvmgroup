@@ -1,0 +1,40 @@
+---
+// "/" sends visitors to their language: saved choice → browser language → English.
+// Netlify Identity invite links (#invite_token=…) are passed on to the CMS.
+import { LOCALES } from '../lib/i18n';
+const SITE = 'https://www.mvmgroup.la';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MVM GROUP</title>
+    <link rel="canonical" href={`${SITE}/en/`} />
+    {LOCALES.map((l) => <link rel="alternate" hreflang={l.hreflang} href={`${SITE}/${l.code}/`} />)}
+    <link rel="alternate" hreflang="x-default" href={`${SITE}/en/`} />
+    <link rel="icon" href="/brand/favicon.svg" type="image/svg+xml" />
+    <script is:inline>
+      (function () {
+        if (/(invite|confirmation|recovery|email_change)_token=/.test(location.hash)) {
+          location.replace('/admin/' + location.hash);
+          return;
+        }
+        var lang = 'en';
+        try {
+          var saved = localStorage.getItem('mvm-lang');
+          if (saved === 'en' || saved === 'la' || saved === 'zh') lang = saved;
+          else {
+            var prefs = (navigator.languages || [navigator.language || '']).join(',').toLowerCase();
+            if (/(^|,)lo/.test(prefs)) lang = 'la';
+            else if (/(^|,)zh/.test(prefs)) lang = 'zh';
+          }
+        } catch (e) {}
+        location.replace('/' + lang + '/');
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
+    <style is:inline>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0e0b08;color:#f3ecdd;font-family:system-ui,sans-serif}a{color:#c9a45c;margin:0 12px}</style>
+  </head>
+  <body><p><a href="/en/">English</a><a href="/la/" lang="lo">ລາວ</a><a href="/zh/" lang="zh-Hans">中文</a></p></body>
+</html>

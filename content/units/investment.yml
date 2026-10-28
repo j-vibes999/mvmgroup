@@ -1,0 +1,17 @@
+# Ready-made business unit, hidden until its status is set to "active" in the CMS.
+en:
+  title: Investment
+  summary: Investment and joint-venture projects.
+  description: ""
+  icon: chart
+  status: planned
+  show_in_menu: true
+  order: 9
+  link: ""
+  image: ""
+la:
+  title: ການລົງທຶນ
+  summary: ໂຄງການລົງທຶນ ແລະ ການຮ່ວມທຶນ.
+zh:
+  title: 投资
+  summary: 投资及合资项目。

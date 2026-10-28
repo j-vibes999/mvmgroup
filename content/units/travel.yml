@@ -1,0 +1,21 @@
+en:
+  title: Travel & Business Visits
+  summary: Private trips, transfers, guides and business study tours across Laos.
+  description: |-
+    We plan travel in Laos for international visitors, from airport transfers and private tours to business delegations visiting factories, farms, special economic zones and partners. Guides speak Lao, Chinese, Thai and English.
+  icon: mountain
+  status: active
+  show_in_menu: true
+  order: 2
+  link: ""
+  image: ""
+la:
+  title: ທ່ອງທ່ຽວ ແລະ ທັດສະນະສຶກສາທຸລະກິດ
+  summary: ທ່ອງທ່ຽວສ່ວນຕົວ, ລົດຮັບສົ່ງ, ໄກດ໌ ແລະ ການທັດສະນະສຶກສາດ້ານທຸລະກິດ ທົ່ວ ສປປ ລາວ.
+  description: |-
+    ພວກເຮົາວາງແຜນການເດີນທາງໃນ ສປປ ລາວ ໃຫ້ແກ່ແຂກຕ່າງປະເທດ ຕັ້ງແຕ່ລົດຮັບສົ່ງສະໜາມບິນ ແລະ ທົວສ່ວນຕົວ ຈົນເຖິງຄະນະທຸລະກິດທີ່ມາຢ້ຽມຢາມໂຮງງານ, ຟາມ, ເຂດເສດຖະກິດພິເສດ ແລະ ຄູ່ຮ່ວມງານ. ໄກດ໌ເວົ້າພາສາລາວ, ຈີນ, ໄທ ແລະ ອັງກິດ.
+zh:
+  title: 旅游与商务考察
+  summary: 覆盖老挝全境的私人行程、接送、导游及商务考察服务。
+  description: |-
+    我们为国际访客安排在老挝的行程，从机场接送、私人定制游，到参观工厂、农场、经济特区和合作伙伴的商务考察团。导游可使用老挝语、中文、泰语和英语。

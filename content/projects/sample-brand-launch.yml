@@ -1,0 +1,56 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Developing a consumer brand for the Lao market
+  summary: Naming, packaging and distribution planning for one of the group's own food brands.
+  client: MVM GROUP
+  category: brand-development
+  services:
+    - product-trading-distribution
+  year: ""
+  location: Laos
+  cover: ""
+  featured: false
+  sample: true
+  order: 6
+  gallery: []
+  body: |-
+    ## The brief
+    Create a food brand that Lao customers recognise immediately and that partners abroad can read.
+
+    ## What we did
+    - Developed the brand name and names in Lao, English and Chinese
+    - Designed packaging and labelling for shops and export
+    - Planned distribution through wholesalers and retailers
+
+    ## Result
+    Describe the outcome here.
+la:
+  title: ການພັດທະນາແບຣນສິນຄ້າສຳລັບຕະຫຼາດລາວ
+  summary: ການຕັ້ງຊື່, ບັນຈຸພັນ ແລະ ການວາງແຜນຈັດຈຳໜ່າຍ ສຳລັບແບຣນອາຫານຂອງກຸ່ມບໍລິສັດ.
+  location: ສປປ ລາວ
+  body: |-
+    ## ຄວາມຕ້ອງການ
+    ສ້າງແບຣນອາຫານທີ່ລູກຄ້າລາວຈື່ຈຳໄດ້ທັນທີ ແລະ ຄູ່ຮ່ວມງານຕ່າງປະເທດອ່ານເຂົ້າໃຈ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ພັດທະນາຊື່ແບຣນ ເປັນພາສາລາວ, ອັງກິດ ແລະ ຈີນ
+    - ອອກແບບບັນຈຸພັນ ແລະ ສະຫຼາກ ສຳລັບຮ້ານຄ້າ ແລະ ການສົ່ງອອກ
+    - ວາງແຜນການຈັດຈຳໜ່າຍຜ່ານຮ້ານຂາຍຍົກ ແລະ ຮ້ານຂາຍຍ່ອຍ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້.
+zh:
+  title: 为老挝市场打造消费品牌
+  summary: 为集团自有食品品牌进行命名、包装设计及分销规划。
+  location: 老挝
+  body: |-
+    ## 项目需求
+    打造一个老挝消费者一眼就能认出、海外合作伙伴也能看懂的食品品牌。
+
+    ## 我们的工作
+    - 确定品牌名称及其老挝语、英语和中文名称
+    - 设计适合商店和出口的包装与标签
+    - 规划通过批发商和零售商的分销渠道
+
+    ## 成果
+    在此描述项目成果。

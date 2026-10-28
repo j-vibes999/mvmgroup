@@ -1,0 +1,8 @@
+---
+import { ICONS } from '../lib/icons';
+const symbols = Object.entries(ICONS)
+  .map(([name, body]) => `<symbol id="i-${name}" viewBox="0 0 24 24">${body}</symbol>`)
+  .join('');
+const defs = `<defs><linearGradient id="gold-grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E6B8"/><stop offset=".5" stop-color="#D9B46E"/><stop offset="1" stop-color="#A8823F"/></linearGradient></defs>`;
+---
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false" set:html={defs + symbols}></svg>

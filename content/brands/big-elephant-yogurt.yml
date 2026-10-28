@@ -1,0 +1,133 @@
+# Brand page. Replace placeholder flavours, sizes, photos and outlets in the CMS: Brands → Big Elephant Yogurt.
+en:
+  title: Big Elephant Yogurt
+  name_en: Big Elephant Yogurt
+  name_la: ໂຢເກີດທ໌ ຊ້າງໃຫຍ່
+  name_zh: 大象酸奶
+  unit: consumer-brands
+  order: 1
+  illustration: big-elephant
+  accent_color: "#13233a"
+  logo: /uploads/brands/big-elephant-logo.webp
+  hero_image: ""
+  card_image: ""
+  seo_title: Big Elephant Yogurt — a brand of MVM GROUP
+  seo_description: >-
+    Big Elephant Yogurt (ໂຢເກີດທ໌ ຊ້າງໃຫຍ່, 大象酸奶) is a yogurt brand from Laos developed and distributed by
+    MVM GROUP. Flavours, pack sizes, where to buy and distributor applications.
+  tagline: A yogurt with a Lao name and an everyday place on the table.
+  summary: A yogurt brand from Laos, named after the elephant, the country's best-known symbol.
+  story: |-
+    Laos was once called Lan Xang, the Land of a Million Elephants. Big Elephant Yogurt takes its name from that heritage: a strong, friendly symbol that every Lao family recognises.
+
+    The brand was created by MVM GROUP to offer a yogurt that feels local, is easy to find and fits into daily routines, from breakfast to an afternoon snack.
+  concept: |-
+    Simple, fresh and familiar. Big Elephant Yogurt pairs a clean, modern pack with a name and mascot that speak to Lao customers first, while the Lao, English and Chinese names make it easy to recognise for visitors and partners.
+  highlights:
+    - title: Rooted in Laos
+      text: A name that recalls Lan Xang, the Land of a Million Elephants.
+    - title: Made for every day
+      text: Smooth yogurt to enjoy on its own, with fruit or as part of breakfast.
+    - title: Kept cold to the shelf
+      text: Distributed through a chilled supply chain to arrive fresh.
+    - title: Easy to stock
+      text: Packs and cartons planned for shops, cafés and supermarkets.
+  flavors:
+    - name: Flavour 1
+      note: name to be added
+    - name: Flavour 2
+      note: name to be added
+    - name: Flavour 3
+      note: name to be added
+  sizes:
+    - name: Size 1
+      note: volume to be added
+    - name: Size 2
+      note: volume to be added
+  products: []
+  usage: []
+  gallery:
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+  outlets: []
+  contact:
+    phone: ""
+    email: ""
+    facebook: ""
+    tiktok: ""
+la:
+  title: ໂຢເກີດທ໌ ຊ້າງໃຫຍ່
+  seo_title: ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ — ແບຣນໃນເຄືອ MVM GROUP
+  seo_description: >-
+    ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ (Big Elephant Yogurt, 大象酸奶) ແມ່ນແບຣນໂຢເກີດຈາກລາວ ທີ່ MVM GROUP ພັດທະນາ ແລະ
+    ຈັດຈຳໜ່າຍ. ລົດຊາດ, ຂະໜາດ, ຈຸດຈຳໜ່າຍ ແລະ ການສະໝັກເປັນຕົວແທນຈຳໜ່າຍ.
+  tagline: ໂຢເກີດທີ່ມີຊື່ລາວ ແລະ ມີບ່ອນຢູ່ເທິງໂຕະອາຫານທຸກວັນ.
+  summary: ແບຣນໂຢເກີດຈາກລາວ ທີ່ຕັ້ງຊື່ຕາມຊ້າງ ເຊິ່ງເປັນສັນຍາລັກທີ່ຮູ້ຈັກກັນດີທີ່ສຸດຂອງປະເທດ.
+  story: |-
+    ລາວເຄີຍມີຊື່ວ່າ ລ້ານຊ້າງ, ດິນແດນແຫ່ງຊ້າງລ້ານໂຕ. ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ ຕັ້ງຊື່ຕາມມໍລະດົກນັ້ນ: ສັນຍາລັກທີ່ເຂັ້ມແຂງ ແລະ ເປັນມິດ ທີ່ທຸກຄອບຄົວລາວຮູ້ຈັກ.
+
+    MVM GROUP ສ້າງແບຣນນີ້ຂຶ້ນ ເພື່ອສະເໜີໂຢເກີດທີ່ມີຄວາມເປັນທ້ອງຖິ່ນ, ຊອກຊື້ງ່າຍ ແລະ ເໝາະກັບຊີວິດປະຈຳວັນ ຕັ້ງແຕ່ອາຫານເຊົ້າ ຈົນເຖິງອາຫານຫວ່າງຕອນບ່າຍ.
+  concept: |-
+    ງ່າຍ, ສົດ ແລະ ຄຸ້ນເຄີຍ. ໂຢເກີດທ໌ ຊ້າງໃຫຍ່ ປະສົມບັນຈຸພັນທີ່ທັນສະໄໝ ເຂົ້າກັບຊື່ ແລະ ມາສະຄອດ ທີ່ສື່ສານກັບລູກຄ້າລາວກ່ອນ, ໃນຂະນະທີ່ຊື່ພາສາລາວ, ອັງກິດ ແລະ ຈີນ ຊ່ວຍໃຫ້ນັກທ່ອງທ່ຽວ ແລະ ຄູ່ຮ່ວມງານຈື່ຈຳໄດ້ງ່າຍ.
+  highlights:
+    - title: ມີຮາກຖານຈາກລາວ
+      text: ຊື່ທີ່ລະນຶກເຖິງ ລ້ານຊ້າງ, ດິນແດນແຫ່ງຊ້າງລ້ານໂຕ.
+    - title: ເໝາະສຳລັບທຸກວັນ
+      text: ໂຢເກີດນຸ່ມນວນ ກິນເປົ່າໆ, ກິນກັບໝາກໄມ້ ຫຼື ເປັນສ່ວນໜຶ່ງຂອງອາຫານເຊົ້າ.
+    - title: ຮັກສາຄວາມເຢັນຈົນເຖິງຊັ້ນວາງ
+      text: ຈັດຈຳໜ່າຍຜ່ານລະບົບຂົນສົ່ງຄວາມເຢັນ ເພື່ອໃຫ້ຮອດມືລູກຄ້າຢ່າງສົດໃໝ່.
+    - title: ວາງຂາຍງ່າຍ
+      text: ບັນຈຸພັນ ແລະ ລັງ ອອກແບບມາສຳລັບຮ້ານຄ້າ, ຄາເຟ ແລະ ຊຸບເປີມາເກັດ.
+  flavors:
+    - name: ລົດຊາດ 1
+      note: ລໍຖ້າເພີ່ມຊື່
+    - name: ລົດຊາດ 2
+      note: ລໍຖ້າເພີ່ມຊື່
+    - name: ລົດຊາດ 3
+      note: ລໍຖ້າເພີ່ມຊື່
+  sizes:
+    - name: ຂະໜາດ 1
+      note: ລໍຖ້າເພີ່ມປະລິມານ
+    - name: ຂະໜາດ 2
+      note: ລໍຖ້າເພີ່ມປະລິມານ
+zh:
+  title: 大象酸奶
+  seo_title: 大象酸奶 — MVM 集团旗下品牌
+  seo_description: >-
+    大象酸奶（Big Elephant Yogurt，ໂຢເກີດທ໌ ຊ້າງໃຫຍ່）是由 MVM 集团开发和分销的老挝酸奶品牌。
+    了解口味、规格、销售网点及经销商申请。
+  tagline: 一款拥有老挝名字、天天出现在餐桌上的酸奶。
+  summary: 来自老挝的酸奶品牌，以老挝最具代表性的象征——大象命名。
+  story: |-
+    老挝古称“澜沧”，意为“百万大象之国”。大象酸奶的名字正源于这一传统：一个每个老挝家庭都熟悉的、强壮而亲切的象征。
+
+    MVM 集团创立这一品牌，希望提供一款有本地亲切感、容易买到、适合日常生活的酸奶，无论是早餐还是午后小食。
+  concept: |-
+    简单、新鲜、亲切。大象酸奶将现代简洁的包装与首先面向老挝消费者的名字和吉祥物相结合，同时以老挝语、英语和中文三种名称，方便游客和合作伙伴识别。
+  highlights:
+    - title: 源自老挝
+      text: 品牌名称让人联想到“澜沧”——百万大象之国。
+    - title: 适合每一天
+      text: 口感顺滑，可直接食用、搭配水果或作为早餐的一部分。
+    - title: 冷链直达货架
+      text: 通过冷链配送，确保新鲜到达。
+    - title: 便于铺货
+      text: 包装及外箱规格适合商店、咖啡馆和超市。
+  flavors:
+    - name: 口味 1
+      note: 名称待补充
+    - name: 口味 2
+      note: 名称待补充
+    - name: 口味 3
+      note: 名称待补充
+  sizes:
+    - name: 规格 1
+      note: 容量待补充
+    - name: 规格 2
+      note: 容量待补充

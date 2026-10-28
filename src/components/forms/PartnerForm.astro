@@ -1,0 +1,37 @@
+---
+import Form from './Form.astro';
+import Field from './Field.astro';
+import ContactFields from './ContactFields.astro';
+import { getSite } from '../../lib/site';
+import { PARTNER_TYPES } from '../../lib/taxonomies';
+import { t, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const brands = getSite().brands(lang);
+---
+<Form lang={lang} name="partnership" submit={t(lang, 'form.sendPartner')}>
+  <fieldset class="form__group">
+    <legend class="form__legend">{t(lang, 'form.partnerType')}</legend>
+    <div class="choice-cards" data-required-group role="radiogroup">
+      {PARTNER_TYPES.map((k, i) => (
+        <label class="choice-card"><input type="radio" name="partnership_type" value={k} data-prefill="type" checked={i === 0} /><span><strong>{t(lang, `partner.${k}`)}</strong><small>{t(lang, `partner.${k}Text`)}</small></span></label>
+      ))}
+    </div>
+    <div class="field">
+      <span class="field__label" id="brands-label">{t(lang, 'form.brandInterest')}</span>
+      <div class="choices" role="group" aria-labelledby="brands-label">
+        {brands.map((b) => <label class="choice"><input type="checkbox" name="brands[]" value={b.slug} data-prefill="brand" /><span>{b.title}</span></label>)}
+        <label class="choice"><input type="checkbox" name="brands[]" value="any" /><span>{t(lang, 'form.allBrands')}</span></label>
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="form__group">
+    <legend class="form__legend">{t(lang, 'form.yourDetails')}</legend>
+    <ContactFields lang={lang} />
+    <div class="form__row">
+      <Field lang={lang} name="business_type" label={t(lang, 'form.businessType')} hint={t(lang, 'form.businessHint')} />
+      <Field lang={lang} name="location" label={t(lang, 'form.location')} />
+    </div>
+    <Field lang={lang} name="message" label={t(lang, 'form.partnerMessage')} type="textarea" required hint={t(lang, 'form.partnerHint')} />
+  </fieldset>
+</Form>

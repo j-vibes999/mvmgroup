@@ -1,0 +1,139 @@
+---
+import Shell from '../../../../layouts/Shell.astro';
+import Section from '../../../../components/win/Section.astro';
+import Faq from '../../../../components/win/Faq.astro';
+import HelpList from '../../../../components/win/HelpList.astro';
+import Steps from '../../../../components/win/Steps.astro';
+import QuickActions from '../../../../components/win/QuickActions.astro';
+import ServiceCard from '../../../../components/win/ServiceCard.astro';
+import TourCard from '../../../../components/win/TourCard.astro';
+import Icon from '../../../../components/Icon.astro';
+import { getSite, itemPaths } from '../../../../lib/site';
+import { md, mdInline, plain } from '../../../../lib/markdown';
+import { abs, breadcrumbLd, faqLd } from '../../../../lib/seo';
+import { t, url, type Lang } from '../../../../lib/i18n';
+import type { Entry } from '../../../../lib/content';
+import { webp } from '../../../../lib/images';
+
+export const getStaticPaths = () => itemPaths('service', (l) => getSite().services(l));
+const lang = Astro.params.lang as Lang;
+const { item: s } = Astro.props as { item: Entry };
+const site = getSite();
+const tours = site.tours(lang).filter((x) => x.service === s.slug);
+const isHub = tours.length > 0;
+const unit = site.units(lang).find((u) => u.slug === s.unit);
+const others = site.services(lang).filter((x) => x.slug !== s.slug).slice(0, 4);
+const q = s.quote_option ? `?service=${s.quote_option}` : '';
+const quoteHref = `${url(lang, 'quote')}${q}`;
+const trail = [{ label: t(lang, 'nav.services'), href: url(lang, 'services') }, { label: s.title }];
+const title = isHub ? s.hub_title || s.title : s.title;
+const lead = isHub ? s.hub_lead || s.summary : s.summary;
+const facts: string[] = (s.hub_facts || []).filter(Boolean);
+const destinations = (s.destinations || []).filter((d: Entry) => d && d.name);
+const info = (s.travel_info || []).filter((x: Entry) => x && x.title);
+const heroPhotos = (s.hero_photos || []).filter((p: Entry) => p && p.image);
+
+const jsonLd: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: title,
+    description: lead,
+    serviceType: s.title,
+    areaServed: { '@type': 'Country', name: 'Laos' },
+    provider: { '@type': 'Organization', name: 'MVM GROUP', url: abs('/') },
+    url: abs(url(lang, 'services', s.slug)),
+    ...(isHub
+      ? { hasOfferCatalog: { '@type': 'OfferCatalog', name: t(lang, 'tour.packages'), itemListElement: tours.map((x) => ({ '@type': 'Offer', itemOffered: { '@type': 'TouristTrip', name: x.title, url: abs(url(lang, 'services', s.slug, x.slug)) } })) } }
+      : {}),
+  },
+  breadcrumbLd(lang, trail),
+];
+if (s.faq?.length) jsonLd.push(faqLd(s.faq, plain));
+---
+<Shell
+  lang={lang}
+  path={['services', s.slug]}
+  nav="services"
+  title={s.seo_title || title}
+  description={s.seo_description || lead || plain(s.intro)}
+  image={heroPhotos[0]?.image || s.image}
+  jsonLd={jsonLd}
+  photos={heroPhotos.map((p: Entry) => p.image)}
+  win={{ title, eyebrow: t(lang, 'nav.services'), icon: s.icon, trail }}
+>
+  {lead && <p class="lead">{lead}</p>}
+  {facts.length > 0 && <ul class="pills">{facts.map((f) => <li>{f}</li>)}</ul>}
+  {unit && <p class="muted" style="margin-top:12px"><a class="link-arrow" href={unit.link || url(lang, 'group', unit.slug)}>{t(lang, 'service.unit')}: {unit.title}</a></p>}
+  <QuickActions lang={lang} quoteHref={quoteHref} extra={isHub ? [{ label: t(lang, 'tour.seePackages'), href: '#packages', icon: 'route' }] : []} />
+  {heroPhotos.length > 0 && (
+    <div class="photo-strip" aria-hidden="true">
+      {heroPhotos.slice(0, 3).map((p: Entry, i: number) => <figure><img src={webp(p.image)} alt="" width="800" height="600" loading={i ? 'lazy' : 'eager'} fetchpriority={i ? undefined : 'high'} decoding="async" />{p.place && <figcaption><Icon name="pin" /> {p.place}</figcaption>}</figure>)}
+    </div>
+  )}
+  <div class="frieze" aria-hidden="true"></div>
+
+  {isHub && (
+    <Section title={t(lang, 'tour.packages')} intro={s.packages_intro} id="packages">
+      <div class="grid grid--2">{tours.map((x) => <TourCard lang={lang} service={s.slug} item={x} />)}</div>
+      <p class="note"><Icon name="compass" /> {t(lang, 'tour.note')}</p>
+    </Section>
+  )}
+  {s.intro && <Section title={t(lang, 'service.whatIs')}><div class="prose" set:html={md(s.intro)} /></Section>}
+  {s.audience?.length > 0 && (
+    <Section title={t(lang, 'service.whoFor')}><ul class="checks">{s.audience.map((a: string | Entry) => <li>{typeof a === 'string' ? a : a.text}</li>)}</ul></Section>
+  )}
+  {destinations.length > 0 && (
+    <Section title={t(lang, 'tour.destinations')} intro={s.destinations_intro}>
+      <div class="dests">
+        {destinations.map((d: Entry) => (
+          <article class="dest">
+            {d.image && <img src={webp(d.image)} alt={d.name} loading="lazy" decoding="async" />}
+            <div>
+              <h3>{d.name}</h3>
+              {d.text && <p class="muted">{d.text}</p>}
+              {d.sights?.length > 0 && <><p class="dest__label">{t(lang, 'tour.sights')}</p><ul class="checks">{d.sights.map((x: string) => <li>{x}</li>)}</ul></>}
+              <dl class="meta">
+                {d.stay && <div><dt><Icon name="bed" />{t(lang, 'tour.stay')}</dt><dd>{d.stay}</dd></div>}
+                {d.getting_there && <div><dt><Icon name="train" />{t(lang, 'tour.gettingThere')}</dt><dd>{d.getting_there}</dd></div>}
+                {d.time && <div><dt><Icon name="clock" />{t(lang, 'tour.time')}</dt><dd>{d.time}</dd></div>}
+              </dl>
+            </div>
+          </article>
+        ))}
+      </div>
+    </Section>
+  )}
+  {info.length > 0 && (
+    <Section title={t(lang, 'tour.info')} intro={s.info_intro}>
+      <div class="grid grid--2">
+        {info.map((x: Entry) => <article class="card"><div class="card__body"><Icon name={x.icon || 'compass'} class="info-icon" /><h3>{x.title}</h3><div class="prose muted" set:html={md(x.text)} /></div></article>)}
+      </div>
+    </Section>
+  )}
+  {s.help?.length > 0 && <Section title={t(lang, isHub ? 'tour.more' : 'service.help')}><HelpList items={s.help} /></Section>}
+  {s.process?.length > 0 && <Section title={t(lang, isHub ? 'tour.how' : 'service.process')}><Steps items={s.process} /></Section>}
+  {s.documents?.length > 0 && (
+    <Section title={t(lang, 'service.documents')}>
+      <ul class="doc-list">{s.documents.map((d: string | Entry) => <li><Icon name="file" /><span>{typeof d === 'string' ? d : d.text}</span></li>)}</ul>
+      <p class="note">{t(lang, 'service.documentsNote')}</p>
+    </Section>
+  )}
+  {s.timeline?.length > 0 && (
+    <Section title={t(lang, 'service.timeline')}>
+      <dl class="facts">{s.timeline.map((r: Entry) => <div><dt>{r.item}</dt><dd>{r.duration}</dd></div>)}</dl>
+      <p class="note">{t(lang, 'service.timelineNote')}</p>
+    </Section>
+  )}
+  {s.faq?.length > 0 && <Section title={t(lang, 'service.faq')}><Faq items={s.faq} /></Section>}
+  <Section title={t(lang, 'service.pricing')}>
+    <div class="callout">
+      <p><strong>{t(lang, 'service.pricingNote')}</strong> — {t(lang, 'service.pricingText')}</p>
+      <div class="hero-actions"><a class="btn btn--solid" href={quoteHref}>{t(lang, 'cta.requestQuote')}</a><a class="btn" href={`${url(lang, 'contact')}${q}`}>{t(lang, 'cta.contactUs')}</a></div>
+    </div>
+  </Section>
+  {!isHub && others.length > 0 && (
+    <Section title={t(lang, 'service.other')}><div class="grid grid--2">{others.map((x) => <ServiceCard lang={lang} item={x} />)}</div></Section>
+  )}
+  {s.hub_credit && <p class="credit" set:html={mdInline(s.hub_credit)} />}
+</Shell>

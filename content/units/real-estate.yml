@@ -1,0 +1,17 @@
+# Ready-made business unit, hidden until its status is set to "active" in the CMS.
+en:
+  title: Real Estate
+  summary: Property development, leasing and advisory.
+  description: ""
+  icon: building
+  status: planned
+  show_in_menu: true
+  order: 8
+  link: ""
+  image: ""
+la:
+  title: ອະສັງຫາລິມະຊັບ
+  summary: ການພັດທະນາ, ການເຊົ່າ ແລະ ທີ່ປຶກສາດ້ານອະສັງຫາລິມະຊັບ.
+zh:
+  title: 房地产
+  summary: 房地产开发、租赁及咨询。

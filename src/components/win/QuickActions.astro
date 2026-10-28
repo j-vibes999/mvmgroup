@@ -1,0 +1,18 @@
+---
+import Icon from '../Icon.astro';
+import { getSite } from '../../lib/site';
+import { contactLinks } from '../../lib/contact';
+import { t, url, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang; quoteHref?: string; extra?: { label: string; href: string; icon: string }[] }
+const { lang, quoteHref = url(lang, 'quote'), extra = [] } = Astro.props;
+const links = contactLinks(getSite().settings(lang), lang).filter((l) => l.href && (l.kind === 'whatsapp' || l.kind === 'phone' || l.kind === 'wechat'));
+---
+<ul class="acts">
+  <li><a href={quoteHref}><span class="acts__c"><Icon name="file" /></span>{t(lang, 'cta.requestQuote')}</a></li>
+  {extra.map((x) => <li><a href={x.href}><span class="acts__c"><Icon name={x.icon} /></span>{x.label}</a></li>)}
+  {links.map((l) => (
+    <li><a href={l.href} target={l.href!.startsWith('http') ? '_blank' : undefined} rel={l.href!.startsWith('http') ? 'noopener' : undefined}><span class="acts__c"><Icon name={l.icon} /></span>{l.label}</a></li>
+  ))}
+  <li><a href={url(lang, 'contact')}><span class="acts__c"><Icon name="chat" /></span>{t(lang, 'cta.contactUs')}</a></li>
+  <li><button type="button" data-share><span class="acts__c"><Icon name="link" /></span><span data-share-label>{t(lang, 'news.share')}</span></button></li>
+</ul>

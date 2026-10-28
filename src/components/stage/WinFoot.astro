@@ -1,0 +1,27 @@
+---
+import { getSite } from '../../lib/site';
+import { LOCALES, t, url, type Lang } from '../../lib/i18n';
+import { isPlaceholder } from '../../lib/contact';
+interface Props { lang: Lang; path: string[]; credits: string[] }
+const { lang, path, credits } = Astro.props;
+const s = getSite().settings(lang);
+const company = s.company || {};
+---
+<footer class="winfoot">
+  <ul>
+    <li><a href={url(lang, 'services')}>{t(lang, 'nav.services')}</a></li>
+    <li><a href={url(lang, 'brands')}>{t(lang, 'nav.brands')}</a></li>
+    <li><a href={url(lang, 'partnership')}>{t(lang, 'nav.partnership')}</a></li>
+    <li><a href={url(lang, 'quote')}>{t(lang, 'cta.requestQuote')}</a></li>
+    <li><a href={url(lang, 'privacy')}>{t(lang, 'footer.privacy')}</a></li>
+    <li><a href={url(lang, 'terms')}>{t(lang, 'footer.terms')}</a></li>
+    {LOCALES.filter((l) => l.code !== lang).map((l) => (
+      <li><a href={url(l.code, ...path)} lang={l.htmlLang} hreflang={l.hreflang} data-lang-link={l.code}>{l.label}</a></li>
+    ))}
+  </ul>
+  <p>
+    © {new Date().getFullYear()} {company.legal_name || s.site_name || 'MVM GROUP'}. {t(lang, 'footer.rights')}
+    {company.registration_no && !isPlaceholder(company.registration_no) && <> {t(lang, 'footer.registration')}: {company.registration_no}</>}
+  </p>
+  {credits.length > 0 && <p class="credit">{credits.join(' · ')}</p>}
+</footer>

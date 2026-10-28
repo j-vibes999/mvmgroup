@@ -1,0 +1,17 @@
+# Ready-made business unit, hidden until its status is set to "active" in the CMS.
+en:
+  title: Media
+  summary: Content, advertising and media production.
+  description: ""
+  icon: media
+  status: planned
+  show_in_menu: true
+  order: 6
+  link: ""
+  image: ""
+la:
+  title: ສື່
+  summary: ການຜະລິດເນື້ອຫາ, ການໂຄສະນາ ແລະ ສື່.
+zh:
+  title: 传媒
+  summary: 内容、广告及媒体制作。

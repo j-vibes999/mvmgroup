@@ -1,0 +1,59 @@
+---
+// News listings: /news/, /news/page/<n>/, /news/category/<key>/[page/<n>/]  (12 per page)
+import Shell from '../../../layouts/Shell.astro';
+import NewsCard from '../../../components/NewsCard.astro';
+import { getSite, LANGS } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { findCategory, label, NEWS_CATEGORIES } from '../../../lib/taxonomies';
+import { t, url, type Lang } from '../../../lib/i18n';
+import type { Entry } from '../../../lib/content';
+
+export function getStaticPaths() {
+  const PER_PAGE = 12; // getStaticPaths runs on its own: keep its constants inside
+  const site = getSite();
+  const out: { params: { lang: Lang; path: string | undefined }; props: { posts: Entry[]; page: number; total: number; category?: string; base: string[] } }[] = [];
+  for (const lang of LANGS) {
+    const news = site.news(lang);
+    const paginate = (posts: Entry[], base: string[], category?: string) => {
+      const total = Math.max(1, Math.ceil(posts.length / PER_PAGE));
+      for (let page = 1; page <= total; page++) {
+        const segs = page === 1 ? base : [...base, 'page', String(page)];
+        out.push({ params: { lang, path: segs.length ? segs.join('/') : undefined }, props: { posts: posts.slice((page - 1) * PER_PAGE, page * PER_PAGE), page, total, category, base } });
+      }
+    };
+    paginate(news, []);
+    for (const c of NEWS_CATEGORIES) {
+      const posts = news.filter((n) => n.category === c.key);
+      if (posts.length) paginate(posts, ['category', c.key], c.key);
+    }
+  }
+  return out;
+}
+const lang = Astro.params.lang as Lang;
+const { posts, page, total, category, base } = Astro.props;
+const site = getSite();
+const p = site.pages(lang);
+const cat = category ? findCategory(NEWS_CATEGORIES, category) : undefined;
+const title = cat ? label(cat, lang) : p.news_title || t(lang, 'nav.news');
+const trail = cat ? [{ label: t(lang, 'nav.news'), href: url(lang, 'news') }, { label: title }] : [{ label: t(lang, 'nav.news') }];
+const used = NEWS_CATEGORIES.filter((c) => site.news(lang).some((n) => n.category === c.key));
+const pageHref = (n: number) => (n === 1 ? url(lang, 'news', ...base) : url(lang, 'news', ...base, 'page', String(n)));
+const path = ['news', ...(page > 1 ? [...base, 'page', String(page)] : base)];
+---
+<Shell lang={lang} path={path} nav="news" title={page > 1 ? `${title} — ${t(lang, 'news.page')} ${page}` : title} description={cat ? `${title} — MVM GROUP` : p.news_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'news', trail }}>
+  {!cat && p.news_lead && <p class="lead">{p.news_lead}</p>}
+  {used.length > 0 && (
+    <ul class="chips" aria-label={t(lang, 'news.categories')}>
+      <li><a href={url(lang, 'news')} aria-current={!category ? 'page' : undefined}>{t(lang, 'news.all')}</a></li>
+      {used.map((c) => <li><a href={url(lang, 'news', 'category', c.key)} aria-current={category === c.key ? 'page' : undefined}>{label(c, lang)}</a></li>)}
+    </ul>
+  )}
+  {posts.length === 0 ? <p class="muted">{t(lang, 'news.empty')}</p> : <div class="grid grid--2">{posts.map((n: Entry) => <NewsCard lang={lang} level="h2" item={n} />)}</div>}
+  {total > 1 && (
+    <nav class="pager" aria-label={t(lang, 'news.page')}>
+      {page > 1 ? <a href={pageHref(page - 1)}>←</a> : <span></span>}
+      <span aria-current="page">{page} / {total}</span>
+      {page < total ? <a href={pageHref(page + 1)}>→</a> : <span></span>}
+    </nav>
+  )}
+</Shell>

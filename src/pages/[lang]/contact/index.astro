@@ -1,0 +1,53 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import Section from '../../../components/win/Section.astro';
+import ContactForm from '../../../components/forms/ContactForm.astro';
+import Icon from '../../../components/Icon.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { contactLinks, isPlaceholder } from '../../../lib/contact';
+import { t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const p = site.pages(lang);
+const s = site.settings(lang);
+const c = s.contact || {};
+const title = p.contact_title || t(lang, 'nav.contactUs');
+const trail = [{ label: t(lang, 'nav.contact') }];
+type Channel = { key: string; icon: string; label: string; value: string; href: string | null };
+const channels: Channel[] = contactLinks(s, lang).map((l) => ({ key: l.kind, icon: l.icon, label: l.label, value: l.value, href: l.href }));
+if (s.address) channels.push({ key: 'address', icon: 'pin', label: t(lang, 'contact.address'), value: s.address, href: isPlaceholder(c.map_link) ? null : c.map_link });
+if (s.hours) channels.push({ key: 'hours', icon: 'clock', label: t(lang, 'contact.hours'), value: s.hours, href: null });
+if (!isPlaceholder(c.facebook)) channels.push({ key: 'facebook', icon: 'facebook', label: t(lang, 'contact.facebook'), value: c.facebook.replace(/^https?:\/\/(www\.)?/, ''), href: c.facebook });
+if (!isPlaceholder(c.tiktok)) channels.push({ key: 'tiktok', icon: 'tiktok', label: t(lang, 'contact.tiktok'), value: c.tiktok.replace(/^https?:\/\/(www\.)?/, ''), href: c.tiktok });
+const hasMap = c.map_embed && !isPlaceholder(c.map_embed);
+---
+<Shell lang={lang} path={['contact']} nav="contact" title={title} description={p.contact_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'chat', trail }}>
+  {p.contact_lead && <p class="lead">{p.contact_lead}</p>}
+  <div class="frieze" aria-hidden="true"></div>
+  <Section title={t(lang, 'contact.channels')}>
+    <ul class="channels">
+      {channels.map((l) => (
+        <li id={l.key === 'wechat' ? 'wechat' : undefined}>
+          <span class="acts__c"><Icon name={l.icon} /></span>
+          <span><small>{l.label}</small>{l.href ? <a href={l.href} target={l.href.startsWith('http') ? '_blank' : undefined} rel={l.href.startsWith('http') ? 'noopener' : undefined}>{l.value}</a> : <span>{l.value && !isPlaceholder(l.value) ? l.value : t(lang, 'misc.placeholder')}</span>}</span>
+        </li>
+      ))}
+    </ul>
+    <div class="wechat-qr">
+      {c.wechat_qr ? <img src={c.wechat_qr} alt={t(lang, 'contact.scanWechat')} width="140" height="140" loading="lazy" /> : <span class="app" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-wechat" /></svg></span>}
+      <p>{t(lang, 'contact.scanWechat')}{!isPlaceholder(c.wechat) && <><br /><strong>{c.wechat}</strong></>}</p>
+    </div>
+  </Section>
+  <Section title={t(lang, 'contact.formTitle')}><ContactForm lang={lang} /></Section>
+  <Section title={t(lang, 'contact.map')}>
+    {hasMap ? (
+      <div class="map"><iframe src={c.map_embed} title={`${t(lang, 'contact.map')} — MVM GROUP`} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    ) : (
+      <p class="muted">{t(lang, 'contact.mapPending')}</p>
+    )}
+    {c.map_link && !isPlaceholder(c.map_link) && <p><a class="link-arrow" href={c.map_link} target="_blank" rel="noopener">{t(lang, 'contact.openMap')} ↗</a></p>}
+  </Section>
+</Shell>

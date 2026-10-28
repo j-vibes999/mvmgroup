@@ -1,0 +1,12 @@
+---
+import Shell from '../../layouts/Shell.astro';
+import { langPaths } from '../../lib/site';
+import { t, url, type Lang } from '../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+---
+<Shell lang={lang} path={['404']} title={t(lang, 'notFound.title')} noindex win={{ title: t(lang, 'notFound.title'), eyebrow: '404', icon: 'compass' }}>
+  <p class="lead">{t(lang, 'notFound.text')}</p>
+  <div class="hero-actions"><a class="btn btn--solid" href={url(lang)}>{t(lang, 'cta.backHome')}</a><a class="btn" href={url(lang, 'contact')}>{t(lang, 'cta.contactUs')}</a></div>
+</Shell>

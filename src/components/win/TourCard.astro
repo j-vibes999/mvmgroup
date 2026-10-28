@@ -1,0 +1,21 @@
+---
+import Icon from '../Icon.astro';
+import { t, url, type Lang } from '../../lib/i18n';
+import type { Entry } from '../../lib/content';
+import { webp } from '../../lib/images';
+interface Props { lang: Lang; service: string; item: Entry }
+const { lang, service, item: tour } = Astro.props;
+const image = webp(tour.image || tour.hero_image);
+---
+<a class="card tour-card" href={url(lang, 'services', service, tour.slug)}>
+  <div class="card__media">
+    {image ? <img src={image} alt="" loading="lazy" decoding="async" /> : <div class="media-pending"><img src="/patterns/dok-champa.svg" alt="" /></div>}
+    {tour.duration && <span class="tour-card__badge">{tour.duration}</span>}
+  </div>
+  <div class="card__body">
+    {tour.route && <span class="card__meta"><Icon name="route" /> {tour.route}</span>}
+    <h3>{tour.title}</h3>
+    {tour.summary && <p>{tour.summary}</p>}
+    <span class="link-arrow card__foot">{t(lang, 'tour.viewItinerary')} →</span>
+  </div>
+</a>

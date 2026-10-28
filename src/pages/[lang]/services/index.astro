@@ -1,0 +1,28 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import Section from '../../../components/win/Section.astro';
+import ServiceCard from '../../../components/win/ServiceCard.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const p = site.pages(lang);
+const services = site.services(lang);
+const units = site.units(lang).filter((u) => u.status !== 'planned');
+const grouped = units.map((unit) => ({ unit, services: services.filter((s) => s.unit === unit.slug) })).filter((g) => g.services.length);
+const ungrouped = services.filter((s) => !units.some((u) => u.slug === s.unit));
+const title = p.services_title || t(lang, 'section.services');
+const trail = [{ label: t(lang, 'nav.services') }];
+---
+<Shell lang={lang} path={['services']} nav="services" title={title} description={p.services_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'briefcase', trail }}>
+  {p.services_lead && <p class="lead">{p.services_lead}</p>}
+  {grouped.map((g) => (
+    <Section title={g.unit.title} intro={g.unit.summary}>
+      <div class="grid grid--2">{g.services.map((s) => <ServiceCard lang={lang} item={s} />)}</div>
+    </Section>
+  ))}
+  {ungrouped.length > 0 && <Section><div class="grid grid--2">{ungrouped.map((s) => <ServiceCard lang={lang} item={s} />)}</div></Section>}
+</Shell>

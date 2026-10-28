@@ -1,0 +1,10 @@
+---
+import { LOCALES, url, type Lang } from '../lib/i18n';
+interface Props { lang: Lang; path: string[]; class?: string; label: string }
+const { lang, path, class: cls, label } = Astro.props;
+---
+<div class={cls} role="group" aria-label={label}>
+  {LOCALES.map((l) => (
+    <a href={url(l.code, ...path)} hreflang={l.hreflang} lang={l.htmlLang} data-lang-link={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.label}</a>
+  ))}
+</div>

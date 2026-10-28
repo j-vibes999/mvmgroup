@@ -1,0 +1,47 @@
+---
+import Shell from '../../../../layouts/Shell.astro';
+import Section from '../../../../components/win/Section.astro';
+import ProjectCard from '../../../../components/win/ProjectCard.astro';
+import { getSite, itemPaths } from '../../../../lib/site';
+import { md, plain } from '../../../../lib/markdown';
+import { breadcrumbLd } from '../../../../lib/seo';
+import { findCategory, label, PROJECT_CATEGORIES } from '../../../../lib/taxonomies';
+import { t, url, type Lang } from '../../../../lib/i18n';
+import type { Entry } from '../../../../lib/content';
+
+export const getStaticPaths = () => itemPaths('project', (l) => getSite().projects(l));
+const lang = Astro.params.lang as Lang;
+const { item: pr } = Astro.props as { item: Entry };
+const site = getSite();
+const cat = findCategory(PROJECT_CATEGORIES, pr.category);
+const services = (pr.services || []).map((slug: string) => site.services(lang).find((s) => s.slug === slug)).filter(Boolean) as Entry[];
+const all = site.projects(lang).filter((x) => x.slug !== pr.slug);
+const related = all.filter((x) => x.category === pr.category).concat(all.filter((x) => x.category !== pr.category)).slice(0, 2);
+const trail = [{ label: t(lang, 'nav.projects'), href: url(lang, 'projects') }, { label: pr.title }];
+const facts = [
+  { k: t(lang, 'project.client'), v: pr.client },
+  { k: t(lang, 'project.category'), v: cat ? label(cat, lang) : '' },
+  { k: t(lang, 'project.year'), v: pr.year },
+  { k: t(lang, 'project.location'), v: pr.location },
+].filter((f) => f.v);
+---
+<Shell lang={lang} path={['projects', pr.slug]} nav="projects" title={pr.seo_title || pr.title} description={pr.seo_description || pr.summary || plain(pr.body)} image={pr.cover} noindex={pr.sample === true} jsonLd={breadcrumbLd(lang, trail)} win={{ title: pr.title, eyebrow: cat ? label(cat, lang) : t(lang, 'nav.projects'), icon: cat?.icon || 'chart', trail }}>
+  {pr.summary && <p class="lead">{pr.summary}</p>}
+  {pr.sample && <p><span class="tag tag--sample">{t(lang, 'project.sample')}</span></p>}
+  {facts.length > 0 && (
+    <dl class="facts">
+      {facts.map((f) => <div><dt>{f.k}</dt><dd>{f.v}</dd></div>)}
+      {services.length > 0 && <div><dt>{t(lang, 'project.services')}</dt><dd>{services.map((s, i) => <>{i > 0 && ', '}<a href={url(lang, 'services', s.slug)}>{s.title}</a></>)}</dd></div>}
+    </dl>
+  )}
+  {pr.cover && <figure class="hero-photo"><img src={pr.cover} alt={pr.cover_alt || pr.title} decoding="async" /></figure>}
+  <div class="frieze" aria-hidden="true"></div>
+  <div class="prose" set:html={md(pr.body)} />
+  {pr.gallery?.length > 0 && (
+    <Section title={t(lang, 'project.gallery')}>
+      <div class="gallery">{pr.gallery.filter((g: Entry) => g.image).map((g: Entry) => <figure><img src={g.image} alt={g.caption || ''} loading="lazy" />{g.caption && <figcaption>{g.caption}</figcaption>}</figure>)}</div>
+    </Section>
+  )}
+  <div class="hero-actions" style="margin-top:28px"><a class="btn btn--solid" href={url(lang, 'quote')}>{t(lang, 'cta.requestQuote')}</a></div>
+  {related.length > 0 && <Section title={t(lang, 'project.related')}><div class="grid grid--2">{related.map((x) => <ProjectCard lang={lang} item={x} />)}</div></Section>}
+</Shell>

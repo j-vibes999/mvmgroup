@@ -1,0 +1,9 @@
+---
+interface Props { title?: string; intro?: string; id?: string }
+const { title, intro, id } = Astro.props;
+---
+<section class="wsec" id={id}>
+  {title && <h2 class="section-title">{title}</h2>}
+  {intro && <p class="muted wsec__intro">{intro}</p>}
+  <slot />
+</section>

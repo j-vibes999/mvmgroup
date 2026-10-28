@@ -1,0 +1,62 @@
+# SAMPLE ENTRY — shows the project format. Replace with a real project or delete it in the CMS.
+en:
+  title: Work and stay permits for a project team
+  summary: Permits for foreign engineers and managers joining a project in Laos, with a renewal calendar.
+  client: Client name to be added
+  category: government-documentation
+  services:
+    - government-documentation
+    - translation-interpretation
+  year: ""
+  location: Laos
+  cover: ""
+  featured: true
+  sample: true
+  order: 2
+  gallery: []
+  body: |-
+    ## The brief
+    A project company needed work and stay permits for foreign staff arriving in several groups.
+
+    ## What we did
+    - Prepared a document checklist for each employee
+    - Translated and certified supporting documents
+    - Submitted applications and followed up with the responsible offices
+    - Set up a renewal calendar for the whole team
+
+    ## Result
+    Describe the outcome here.
+la:
+  title: ໃບອະນຸຍາດເຮັດວຽກ ແລະ ບັດພັກເຊົາ ສຳລັບທີມງານໂຄງການ
+  summary: ໃບອະນຸຍາດສຳລັບວິສະວະກອນ ແລະ ຜູ້ຈັດການຕ່າງປະເທດ ທີ່ເຂົ້າມາເຮັດວຽກໂຄງການໃນລາວ ພ້ອມປະຕິທິນການຕໍ່ອາຍຸ.
+  client: ລໍຖ້າເພີ່ມຊື່ລູກຄ້າ
+  location: ສປປ ລາວ
+  body: |-
+    ## ຄວາມຕ້ອງການຂອງລູກຄ້າ
+    ບໍລິສັດໂຄງການຕ້ອງການໃບອະນຸຍາດເຮັດວຽກ ແລະ ບັດພັກເຊົາ ສຳລັບພະນັກງານຕ່າງປະເທດ ທີ່ເດີນທາງມາເປັນຫຼາຍກຸ່ມ.
+
+    ## ສິ່ງທີ່ພວກເຮົາເຮັດ
+    - ກະກຽມລາຍການເອກະສານສຳລັບພະນັກງານແຕ່ລະຄົນ
+    - ແປ ແລະ ຢັ້ງຢືນເອກະສານປະກອບ
+    - ຍື່ນຄຳຮ້ອງ ແລະ ຕິດຕາມກັບຫ້ອງການທີ່ຮັບຜິດຊອບ
+    - ສ້າງປະຕິທິນການຕໍ່ອາຍຸສຳລັບທັງທີມ
+
+    ## ຜົນໄດ້ຮັບ
+    ອະທິບາຍຜົນໄດ້ຮັບຢູ່ບ່ອນນີ້.
+zh:
+  title: 为项目团队办理工作许可与居留许可
+  summary: 为来老挝参与项目的外籍工程师和管理人员办理许可，并建立续期日历。
+  client: 客户名称待补充
+  location: 老挝
+  body: |-
+    ## 项目需求
+    一家项目公司需要为分批抵达的外籍员工办理工作许可和居留许可。
+
+    ## 我们的工作
+    - 为每位员工准备文件清单
+    - 翻译并认证随附文件
+    - 递交申请并与主管部门跟进
+    - 为整个团队建立续期日历
+
+    ## 成果
+    在此描述项目成果。

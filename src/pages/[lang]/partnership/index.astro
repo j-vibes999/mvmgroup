@@ -1,0 +1,24 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import PartnerForm from '../../../components/forms/PartnerForm.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { md } from '../../../lib/markdown';
+import { breadcrumbLd } from '../../../lib/seo';
+import { t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const p = getSite().pages(lang);
+const title = p.partnership_title || t(lang, 'nav.partnership');
+const trail = [{ label: t(lang, 'nav.partnership') }];
+---
+<Shell lang={lang} path={['partnership']} nav="brands" title={title} description={p.partnership_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'users', trail }}>
+  {p.partnership_lead && <p class="lead">{p.partnership_lead}</p>}
+  {p.partnership_intro && <div class="prose" set:html={md(p.partnership_intro)} />}
+  <div class="callout">
+    <p><strong>{t(lang, 'quote.nextTitle')}</strong></p>
+    <ol class="next-steps"><li>{t(lang, 'quote.next1')}</li><li>{p.partnership_next || t(lang, 'quote.next2')}</li></ol>
+  </div>
+  <div class="frieze" aria-hidden="true"></div>
+  <PartnerForm lang={lang} />
+</Shell>

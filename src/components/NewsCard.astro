@@ -1,0 +1,18 @@
+---
+import { findCategory, label, NEWS_CATEGORIES } from '../lib/taxonomies';
+import { formatDate, isoDate, url, type Lang } from '../lib/i18n';
+import type { Entry } from '../lib/content';
+interface Props { lang: Lang; item: Entry; /** Heading level for the card title (h2 on listing pages without section headings). */ level?: 'h2' | 'h3' }
+const { lang, item, level: H = 'h3' } = Astro.props;
+const cat = findCategory(NEWS_CATEGORIES, item.category);
+---
+<a class="card" href={url(lang, 'news', item.slug)}>
+  <div class="card__media">
+    {item.cover ? <img src={item.cover} alt="" loading="lazy" decoding="async" /> : <div class="media-pending"><img src="/patterns/laikham-rosette.svg" alt="" loading="lazy" /></div>}
+  </div>
+  <div class="card__body">
+    <span class="card__meta">{cat && label(cat, lang)}{cat && ' · '}<time datetime={isoDate(item.date)}>{formatDate(item.date, lang)}</time></span>
+    <H>{item.title}</H>
+    {item.excerpt && <p>{item.excerpt}</p>}
+  </div>
+</a>

@@ -1,0 +1,21 @@
+en:
+  title: Trade & Logistics
+  summary: Import-export, customs, shipping and product distribution between Laos and international markets.
+  description: |-
+    This unit moves goods in and out of Laos and gets them to market. We coordinate shipping, customs clearance and cross-border transport, and we trade and distribute products through a growing network of agents and retailers.
+  icon: truck
+  status: active
+  show_in_menu: true
+  order: 3
+  link: ""
+  image: ""
+la:
+  title: ການຄ້າ ແລະ ໂລຈິສຕິກ
+  summary: ນຳເຂົ້າ-ສົ່ງອອກ, ພາສີ, ການຂົນສົ່ງ ແລະ ການຈັດຈຳໜ່າຍສິນຄ້າ ລະຫວ່າງລາວ ແລະ ຕະຫຼາດສາກົນ.
+  description: |-
+    ໜ່ວຍທຸລະກິດນີ້ດູແລການເຄື່ອນຍ້າຍສິນຄ້າເຂົ້າ-ອອກ ສປປ ລາວ ແລະ ນຳສິນຄ້າສູ່ຕະຫຼາດ. ພວກເຮົາປະສານງານການຂົນສົ່ງ, ການຜ່ານພາສີ ແລະ ການຂົນສົ່ງຂ້າມແດນ, ພ້ອມທັງຄ້າຂາຍ ແລະ ຈັດຈຳໜ່າຍສິນຄ້າຜ່ານເຄືອຂ່າຍຕົວແທນ ແລະ ຮ້ານຄ້າທີ່ກຳລັງຂະຫຍາຍຕົວ.
+zh:
+  title: 贸易与物流
+  summary: 老挝与国际市场之间的进出口、清关、运输及产品分销。
+  description: |-
+    本板块负责货物进出老挝并将其送达市场。我们协调运输、清关和跨境运输，并通过不断扩大的代理商和零售商网络开展产品贸易与分销。

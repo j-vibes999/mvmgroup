@@ -1,0 +1,17 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { md } from '../../../lib/markdown';
+import { breadcrumbLd } from '../../../lib/seo';
+import { formatDate, t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const l = getSite().legal(lang);
+const title = l.terms_title || t(lang, 'footer.terms');
+const trail = [{ label: title }];
+---
+<Shell lang={lang} path={['terms']} title={title} description={title} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'document', trail }}>
+  {l.updated && <p class="muted">{t(lang, 'misc.updated')}: {formatDate(l.updated, lang)}</p>}
+  <div class="prose" set:html={md(l.terms_body)} />
+</Shell>

@@ -1,0 +1,30 @@
+---
+import Shell from '../../../../layouts/Shell.astro';
+import Section from '../../../../components/win/Section.astro';
+import ServiceCard from '../../../../components/win/ServiceCard.astro';
+import BrandCard from '../../../../components/win/BrandCard.astro';
+import QuickActions from '../../../../components/win/QuickActions.astro';
+import { getSite, itemPaths } from '../../../../lib/site';
+import { md } from '../../../../lib/markdown';
+import { breadcrumbLd } from '../../../../lib/seo';
+import { t, url, type Lang } from '../../../../lib/i18n';
+import type { Entry } from '../../../../lib/content';
+
+// Units with their own website, or still planned, get no page here.
+export const getStaticPaths = () => itemPaths('unit', (l) => getSite().units(l).filter((u) => u.status !== 'planned' && !u.link));
+const lang = Astro.params.lang as Lang;
+const { item: unit } = Astro.props as { item: Entry };
+const site = getSite();
+const services = site.services(lang).filter((s) => s.unit === unit.slug);
+const brands = site.brands(lang).filter((b) => b.unit === unit.slug);
+const trail = [{ label: t(lang, 'nav.about'), href: url(lang, 'about') }, { label: unit.title }];
+---
+<Shell lang={lang} path={['group', unit.slug]} nav="about" title={unit.seo_title || unit.title} description={unit.seo_description || unit.summary} image={unit.image} jsonLd={breadcrumbLd(lang, trail)} win={{ title: unit.title, eyebrow: t(lang, 'nav.businessUnits'), icon: unit.icon || 'building', trail }}>
+  {unit.summary && <p class="lead">{unit.summary}</p>}
+  <QuickActions lang={lang} />
+  <div class="frieze" aria-hidden="true"></div>
+  {unit.image && <figure class="hero-photo"><img src={unit.image} alt={unit.title} decoding="async" /></figure>}
+  {unit.description && <div class="prose" set:html={md(unit.description)} />}
+  {services.length > 0 && <Section title={t(lang, 'section.services')}><div class="grid grid--2">{services.map((s) => <ServiceCard lang={lang} item={s} />)}</div></Section>}
+  {brands.length > 0 && <Section title={t(lang, 'section.brands')}><div class="grid grid--2">{brands.map((b) => <BrandCard lang={lang} item={b} />)}</div></Section>}
+</Shell>

@@ -1,0 +1,18 @@
+---
+import Field from './Field.astro';
+import { t, type Lang } from '../../lib/i18n';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+---
+<div class="form__row">
+  <Field lang={lang} name="name" label={t(lang, 'form.name')} required autocomplete="name" />
+  <Field lang={lang} name="company" label={t(lang, 'form.company')} autocomplete="organization" />
+</div>
+<div class="form__row">
+  <Field lang={lang} name="email" label={t(lang, 'form.email')} type="email" required autocomplete="email" />
+  <Field lang={lang} name="phone" label={t(lang, 'form.phone')} type="tel" required autocomplete="tel" inputmode="tel" />
+</div>
+<div class="form__row">
+  <Field lang={lang} name="country" label={t(lang, 'form.country')} required autocomplete="country-name" />
+  <Field lang={lang} name="wechat" label={t(lang, 'form.wechat')} />
+</div>

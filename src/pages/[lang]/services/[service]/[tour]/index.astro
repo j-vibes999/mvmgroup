@@ -1,0 +1,110 @@
+---
+import Shell from '../../../../../layouts/Shell.astro';
+import Section from '../../../../../components/win/Section.astro';
+import QuickActions from '../../../../../components/win/QuickActions.astro';
+import TourCard from '../../../../../components/win/TourCard.astro';
+import Icon from '../../../../../components/Icon.astro';
+import { getSite, LANGS } from '../../../../../lib/site';
+import { md, mdInline, plain } from '../../../../../lib/markdown';
+import { abs, breadcrumbLd } from '../../../../../lib/seo';
+import { t, url, type Lang } from '../../../../../lib/i18n';
+import type { Entry } from '../../../../../lib/content';
+import { webp } from '../../../../../lib/images';
+
+export function getStaticPaths() {
+  const site = getSite();
+  return LANGS.flatMap((lang) =>
+    site.tours(lang).flatMap((tour) => {
+      const service = site.services(lang).find((s) => s.slug === tour.service);
+      return service ? [{ params: { lang, service: service.slug, tour: tour.slug }, props: { service, tour } }] : [];
+    }),
+  );
+}
+const lang = Astro.params.lang as Lang;
+const { service: s, tour } = Astro.props as { service: Entry; tour: Entry };
+const others = getSite().tours(lang).filter((x) => x.service === s.slug && x.slug !== tour.slug).slice(0, 2);
+const days = (tour.days || []).filter(Boolean);
+const dayLabel = (n: number) => t(lang, 'tour.day').replace('{n}', String(n));
+const quoteHref = `${url(lang, 'quote')}?service=${encodeURIComponent(s.quote_option || 'tour')}&tour=${encodeURIComponent(tour.title)}`;
+const trail = [
+  { label: t(lang, 'nav.services'), href: url(lang, 'services') },
+  { label: s.hub_title || s.title, href: url(lang, 'services', s.slug) },
+  { label: tour.title },
+];
+const facts = [
+  { k: 'tour.duration', v: tour.duration, i: 'clock' },
+  { k: 'tour.route', v: tour.route, i: 'route' },
+  { k: 'tour.start', v: tour.start, i: 'pin' },
+  { k: 'tour.end', v: tour.end, i: 'pin' },
+  { k: 'tour.transport', v: tour.transport, i: 'train' },
+  { k: 'tour.bestFor', v: tour.best_for, i: 'users' },
+].filter((f) => f.v);
+const image = tour.hero_image || tour.image;
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TouristTrip',
+    name: tour.title,
+    description: tour.summary || plain(tour.overview),
+    touristType: tour.best_for || undefined,
+    url: abs(url(lang, 'services', s.slug, tour.slug)),
+    ...(image ? { image: abs(image) } : {}),
+    provider: { '@type': 'Organization', name: 'MVM GROUP', url: abs('/') },
+    itinerary: { '@type': 'ItemList', itemListElement: days.map((d: Entry, i: number) => ({ '@type': 'ListItem', position: i + 1, name: `${dayLabel(i + 1)}: ${d.title}` })) },
+  },
+  breadcrumbLd(lang, trail),
+];
+---
+<Shell
+  lang={lang}
+  path={['services', s.slug, tour.slug]}
+  nav="services"
+  title={tour.seo_title || tour.title}
+  description={tour.seo_description || tour.summary || plain(tour.overview)}
+  image={image}
+  jsonLd={jsonLd}
+  photos={[image]}
+  win={{ title: tour.title, eyebrow: tour.duration || s.title, icon: 'route', trail }}
+>
+  {tour.summary && <p class="lead">{tour.summary}</p>}
+  {image && <figure class="hero-photo"><img src={webp(image)} alt="" width="1200" height="520" fetchpriority="high" decoding="async" /></figure>}
+  <dl class="facts">{facts.map((f) => <div><dt><Icon name={f.i} /> {t(lang, f.k)}</dt><dd>{f.v}</dd></div>)}</dl>
+  <QuickActions lang={lang} quoteHref={quoteHref} extra={[{ label: t(lang, 'tour.itinerary'), href: '#itinerary', icon: 'calendar' }]} />
+  <div class="frieze" aria-hidden="true"></div>
+  {tour.overview && <Section title={t(lang, 'tour.overview')}><div class="prose" set:html={md(tour.overview)} /></Section>}
+  {tour.highlights?.length > 0 && <Section title={t(lang, 'tour.highlights')}><ul class="checks">{tour.highlights.map((h: string) => <li>{h}</li>)}</ul></Section>}
+  {days.length > 0 && (
+    <Section title={t(lang, 'tour.itinerary')} id="itinerary">
+      <ol class="itinerary">
+        {days.map((d: Entry, i: number) => (
+          <li>
+            <span class="itinerary__n" aria-hidden="true">{i + 1}</span>
+            <div>
+              <p class="itinerary__label">{dayLabel(i + 1)}</p>
+              <h3>{d.title}</h3>
+              {d.text && <div class="prose muted" set:html={md(d.text)} />}
+              {d.visits?.length > 0 && <><p class="dest__label"><Icon name="pin" /> {t(lang, 'tour.visit')}</p><ul class="checks">{d.visits.map((v: string) => <li>{v}</li>)}</ul></>}
+              <dl class="meta">
+                {d.overnight && <div><dt><Icon name="bed" />{t(lang, 'tour.overnight')}</dt><dd>{d.overnight}</dd></div>}
+                {d.transport && <div><dt><Icon name="train" />{t(lang, 'tour.transport')}</dt><dd>{d.transport}</dd></div>}
+              </dl>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </Section>
+  )}
+  {(tour.includes?.length > 0 || tour.excludes?.length > 0) && (
+    <div class="grid grid--2 incl">
+      {tour.includes?.length > 0 && <Section title={t(lang, 'tour.includes')}><ul class="checks">{tour.includes.map((x: string) => <li>{x}</li>)}</ul></Section>}
+      {tour.excludes?.length > 0 && <Section title={t(lang, 'tour.excludes')}><ul class="checks checks--no">{tour.excludes.map((x: string) => <li>{x}</li>)}</ul></Section>}
+    </div>
+  )}
+  <p class="note"><Icon name="compass" /> {t(lang, 'tour.note')}</p>
+  <div class="callout">
+    <p><strong>{t(lang, 'tour.request')}</strong> — {t(lang, 'tour.requestText')}</p>
+    <div class="hero-actions"><a class="btn btn--solid" href={quoteHref}>{t(lang, 'tour.request')}</a></div>
+  </div>
+  {others.length > 0 && <Section title={t(lang, 'tour.other')}><div class="grid grid--2">{others.map((x) => <TourCard lang={lang} service={s.slug} item={x} />)}</div></Section>}
+  {tour.photo_credit && <p class="credit" set:html={mdInline(tour.photo_credit)} />}
+</Shell>

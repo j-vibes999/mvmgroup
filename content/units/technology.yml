@@ -1,0 +1,17 @@
+# Ready-made business unit, hidden until its status is set to "active" in the CMS.
+en:
+  title: Technology
+  summary: Digital and technology services.
+  description: ""
+  icon: chip
+  status: planned
+  show_in_menu: true
+  order: 7
+  link: ""
+  image: ""
+la:
+  title: ເຕັກໂນໂລຊີ
+  summary: ບໍລິການດ້ານດິຈິຕອນ ແລະ ເຕັກໂນໂລຊີ.
+zh:
+  title: 科技
+  summary: 数字及科技服务。

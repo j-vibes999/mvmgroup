@@ -1,0 +1,157 @@
+# Brand page. Replace placeholder products, photos and outlets in the CMS: Brands → Pa Daek Sophanua.
+en:
+  title: Pa Daek Sophanua
+  name_en: Pa Daek Sophanua
+  name_la: ປາແດກໂສພານົວ
+  name_zh: 索法努阿鱼酱
+  unit: consumer-brands
+  order: 2
+  illustration: pa-daek
+  accent_color: "#2a2017"
+  logo: /uploads/brands/sophanua-logo.webp
+  hero_image: ""
+  card_image: ""
+  seo_title: Pa Daek Sophanua — Lao fermented fish sauce by MVM GROUP
+  seo_description: >-
+    Pa Daek Sophanua (ປາແດກໂສພານົວ, 索法努阿鱼酱) is a Lao pa daek brand developed and distributed by
+    MVM GROUP. Products, how to use it, where to buy and distributor applications.
+  tagline: The taste at the heart of Lao cooking, packed for today's kitchens.
+  summary: Pa daek, the fermented fish seasoning at the heart of Lao food, in a brand made for homes, restaurants and export.
+  story: |-
+    Pa daek is the seasoning that gives Lao food its depth. Families have made it for generations, and it goes into papaya salad, jeow dipping sauces, soups and curries across the country.
+
+    Pa Daek Sophanua brings that everyday ingredient to modern shelves under a recognisable brand, so home cooks, restaurants and buyers abroad can find a consistent product.
+  concept: |-
+    Traditional taste, clear packaging. The brand keeps the flavour Lao cooks expect and presents it with labelling in Lao, English and Chinese for shops at home and in neighbouring markets.
+  highlights:
+    - title: A staple of Lao cooking
+      text: The base for tam mak hoong, jeow, soups and curries.
+    - title: Deep, savoury flavour
+      text: Rich fermented-fish taste that seasons a whole dish with a spoonful.
+    - title: Packed for shops and kitchens
+      text: Sealed packs for home cooks, restaurants and food businesses.
+    - title: Ready for export
+      text: Labels in Lao, English and Chinese for buyers in the region.
+  products:
+    - name: Product 1
+      description: Product name and description to be added.
+      size: Size to be added
+      image: ""
+    - name: Product 2
+      description: Product name and description to be added.
+      size: Size to be added
+      image: ""
+    - name: Product 3
+      description: Product name and description to be added.
+      size: Size to be added
+      image: ""
+  usage:
+    - title: Season papaya salad
+      text: Add a spoonful to tam mak hoong for its classic Lao flavour.
+    - title: Make jeow dipping sauces
+      text: Mix with chilli, garlic and herbs to serve with sticky rice and vegetables.
+    - title: Flavour soups and curries
+      text: Stir into broths, curries and stews while they cook.
+    - title: Cook before eating
+      text: Unless the label says the product is ready to eat, cook pa daek before serving, and follow the storage instructions on the pack.
+  flavors: []
+  sizes: []
+  gallery:
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+    - image: ""
+      alt: ""
+  outlets: []
+  contact:
+    phone: ""
+    email: ""
+    facebook: ""
+    tiktok: ""
+la:
+  title: ປາແດກໂສພານົວ
+  seo_title: ປາແດກໂສພານົວ — ແບຣນປາແດກລາວ ໃນເຄືອ MVM GROUP
+  seo_description: >-
+    ປາແດກໂສພານົວ (Pa Daek Sophanua, 索法努阿鱼酱) ແມ່ນແບຣນປາແດກລາວ ທີ່ MVM GROUP ພັດທະນາ ແລະ ຈັດຈຳໜ່າຍ.
+    ລາຍການສິນຄ້າ, ວິທີໃຊ້, ຈຸດຈຳໜ່າຍ ແລະ ການສະໝັກເປັນຕົວແທນຈຳໜ່າຍ.
+  tagline: ລົດຊາດທີ່ເປັນຫົວໃຈຂອງອາຫານລາວ ບັນຈຸມາເພື່ອເຮືອນຄົວທຸກມື້ນີ້.
+  summary: ປາແດກ ເຄື່ອງປຸງຫຼັກຂອງອາຫານລາວ ໃນແບຣນທີ່ສ້າງມາສຳລັບຄົວເຮືອນ, ຮ້ານອາຫານ ແລະ ການສົ່ງອອກ.
+  story: |-
+    ປາແດກແມ່ນເຄື່ອງປຸງທີ່ເຮັດໃຫ້ອາຫານລາວມີລົດຊາດເລິກເຊິ່ງ. ຄອບຄົວລາວເຮັດປາແດກສືບທອດກັນມາຫຼາຍລຸ້ນ ແລະ ໃຊ້ໃນຕຳໝາກຫຸ່ງ, ແຈ່ວ, ແກງ ແລະ ອາຫານອື່ນໆ ທົ່ວປະເທດ.
+
+    ປາແດກໂສພານົວ ນຳເອົາວັດຖຸດິບປະຈຳວັນນີ້ ມາສູ່ຊັ້ນວາງສິນຄ້າທີ່ທັນສະໄໝ ພາຍໃຕ້ແບຣນທີ່ຈື່ຈຳງ່າຍ ເພື່ອໃຫ້ແມ່ຄົວ, ຮ້ານອາຫານ ແລະ ຜູ້ຊື້ຕ່າງປະເທດ ໄດ້ສິນຄ້າທີ່ມີຄຸນນະພາບສະໝ່ຳສະເໝີ.
+  concept: |-
+    ລົດຊາດດັ້ງເດີມ, ບັນຈຸພັນຊັດເຈນ. ແບຣນນີ້ຮັກສາລົດຊາດທີ່ແມ່ຄົວລາວຄຸ້ນເຄີຍ ແລະ ນຳສະເໜີດ້ວຍສະຫຼາກພາສາລາວ, ອັງກິດ ແລະ ຈີນ ສຳລັບຮ້ານຄ້າທັງພາຍໃນ ແລະ ຕະຫຼາດໃກ້ຄຽງ.
+  highlights:
+    - title: ເຄື່ອງປຸງຫຼັກຂອງອາຫານລາວ
+      text: ພື້ນຖານຂອງຕຳໝາກຫຸ່ງ, ແຈ່ວ, ແກງ ແລະ ອາຫານປະເພດຕ່າງໆ.
+    - title: ລົດຊາດນົວ ເຂັ້ມຂົ້ນ
+      text: ລົດຊາດປາໝັກທີ່ເຂັ້ມຂົ້ນ ພຽງບ່ວງດຽວກໍປຸງອາຫານໄດ້ທັງຈານ.
+    - title: ບັນຈຸສຳລັບຮ້ານຄ້າ ແລະ ເຮືອນຄົວ
+      text: ບັນຈຸພັນທີ່ປິດສະໜິດ ສຳລັບແມ່ຄົວ, ຮ້ານອາຫານ ແລະ ທຸລະກິດອາຫານ.
+    - title: ພ້ອມສົ່ງອອກ
+      text: ສະຫຼາກພາສາລາວ, ອັງກິດ ແລະ ຈີນ ສຳລັບຜູ້ຊື້ໃນພາກພື້ນ.
+  products:
+    - name: ສິນຄ້າ 1
+      description: ລໍຖ້າເພີ່ມຊື່ ແລະ ລາຍລະອຽດສິນຄ້າ.
+      size: ລໍຖ້າເພີ່ມຂະໜາດ
+    - name: ສິນຄ້າ 2
+      description: ລໍຖ້າເພີ່ມຊື່ ແລະ ລາຍລະອຽດສິນຄ້າ.
+      size: ລໍຖ້າເພີ່ມຂະໜາດ
+    - name: ສິນຄ້າ 3
+      description: ລໍຖ້າເພີ່ມຊື່ ແລະ ລາຍລະອຽດສິນຄ້າ.
+      size: ລໍຖ້າເພີ່ມຂະໜາດ
+  usage:
+    - title: ປຸງຕຳໝາກຫຸ່ງ
+      text: ໃສ່ໜຶ່ງບ່ວງໃນຕຳໝາກຫຸ່ງ ເພື່ອລົດຊາດລາວແບບດັ້ງເດີມ.
+    - title: ເຮັດແຈ່ວ
+      text: ປະສົມກັບໝາກເຜັດ, ກະທຽມ ແລະ ຜັກຫອມ ກິນກັບເຂົ້າໜຽວ ແລະ ຜັກ.
+    - title: ປຸງແກງ ແລະ ອາຫານຕົ້ມ
+      text: ໃສ່ໃນນ້ຳແກງ, ແກງ ແລະ ອາຫານຕົ້ມ ໃນລະຫວ່າງປຸງແຕ່ງ.
+    - title: ປຸງໃຫ້ສຸກກ່ອນກິນ
+      text: ຖ້າສະຫຼາກບໍ່ໄດ້ລະບຸວ່າກິນໄດ້ທັນທີ, ກະລຸນາປຸງປາແດກໃຫ້ສຸກກ່ອນກິນ ແລະ ເກັບຮັກສາຕາມຄຳແນະນຳເທິງບັນຈຸພັນ.
+zh:
+  title: 索法努阿鱼酱
+  seo_title: 索法努阿鱼酱 — MVM 集团旗下老挝鱼酱品牌
+  seo_description: >-
+    索法努阿鱼酱（Pa Daek Sophanua，ປາແດກໂສພານົວ）是由 MVM 集团开发和分销的老挝鱼酱品牌。
+    了解产品、食用方法、销售网点及经销商申请。
+  tagline: 老挝菜的灵魂风味，为现代厨房而包装。
+  summary: 老挝鱼酱（Pa Daek）是老挝菜的核心调味料，这一品牌面向家庭、餐厅及出口市场。
+  story: |-
+    老挝鱼酱（Pa Daek）是由鱼发酵而成、赋予老挝菜醇厚风味的调味料。老挝家庭世代自制，广泛用于青木瓜沙拉、蘸酱、汤和咖喱等菜肴。
+
+    索法努阿鱼酱将这一日常食材以易于识别的品牌带上现代货架，让家庭厨师、餐厅和海外买家都能买到品质稳定的产品。
+  concept: |-
+    传统风味，清晰包装。品牌保留老挝厨师熟悉的味道，并配以老挝语、英语和中文标签，适合国内及周边市场的商店销售。
+  highlights:
+    - title: 老挝菜的必备调料
+      text: 青木瓜沙拉、蘸酱、汤和咖喱的基础调味。
+    - title: 浓郁鲜香
+      text: 发酵鱼的浓郁风味，一勺即可为整道菜调味。
+    - title: 适合商店与厨房的包装
+      text: 密封包装，适合家庭、餐厅和食品企业。
+    - title: 适合出口
+      text: 老挝语、英语和中文标签，便于区域买家选购。
+  products:
+    - name: 产品 1
+      description: 产品名称和介绍待补充。
+      size: 规格待补充
+    - name: 产品 2
+      description: 产品名称和介绍待补充。
+      size: 规格待补充
+    - name: 产品 3
+      description: 产品名称和介绍待补充。
+      size: 规格待补充
+  usage:
+    - title: 调味青木瓜沙拉
+      text: 在青木瓜沙拉中加入一勺，带来经典老挝风味。
+    - title: 制作蘸酱
+      text: 与辣椒、大蒜和香草混合，搭配糯米饭和蔬菜食用。
+    - title: 为汤和咖喱调味
+      text: 烹饪时加入高汤、咖喱或炖菜中。
+    - title: 煮熟后食用
+      text: 除非标签注明可直接食用，请将鱼酱煮熟后再食用，并按包装上的说明储存。

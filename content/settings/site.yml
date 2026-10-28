@@ -1,0 +1,74 @@
+# Site-wide settings. Edit in the CMS: Settings → Site settings.
+# Fields under `en` that have no translation (contact details, IDs, images)
+# apply to all three languages.
+en:
+  site_name: MVM GROUP
+  site_url: https://www.mvmgroup.la
+  logo: ""
+  favicon: ""
+  og_image: /brand/og-image.png
+  tagline: Connecting business, services and brands
+  description: >-
+    MVM GROUP is a Lao business group offering business consulting, government documentation,
+    translation, travel, import-export and logistics services, and developing its own consumer brands.
+  pillars:
+    - Business
+    - Services
+    - Brands
+    - Opportunities
+  footer_text: >-
+    A Lao business group connecting companies, travellers and consumers with services and brands
+    across Laos, China and beyond.
+  address: Vientiane Capital, Lao PDR (full address to be added)
+  hours: Monday–Friday, 8:30–17:30 (to be confirmed)
+  contact:
+    phone: +856 20 XXXX XXXX
+    whatsapp: +856 20 XXXX XXXX
+    wechat: MVMGROUP-XXXX
+    wechat_qr: ""
+    email: info@mvmgroup.la
+    map_embed: ""
+    map_link: ""
+    facebook: ""
+    tiktok: ""
+  company:
+    legal_name: ""
+    registration_no: ""
+    tax_id: ""
+    registered_address: ""
+    licenses: []
+  analytics:
+    ga4_id: ""
+    meta_pixel_id: ""
+    google_site_verification: ""
+  forms:
+    recaptcha: false
+  menu_extra: []
+la:
+  tagline: ເຊື່ອມຕໍ່ທຸລະກິດ, ການບໍລິການ ແລະ ແບຣນສິນຄ້າ
+  description: >-
+    MVM GROUP ແມ່ນກຸ່ມທຸລະກິດລາວ ທີ່ໃຫ້ບໍລິການທີ່ປຶກສາທຸລະກິດ, ດຳເນີນເອກະສານທາງລັດ, ແປພາສາ,
+    ທ່ອງທ່ຽວ, ນຳເຂົ້າ-ສົ່ງອອກ ແລະ ໂລຈິສຕິກ, ພ້ອມທັງພັດທະນາແບຣນສິນຄ້າຂອງຕົນເອງ.
+  pillars:
+    - ທຸລະກິດ
+    - ການບໍລິການ
+    - ແບຣນ
+    - ໂອກາດ
+  footer_text: >-
+    ກຸ່ມທຸລະກິດລາວ ທີ່ເຊື່ອມຕໍ່ບໍລິສັດ, ນັກທ່ອງທ່ຽວ ແລະ ຜູ້ບໍລິໂພກ ເຂົ້າກັບການບໍລິການ ແລະ ແບຣນສິນຄ້າ
+    ໃນ ສປປ ລາວ, ຈີນ ແລະ ສາກົນ.
+  address: ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ (ລໍຖ້າເພີ່ມທີ່ຢູ່ເຕັມ)
+  hours: ວັນຈັນ–ວັນສຸກ, 8:30–17:30 (ລໍຖ້າຢືນຢັນ)
+zh:
+  tagline: 连接商业、服务与品牌
+  description: >-
+    MVM 集团是一家老挝企业集团，提供商务咨询、政府文件办理、翻译、旅游、进出口与物流服务，并开发自有消费品牌。
+  pillars:
+    - 商业
+    - 服务
+    - 品牌
+    - 机遇
+  footer_text: >-
+    立足老挝的企业集团，为企业、旅客和消费者提供连接老挝、中国及国际市场的服务与品牌。
+  address: 老挝人民民主共和国 万象首都（详细地址待补充）
+  hours: 周一至周五 8:30–17:30（待确认）

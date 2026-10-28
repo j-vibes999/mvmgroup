@@ -1,0 +1,13 @@
+---
+import type { Entry } from '../lib/content';
+interface Props { brand: Entry; eager?: boolean }
+const { brand, eager } = Astro.props;
+const photo = brand.card_image || brand.hero_image;
+---
+{photo ? (
+  <img src={photo} alt={brand.title} loading={eager ? 'eager' : 'lazy'} decoding="async" />
+) : brand.illustration ? (
+  <div class="media-pending"><img src={`/img/illustrations/${brand.illustration}.svg`} alt="" loading="lazy" style="width:60%;opacity:.9" /></div>
+) : (
+  <div class="media-pending"><img src="/patterns/dok-champa.svg" alt="" loading="lazy" /></div>
+)}

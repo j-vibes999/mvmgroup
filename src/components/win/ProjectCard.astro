@@ -1,0 +1,18 @@
+---
+import { findCategory, label, PROJECT_CATEGORIES } from '../../lib/taxonomies';
+import { t, url, type Lang } from '../../lib/i18n';
+import type { Entry } from '../../lib/content';
+interface Props { lang: Lang; item: Entry; /** Heading level for the card title (h2 on listing pages without section headings). */ level?: 'h2' | 'h3' }
+const { lang, item: p, level: H = 'h3' } = Astro.props;
+const cat = findCategory(PROJECT_CATEGORIES, p.category);
+---
+<a class="card" href={url(lang, 'projects', p.slug)} data-category={p.category || ''}>
+  <div class="card__media">
+    {p.cover ? <img src={p.cover} alt={p.cover_alt || ''} loading="lazy" decoding="async" /> : <div class="media-pending"><img src="/patterns/khor-lozenge.svg" alt="" /></div>}
+  </div>
+  <div class="card__body">
+    <span class="card__meta">{cat && label(cat, lang)}{p.year ? ` · ${p.year}` : ''}{p.sample && <span class="tag tag--sample">{t(lang, 'project.sample')}</span>}</span>
+    <H>{p.title}</H>
+    {p.summary && <p>{p.summary}</p>}
+  </div>
+</a>

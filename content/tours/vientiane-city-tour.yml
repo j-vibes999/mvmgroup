@@ -1,0 +1,126 @@
+en:
+  title: Vientiane City Tour
+  summary: >-
+    The golden That Luang stupa, Patuxai, the capital's oldest temples, Buddha Park and a sunset on the Mekong, in one
+    relaxed day.
+  service: tour-travel
+  order: 1
+  duration: 1 day
+  route: Vientiane Capital
+  image: /img/photos/laos-that-luang-card.jpg
+  hero_image: /img/photos/laos-that-luang-wide.jpg
+  photo_credit: >-
+    Photo: [Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh), Wikimedia Commons,
+    [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+  best_for: First-time visitors, families, business travellers with a free day
+  start: Your hotel in Vientiane
+  end: Your hotel in Vientiane
+  transport: Private air-conditioned car or van with driver
+  overview: >-
+    Vientiane is a calm, green capital on the banks of the Mekong. This day tour covers its most important sights at an
+    easy pace, with a guide who explains the history and Buddhist traditions behind each place.
+  highlights:
+    - Pha That Luang, the golden stupa and national symbol of Laos
+    - The view over the city from the top of Patuxai
+    - Wat Si Saket, the oldest temple still standing in Vientiane
+    - The riverside garden of giant sculptures at Buddha Park
+    - Sunset and the night market on the Mekong riverside
+  days:
+    - title: Temples, monuments and a Mekong sunset
+      visits:
+        - "Morning: Pha That Luang and the temples around it"
+        - "Patuxai (Victory Monument): climb to the top for a view over the city"
+        - Wat Si Saket and Haw Phra Kaew, two historic temples facing each other in the city centre
+        - Lunch at a Lao restaurant
+        - "Afternoon: Buddha Park (Xieng Khuan) on the Mekong, about 25 km from the city"
+        - "Evening: sunset on the Mekong riverside and the night market"
+      overnight: Your own hotel in Vientiane (we can book one for you)
+      transport: Private car or van, with hotel pick-up and drop-off
+  includes:
+    - Private air-conditioned vehicle with driver
+    - Guide speaking Lao, English, Chinese or Thai
+    - Entrance fees for the sights listed
+    - Drinking water
+  excludes:
+    - Meals and drinks
+    - Personal expenses and tips
+la:
+  title: ທົວນະຄອນຫຼວງວຽງຈັນ 1 ມື້
+  summary: >-
+    ພະທາດຫຼວງ, ປະຕູໄຊ, ວັດເກົ່າແກ່ຂອງນະຄອນຫຼວງ, ສວນພະ ແລະ ຊົມຕາເວັນຕົກແຄມຂອງ ພາຍໃນມື້ດຽວແບບສະບາຍໆ.
+  duration: 1 ມື້
+  route: ນະຄອນຫຼວງວຽງຈັນ
+  photo_credit: >-
+    ພາບ: [Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh), Wikimedia Commons,
+    [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+  best_for: ຜູ້ມາລາວຄັ້ງທຳອິດ, ຄອບຄົວ, ນັກທຸລະກິດທີ່ມີເວລາວ່າງ 1 ມື້
+  start: ໂຮງແຮມຂອງທ່ານໃນວຽງຈັນ
+  end: ໂຮງແຮມຂອງທ່ານໃນວຽງຈັນ
+  transport: ລົດເກັງ ຫຼື ລົດຕູ້ປັບອາກາດສ່ວນຕົວ ພ້ອມຄົນຂັບ
+  overview: >-
+    ວຽງຈັນເປັນນະຄອນຫຼວງທີ່ສະຫງົບ ແລະ ຮົ່ມເຢັນ ຢູ່ແຄມແມ່ນ້ຳຂອງ. ທົວ 1 ມື້ນີ້ ພາທ່ານໄປຊົມສະຖານທີ່ສຳຄັນທີ່ສຸດ
+    ແບບບໍ່ເລັ່ງຮີບ ພ້ອມໄກດ໌ທີ່ອະທິບາຍປະຫວັດສາດ ແລະ ປະເພນີທາງພຸດທະສາສະໜາຂອງແຕ່ລະບ່ອນ.
+  highlights:
+    - ພະທາດຫຼວງ ສັນຍາລັກແຫ່ງຊາດລາວ
+    - ຊົມວິວເມືອງຈາກຊັ້ນເທິງຂອງປະຕູໄຊ
+    - ວັດສີສະເກດ ວັດເກົ່າແກ່ທີ່ສຸດທີ່ຍັງເຫຼືອຢູ່ໃນວຽງຈັນ
+    - ສວນພະ (ວັດຊຽງຂວັນ) ສວນຮູບປັ້ນຂະໜາດໃຫຍ່ແຄມນ້ຳຂອງ
+    - ຕາເວັນຕົກ ແລະ ຕະຫຼາດກາງຄືນແຄມຂອງ
+  days:
+    - title: ວັດວາອາຮາມ, ອະນຸສາວະລີ ແລະ ຕາເວັນຕົກແຄມຂອງ
+      visits:
+        - "ຕອນເຊົ້າ: ພະທາດຫຼວງ ແລະ ວັດອ້ອມຂ້າງ"
+        - "ປະຕູໄຊ: ຂຶ້ນຊົມວິວເມືອງຈາກຊັ້ນເທິງ"
+        - ວັດສີສະເກດ ແລະ ຫໍພະແກ້ວ ສອງວັດປະຫວັດສາດທີ່ຕັ້ງຢູ່ກົງກັນຂ້າມ ໃຈກາງເມືອງ
+        - ອາຫານທ່ຽງທີ່ຮ້ານອາຫານລາວ
+        - "ຕອນບ່າຍ: ສວນພະ (ວັດຊຽງຂວັນ) ແຄມນ້ຳຂອງ ຫ່າງຈາກຕົວເມືອງປະມານ 25 ກມ"
+        - "ຕອນແລງ: ຊົມຕາເວັນຕົກແຄມຂອງ ແລະ ຍ່າງຕະຫຼາດກາງຄືນ"
+      overnight: ໂຮງແຮມຂອງທ່ານໃນວຽງຈັນ (ພວກເຮົາຈອງໃຫ້ໄດ້)
+      transport: ລົດເກັງ ຫຼື ລົດຕູ້ສ່ວນຕົວ ຮັບ-ສົ່ງເຖິງໂຮງແຮມ
+  includes:
+    - ລົດປັບອາກາດສ່ວນຕົວ ພ້ອມຄົນຂັບ
+    - ໄກດ໌ພາສາລາວ, ອັງກິດ, ຈີນ ຫຼື ໄທ
+    - ຄ່າເຂົ້າຊົມສະຖານທີ່ຕາມໂປຣແກຣມ
+    - ນ້ຳດື່ມ
+  excludes:
+    - ອາຫານ ແລະ ເຄື່ອງດື່ມ
+    - ຄ່າໃຊ້ຈ່າຍສ່ວນຕົວ ແລະ ທິບ
+zh:
+  title: 万象市区一日游
+  summary: 金色塔銮、凯旋门、首都最古老的寺庙、佛像公园和湄公河日落，轻松一天全部游览。
+  duration: 1天
+  route: 万象市
+  photo_credit: >-
+    图片：[Benh Lieu Song](https://commons.wikimedia.org/wiki/User:Benh)，Wikimedia Commons，
+    [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+  best_for: 首次来老挝的游客、家庭、有一天空闲的商务旅客
+  start: 您在万象的酒店
+  end: 您在万象的酒店
+  transport: 带司机的私人空调轿车或商务车
+  overview: >-
+    万象是湄公河畔一座宁静、绿意盎然的首都。这条一日游线路以轻松的节奏游览最重要的景点，导游会为您讲解每处景点背后的历史与佛教传统。
+  highlights:
+    - 老挝国家象征——金色的塔銮
+    - 登上凯旋门顶层俯瞰全城
+    - 西沙格寺，万象现存最古老的寺庙
+    - 湄公河畔的巨型雕塑园——佛像公园
+    - 湄公河畔日落与夜市
+  days:
+    - title: 寺庙、地标与湄公河日落
+      visits:
+        - 上午：塔銮及周边寺庙
+        - 凯旋门：登顶俯瞰全城
+        - 西沙格寺与玉佛寺，两座相对而立的历史寺庙
+        - 老挝餐厅午餐
+        - 下午：湄公河畔的佛像公园（香昆寺），距市区约25公里
+        - 傍晚：湄公河畔观日落，逛夜市
+      overnight: 您在万象自订的酒店（可代为预订）
+      transport: 私人轿车或商务车，酒店接送
+  includes:
+    - 带司机的私人空调车
+    - 老挝语、英语、中文或泰语导游
+    - 行程所列景点门票
+    - 饮用水
+  excludes:
+    - 餐饮
+    - 个人消费及小费

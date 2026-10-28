@@ -1,0 +1,29 @@
+---
+import Shell from '../../../layouts/Shell.astro';
+import ProjectCard from '../../../components/win/ProjectCard.astro';
+import { getSite, langPaths } from '../../../lib/site';
+import { breadcrumbLd } from '../../../lib/seo';
+import { PROJECT_CATEGORIES, label } from '../../../lib/taxonomies';
+import { t, type Lang } from '../../../lib/i18n';
+
+export const getStaticPaths = langPaths;
+const lang = Astro.params.lang as Lang;
+const site = getSite();
+const p = site.pages(lang);
+const projects = site.projects(lang);
+const used = PROJECT_CATEGORIES.filter((c) => projects.some((x) => x.category === c.key));
+const title = p.projects_title || t(lang, 'nav.projects');
+const trail = [{ label: t(lang, 'nav.projects') }];
+---
+<Shell lang={lang} path={['projects']} nav="projects" title={title} description={p.projects_lead} jsonLd={breadcrumbLd(lang, trail)} win={{ title, icon: 'chart', trail }}>
+  {p.projects_lead && <p class="lead">{p.projects_lead}</p>}
+  <div class="frieze" aria-hidden="true"></div>
+  {used.length > 1 && (
+    <div class="chips" role="group" aria-label={t(lang, 'project.category')} data-filter-group>
+      <button type="button" data-filter="all" aria-pressed="true">{t(lang, 'news.all')}</button>
+      {used.map((c) => <button type="button" data-filter={c.key} aria-pressed="false">{label(c, lang)}</button>)}
+    </div>
+  )}
+  <div class="grid grid--2" data-filter-grid>{projects.map((x) => <ProjectCard lang={lang} level="h2" item={x} />)}</div>
+  <p class="muted" data-filter-empty hidden>{t(lang, 'project.empty')}</p>
+</Shell>

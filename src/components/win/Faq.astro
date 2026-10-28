@@ -1,0 +1,14 @@
+---
+import Icon from '../Icon.astro';
+import { md } from '../../lib/markdown';
+interface Props { items: { question: string; answer: string }[] }
+const { items } = Astro.props;
+---
+<div class="faq">
+  {items.map((f) => (
+    <details>
+      <summary>{f.question}<Icon name="plus" /></summary>
+      <div class="faq__a prose" set:html={md(f.answer)} />
+    </details>
+  ))}
+</div>
